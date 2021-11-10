@@ -11,15 +11,17 @@ namespace WebAPI.Controllers.v1
         public AuthorsController(IMediator mediator) : base(mediator)
         {
         }
-        [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateAuthorCommand command)
-        {
-            return Ok(await mediator.Send(command));
-        }
+
         [HttpGet]
         public async Task<IActionResult> Get()
         {
             return Ok(await mediator.Send(new GetAuthorsQuery()));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] CreateAuthorCommand command)
+        {
+            return Ok(await mediator.Send(command));
         }
 
         [HttpPut]
@@ -31,6 +33,12 @@ namespace WebAPI.Controllers.v1
             }
 
             return Ok(await mediator.Send(command));
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            return Ok(await mediator.Send(new DeleteAuthorCommand(id)));
         }
     }
 }

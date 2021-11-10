@@ -5,10 +5,9 @@ namespace Application.Features.Commands
     public class DeleteBookCommand : IRequest<Guid>
     {
         public Guid Id { get; set; }
-        public string Title { get; set; }
-        public decimal Rating { get; set; }
-        public string Description { get; set; }
-        public DateTime PublicationDate { get; set; }
-        public Uri ImageUri { get; set; }
+        public DeleteBookCommand(Guid id)
+        {
+            this.Id = id;
+        }
     }
 }
