@@ -1,15 +1,14 @@
 ﻿using Application.Interfaces;
 using Domain.Common;
 using Microsoft.EntityFrameworkCore;
-using Persistence.Context;
 
 namespace Persistence.v1
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : BaseEntity
     {
-        private readonly BookContext context;
+        private readonly DbContext context;
 
-        public Repository(BookContext context)
+        public Repository(DbContext context)
         {
             this.context = context;
         }

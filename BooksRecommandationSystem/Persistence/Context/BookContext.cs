@@ -7,7 +7,6 @@ namespace Persistence.Context
     {
         public BookContext()
         {
-
         }
         public BookContext(DbContextOptions<BookContext> options) : base(options)
         {

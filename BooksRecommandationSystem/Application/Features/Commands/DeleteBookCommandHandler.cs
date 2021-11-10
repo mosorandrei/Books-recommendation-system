@@ -7,6 +7,10 @@ namespace Application.Features.Commands
     {
         private readonly IBookRepository repository;
 
+        public DeleteBookCommandHandler(IBookRepository repository)
+        {
+            this.repository = repository;
+        }
         public async Task<Guid> Handle(DeleteBookCommand request, CancellationToken cancellationToken)
         {
             var book = repository.GetByIdAsync(request.Id).Result;
