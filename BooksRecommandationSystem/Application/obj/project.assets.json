@@ -595,20 +595,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\adria\\.nuget\\packages\\": {}
+    "C:\\Users\\ROG\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adria\\Desktop\\.NET\\.NET-Project\\BooksRecommandationSystem\\Application\\Application.csproj",
+      "projectUniqueName": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "C:\\Users\\adria\\Desktop\\.NET\\.NET-Project\\BooksRecommandationSystem\\Application\\Application.csproj",
-      "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adria\\Desktop\\.NET\\.NET-Project\\BooksRecommandationSystem\\Application\\obj\\",
+      "projectPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Application\\Application.csproj",
+      "packagesPath": "C:\\Users\\ROG\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Application\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\ROG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -621,8 +626,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\adria\\Desktop\\.NET\\.NET-Project\\BooksRecommandationSystem\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\adria\\Desktop\\.NET\\.NET-Project\\BooksRecommandationSystem\\Domain\\Domain.csproj"
+            "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj"
             }
           }
         }

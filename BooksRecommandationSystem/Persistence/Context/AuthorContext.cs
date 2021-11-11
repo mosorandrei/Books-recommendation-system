@@ -5,9 +5,9 @@ namespace Persistence.Context
 {
     public class AuthorContext : DbContext
     {
-        public AuthorContext()
-        {
-        }
+        //public AuthorContext()
+        //{
+        //}
         public AuthorContext(DbContextOptions<AuthorContext> options) : base(options)
         {
         }
@@ -16,9 +16,9 @@ namespace Persistence.Context
         {
             return await base.SaveChangesAsync();
         }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlite("Data Source=MyAuthors.db");
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlite("Data Source=MyAuthors.db");
+        //}
     }
 }
