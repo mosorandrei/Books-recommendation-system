@@ -9,6 +9,7 @@ ridică interes și ulterior vor avea posibilitatea de a le acorda o notă. Astf
 
 <a href="https://docs.google.com/document/d/1tg2KsBLGGSRlmzItTLB71LhLUBidkr7FpBBY7mIn6t4/edit?usp=sharing"> Project Documentation </a><br>
 <a href="https://www.figma.com/file/fHg2jT1LoflL9pONVGloWL/Books-recommendation-system?node-id=0%3A1"> FE Design </a><br>
+<a href="https://docs.google.com/document/d/1-QeW9n1y5QUnvK7a6EZNj13mndlmYReg/edit"> Plan of approach for Unit Testing </a><br>
 <br>Componența echipei:<ul>
 <li> Amarandei Alex</li>
 <li> Mosor Andrei</li>
