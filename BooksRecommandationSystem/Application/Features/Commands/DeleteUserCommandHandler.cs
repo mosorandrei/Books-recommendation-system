@@ -17,7 +17,7 @@ namespace Application.Features.Commands
             var user = repository.GetByIdAsync(request.Id).Result;
             if (user == null)
             {
-                throw new Exception("User does not exist!");
+                throw new InvalidDataException("User does not exist!");
             }
             await repository.DeleteAsync(user);
             return user.Id;

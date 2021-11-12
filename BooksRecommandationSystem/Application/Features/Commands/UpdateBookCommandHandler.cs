@@ -16,7 +16,7 @@ namespace Application.Features.Commands
             var book = repository.GetByIdAsync(request.Id).Result;
             if (book == null || book.Id == Guid.Empty)
             {
-                throw new Exception("Book does not exist!");
+                throw new InvalidDataException("Book does not exist!");
             }
             book.Rating = request.Rating;
             book.Description = request.Description;

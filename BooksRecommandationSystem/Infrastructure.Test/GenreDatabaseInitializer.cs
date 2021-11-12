@@ -11,11 +11,16 @@ namespace Infrastructure.Test
     {
         public static void Initialize(GenreContext context)
         {
+            if(context.Genres is null)
+            {
+                Seed(context);
+                return;
+            }
+
             if (context.Genres.Any())
             {
                 return;
             }
-            Seed(context);
         }
 
         private static void Seed(GenreContext context)
@@ -34,7 +39,8 @@ namespace Infrastructure.Test
                 }
 
             };
-            context.Genres.AddRange(genres);
+            if (context.Genres is not null)
+                context.Genres.AddRange(genres);
             context.SaveChanges();
         }
     }

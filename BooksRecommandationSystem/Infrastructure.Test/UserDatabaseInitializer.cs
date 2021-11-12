@@ -11,11 +11,16 @@ namespace Infrastructure.Test
     {
         public static void Initialize(UserContext context)
         {
+            if(context.Users is null)
+            {
+                Seed(context);
+                return;
+            }
+
             if (context.Users.Any())
             {
                 return;
             }
-            Seed(context);
         }
 
         private static void Seed(UserContext context)
@@ -36,7 +41,8 @@ namespace Infrastructure.Test
                 }
 
             };
-            context.Users.AddRange(users);
+            if (context.Users is not null)
+                context.Users.AddRange(users);
             context.SaveChanges();
         }
     }

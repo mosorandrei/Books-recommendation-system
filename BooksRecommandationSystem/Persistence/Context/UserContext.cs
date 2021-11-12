@@ -11,7 +11,7 @@ namespace Persistence.Context
         public UserContext(DbContextOptions<UserContext> options) : base(options)
         {
         }
-        public DbSet<User> Users { get; set; }
+        public DbSet<User>? Users { get; set; }
         public async Task<int> SaveChangesAsync()
         {
             return await base.SaveChangesAsync();

@@ -4,6 +4,7 @@ using Domain.Entities;
 using FluentAssertions;
 using Persistence.v1;
 using System;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Infrastructure.Test.Data
@@ -28,7 +29,7 @@ namespace Infrastructure.Test.Data
         }
 
         [Fact]
-        public async void Given_NewBook_WhenBookIsNotNull_Then_AddAsyncShouldReturnANewBook()
+        public async Task Given_NewBook_WhenBookIsNotNull_Then_AddAsyncShouldReturnANewBook()
         {
             var result = await repository.AddAsync(newBook);
             result.Should().BeOfType<Book>();

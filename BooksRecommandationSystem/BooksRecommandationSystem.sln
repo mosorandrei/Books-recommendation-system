@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistence\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{6DAD25BA-BC19-4B7B-B9B3-FC3E0FD120E3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "99 Tests", "99 Tests", "{B04CE1CA-CC99-455A-B0AD-7F648FE73CED}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 Tests", "00 Tests", "{B04CE1CA-CC99-455A-B0AD-7F648FE73CED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Test", "Infrastructure.Test\Infrastructure.Test.csproj", "{14A03164-94E0-4FD0-9137-ECC1C22637D7}"
 EndProject

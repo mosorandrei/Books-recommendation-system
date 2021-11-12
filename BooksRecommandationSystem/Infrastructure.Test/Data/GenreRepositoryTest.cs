@@ -1,9 +1,8 @@
-﻿
-
-using Domain.Entities;
+﻿using Domain.Entities;
 using FluentAssertions;
 using Persistence.v1;
 using System;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Infrastructure.Test.Data
@@ -24,7 +23,7 @@ namespace Infrastructure.Test.Data
         }
 
         [Fact]
-        public async void Given_NewGenre_WhenGenreIsNotNull_Then_AddAsyncShouldReturnANewGenre()
+        public async Task Given_NewGenre_WhenGenreIsNotNull_Then_AddAsyncShouldReturnANewGenre()
         {
             var result = await repository.AddAsync(newGenre);
             result.Should().BeOfType<Genre>();

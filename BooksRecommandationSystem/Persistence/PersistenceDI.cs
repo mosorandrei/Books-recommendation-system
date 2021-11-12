@@ -11,12 +11,10 @@ namespace Persistence
     {
         public static void AddPersistence(this IServiceCollection services, IConfiguration configuration)
         {
-            // services.AddDbContext<BookContext>(options => options.UseSqlServer(configuration.GetConnectionString("MyConnection"), b => b.MigrationsAssembly(typeof(BookContext).Assembly.FullName)));
             services.AddDbContext<BookContext>(options => options.UseSqlite("Data Source=MyBooks.db"));
             services.AddDbContext<GenreContext>(options => options.UseSqlite("Data Source=MyGenres.db"));
             services.AddDbContext<AuthorContext>(options => options.UseSqlite("Data Source=MyAuthors.db"));
             services.AddDbContext<UserContext>(options => options.UseSqlite("Data Source=MyUsers.db"));
-            // services.AddScoped<IApplicationContext, BookContext>();
             // register implementations related to repository/generic implementation
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
             services.AddTransient<IBookRepository, BookRepository>();

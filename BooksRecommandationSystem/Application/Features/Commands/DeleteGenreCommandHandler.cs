@@ -17,7 +17,7 @@ namespace Application.Features.Commands
             var genre = repository.GetByIdAsync(request.Id).Result;
             if (genre == null)
             {
-                throw new Exception("Genre does not exist!");
+                throw new InvalidDataException("Genre does not exist!");
             }
             await repository.DeleteAsync(genre);
             return genre.Id;

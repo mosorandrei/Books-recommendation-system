@@ -18,7 +18,7 @@ namespace Application.Features.Queries
             var author = await repository.GetByIdAsync(request.Id);
             if (author == null)
             {
-                throw new Exception("Author does not exist!");
+                throw new InvalidDataException("Author does not exist!");
             }
             return author;
         }

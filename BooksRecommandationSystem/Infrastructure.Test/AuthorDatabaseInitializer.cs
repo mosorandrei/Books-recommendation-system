@@ -9,11 +9,16 @@ namespace Infrastructure.Test
     {
         public static void Initialize(AuthorContext context)
         {
+            if(context.Authors is null)
+            {
+                Seed(context);
+                return;
+            }
+
             if(context.Authors.Any())
             {
                 return;
             }
-            Seed(context);
         }
 
         private static void Seed(AuthorContext context)
@@ -33,7 +38,8 @@ namespace Infrastructure.Test
                     LastName = "Creanga"
                 }
             };
-            context.Authors.AddRange(authors);
+            if (context.Authors is not null)
+                context.Authors.AddRange(authors);
             context.SaveChanges(); 
         }
     }

@@ -10,11 +10,16 @@ namespace Infrastructure.Test
     {
         public static void Initialize(BookContext context)
         {
+            if (context.Books is null)
+            {
+                Seed(context);
+                return;
+            }
+
             if (context.Books.Any())
             {
                 return;
             }
-            Seed(context);
         }
 
         private static void Seed(BookContext context)
@@ -41,7 +46,8 @@ namespace Infrastructure.Test
                 }
                   
             };
-            context.Books.AddRange(books);
+            if (context.Books is not null)
+                context.Books.AddRange(books);
             context.SaveChanges();
         }
     }

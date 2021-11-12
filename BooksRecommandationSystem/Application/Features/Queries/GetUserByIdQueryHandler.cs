@@ -18,7 +18,7 @@ namespace Application.Features.Queries
             var user = await repository.GetByIdAsync(request.Id);
             if (user == null)
             {
-                throw new Exception("User does not exist!");
+                throw new InvalidDataException("User does not exist!");
             }
             return user;
         }

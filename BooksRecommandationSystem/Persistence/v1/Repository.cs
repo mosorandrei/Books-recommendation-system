@@ -16,7 +16,7 @@ namespace Persistence.v1
         {
             if (entity == null)
             {
-                throw new ArgumentNullException($"{nameof(AddAsync)} entity must not be null");
+                throw new ArgumentException($"{nameof(AddAsync)} entity must not be null");
             }
             await context.AddAsync(entity);
             await context.SaveChangesAsync();
@@ -27,7 +27,7 @@ namespace Persistence.v1
         {
             if (entity == null)
             {
-                throw new ArgumentNullException($"{nameof(DeleteAsync)} entity mult not be null");
+                throw new ArgumentException($"{nameof(DeleteAsync)} entity must not be null");
             }
 
             context.Remove(entity);
@@ -40,7 +40,7 @@ namespace Persistence.v1
             return await context.Set<TEntity>().ToListAsync();
         }
 
-        public async Task<TEntity> GetByIdAsync(Guid id)
+        public async Task<TEntity?> GetByIdAsync(Guid id)
         {
             if (id == Guid.Empty)
             {
@@ -54,7 +54,7 @@ namespace Persistence.v1
         {
             if (entity == null)
             {
-                throw new ArgumentNullException($"{nameof(UpdateAsync)} entity must not be null");
+                throw new ArgumentException($"{nameof(UpdateAsync)} entity must not be null");
             }
 
             context.Update(entity);

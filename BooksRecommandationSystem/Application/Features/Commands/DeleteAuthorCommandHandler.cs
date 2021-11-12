@@ -18,7 +18,7 @@ namespace Application.Features.Commands
             var author = repository.GetByIdAsync(request.Id).Result;
             if (author == null)
             {
-                throw new Exception("Author does not exist!");
+                throw new InvalidDataException("Author does not exist!");
             }
             await repository.DeleteAsync(author);
             return author.Id;

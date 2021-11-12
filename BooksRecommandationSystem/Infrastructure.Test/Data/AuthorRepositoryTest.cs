@@ -2,6 +2,7 @@
 using FluentAssertions;
 using Persistence.v1;
 using System;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Infrastructure.Test.Data
@@ -23,7 +24,7 @@ namespace Infrastructure.Test.Data
         }
 
         [Fact]
-        public async void Given_NewAuthor_WhenAuthorIsNotNull_Then_AddAsyncShouldReturnANewAuthor()
+        public async Task Given_NewAuthor_WhenAuthorIsNotNull_Then_AddAsyncShouldReturnANewAuthor()
         {
             var result = await repository.AddAsync(newAuthor);
             result.Should().BeOfType<Author>();

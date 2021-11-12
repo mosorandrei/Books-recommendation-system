@@ -16,7 +16,7 @@ namespace Application.Features.Commands
             var user = repository.GetByIdAsync(request.Id).Result;
             if (user == null || user.Id == Guid.Empty)
             {
-                throw new Exception("User does not exist!");
+                throw new InvalidDataException("User does not exist!");
             }
             user.Username = request.Username;
             user.Password = request.Password;

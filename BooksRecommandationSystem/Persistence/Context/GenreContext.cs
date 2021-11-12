@@ -11,7 +11,7 @@ namespace Persistence.Context
         public GenreContext(DbContextOptions<GenreContext> options) : base(options)
         {
         }
-        public DbSet<Genre> Genres { get; set; }
+        public DbSet<Genre>? Genres { get; set; }
         public async Task<int> SaveChangesAsync()
         {
             return await base.SaveChangesAsync();

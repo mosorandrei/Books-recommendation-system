@@ -2,6 +2,7 @@
 using FluentAssertions;
 using Persistence.v1;
 using System;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Infrastructure.Test.Data
@@ -23,7 +24,7 @@ namespace Infrastructure.Test.Data
         }
 
         [Fact]
-        public async void Given_NewUser_WhenUserIsNotNull_Then_AddAsyncShouldReturnANewUser()
+        public async Task Given_NewUser_WhenUserIsNotNull_Then_AddAsyncShouldReturnANewUser()
         {
             var result = await repository.AddAsync(newUser);
             result.Should().BeOfType<User>();

@@ -1,0 +1,1 @@
+/Users/alex-ama/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/.sonarqube/out/1

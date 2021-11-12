@@ -11,7 +11,7 @@ namespace Persistence.Context
         public AuthorContext(DbContextOptions<AuthorContext> options) : base(options)
         {
         }
-        public DbSet<Author> Authors { get; set; }
+        public DbSet<Author>? Authors { get; set; }
         public async Task<int> SaveChangesAsync()
         {
             return await base.SaveChangesAsync();

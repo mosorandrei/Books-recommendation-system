@@ -17,7 +17,7 @@ namespace Application.Features.Queries
             var book = await repository.GetByIdAsync(request.Id);
             if (book == null)
             {
-                throw new Exception("Book does not exist!");
+                throw new InvalidDataException("Book does not exist!");
             }
             return book;
         }

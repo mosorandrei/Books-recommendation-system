@@ -2,7 +2,6 @@ using Application;
 using Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
-// https://docs.microsoft.com/en-us/visualstudio/code-quality/code-metrics-maintainability-index-range-and-meaning?view=vs-2022
 // Add services to the container.
 builder.Services.AddApiVersioning(config =>
 {

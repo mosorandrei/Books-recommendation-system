@@ -16,7 +16,7 @@ namespace Application.Features.Commands
             var author = repository.GetByIdAsync(request.Id).Result;
             if (author == null || author.Id == Guid.Empty)
             {
-                throw new Exception("Author does not exist!");
+                throw new InvalidDataException("Author does not exist!");
             }
             author.FirstName = request.FirstName;
             author.LastName = request.LastName;
