@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vPIGB7x/AXKq/O4VPtdlptUNN2yXo02GRueNQzComvLugIrVgB0Va8B5rJoupGyeZx8f42RyaYDecRlhVRLnVQ==",
+  "dgSpecHash": "fqaGhGRdrc7/bEq4PxSbUUCsEcKHvClbW3m2S6YEkYRREsoA3egt7FBdELPQPRw5fLfFxYvifrdll2gW32zgEQ==",
   "success": true,
-  "projectFilePath": "/Users/alex-ama/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Domain.csproj",
+  "projectFilePath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

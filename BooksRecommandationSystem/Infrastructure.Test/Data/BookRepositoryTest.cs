@@ -34,5 +34,11 @@ namespace Infrastructure.Test.Data
             var result = await repository.AddAsync(newBook);
             result.Should().BeOfType<Book>();
         }
+
+        [Fact]
+        public async void Given_NewBook_WhenBookIsNull_ThenAddSyncShouldReturnThrowArgumentNullException()
+        {
+            _ = repository.Invoking(r => r.AddAsync(null)).Should().ThrowAsync<ArgumentNullException>();
+        }
     }
 }

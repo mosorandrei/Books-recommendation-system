@@ -29,5 +29,11 @@ namespace Infrastructure.Test.Data
             var result = await repository.AddAsync(newUser);
             result.Should().BeOfType<User>();
         }
+
+        [Fact]
+        public async void Given_NewUser_WhenUserIsNull_ThenAddSyncShouldReturnThrowArgumentNullException()
+        {
+            _ = repository.Invoking(r => r.AddAsync(null)).Should().ThrowAsync<ArgumentNullException>();
+        }
     }
 }

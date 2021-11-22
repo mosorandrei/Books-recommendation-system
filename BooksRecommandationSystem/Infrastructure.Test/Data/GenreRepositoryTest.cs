@@ -28,5 +28,11 @@ namespace Infrastructure.Test.Data
             var result = await repository.AddAsync(newGenre);
             result.Should().BeOfType<Genre>();
         }
+
+        [Fact]
+        public async void Given_NewGenre_WhenGenreIsNull_ThenAddSyncShouldReturnThrowArgumentNullException()
+        {
+            _ = repository.Invoking(r => r.AddAsync(null)).Should().ThrowAsync<ArgumentNullException>();
+        }
     }
 }

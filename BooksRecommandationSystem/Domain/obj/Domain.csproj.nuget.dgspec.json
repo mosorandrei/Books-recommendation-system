@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/alex-ama/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Domain.csproj": {}
+    "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "/Users/alex-ama/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Domain.csproj": {
+    "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alex-ama/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Domain.csproj",
+        "projectUniqueName": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "/Users/alex-ama/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Domain.csproj",
-        "packagesPath": "/Users/alex-ama/.nuget/packages/",
-        "outputPath": "/Users/alex-ama/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/obj/",
+        "projectPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\ROG\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "/Users/alex-ama/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ROG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-rc.1.21463.6/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

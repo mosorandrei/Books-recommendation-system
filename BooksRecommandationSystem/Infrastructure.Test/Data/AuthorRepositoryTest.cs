@@ -29,5 +29,11 @@ namespace Infrastructure.Test.Data
             var result = await repository.AddAsync(newAuthor);
             result.Should().BeOfType<Author>();
         }
+
+        [Fact]
+        public async void Given_NewAuthor_WhenAuthorIsNull_ThenAddSyncShouldReturnThrowArgumentNullException()
+        {
+            _ = repository.Invoking(r => r.AddAsync(null)).Should().ThrowAsync<ArgumentNullException>();
+        }
     }
 }
