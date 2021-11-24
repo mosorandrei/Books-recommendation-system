@@ -5,9 +5,9 @@ namespace Persistence.Context
 {
     public class AuthorContext : DbContext
     {
-        //public AuthorContext()
-        //{
-        //}
+        public AuthorContext()
+        {
+        }
         public AuthorContext(DbContextOptions<AuthorContext> options) : base(options)
         {
         }

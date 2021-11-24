@@ -5,9 +5,9 @@ namespace Persistence.Context
 {
     public class GenreContext : DbContext
     {
-        //public GenreContext()
-        //{
-        //}
+        public GenreContext()
+        {
+        }
         public GenreContext(DbContextOptions<GenreContext> options) : base(options)
         {
         }
