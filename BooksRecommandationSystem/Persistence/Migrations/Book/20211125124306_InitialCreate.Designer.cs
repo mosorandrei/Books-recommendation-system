@@ -8,34 +8,44 @@ using Persistence.Context;
 
 #nullable disable
 
-namespace Persistence.Migrations.Author
+namespace Persistence.Migrations.Book
 {
-    [DbContext(typeof(AuthorContext))]
-    [Migration("20211110153943_FirstMigration")]
-    partial class FirstMigration
+    [DbContext(typeof(BookContext))]
+    [Migration("20211125124306_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.0");
 
-            modelBuilder.Entity("Domain.Entities.Author", b =>
+            modelBuilder.Entity("Domain.Entities.Book", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("FirstName")
-                        .IsRequired()
+                    b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("LastName")
-                        .IsRequired()
+                    b.Property<string>("DownloadUri")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ImageUri")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("PublicationDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("Rating")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Title")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Authors");
+                    b.ToTable("Books");
                 });
 #pragma warning restore 612, 618
         }

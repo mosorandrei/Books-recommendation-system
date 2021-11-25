@@ -21,7 +21,8 @@ namespace Application.Features.Commands
                 Rating = request.Rating,
                 Description = request.Description,
                 PublicationDate = request.PublicationDate,
-                ImageUri = request.ImageUri
+                ImageUri = request.ImageUri,
+                DownloadUri = request.DownloadUri
             };
 
             await repository.AddAsync(book);

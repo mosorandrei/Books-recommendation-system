@@ -8,30 +8,32 @@ using Persistence.Context;
 
 #nullable disable
 
-namespace Persistence.Migrations.Genre
+namespace Persistence.Migrations
 {
-    [DbContext(typeof(GenreContext))]
-    [Migration("20211110153950_FirstMigration")]
-    partial class FirstMigration
+    [DbContext(typeof(AuthorContext))]
+    [Migration("20211125124235_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.0");
 
-            modelBuilder.Entity("Domain.Entities.Genre", b =>
+            modelBuilder.Entity("Domain.Entities.Author", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
+                    b.Property<string>("FirstName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LastName")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Genres");
+                    b.ToTable("Authors");
                 });
 #pragma warning restore 612, 618
         }

@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace WebAPI.Controllers.v1
 {
     [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
+
     public class UsersController : BaseController
     {
         public UsersController(IMediator mediator) : base(mediator)

@@ -28,4 +28,10 @@
     <ProjectReference Include="..\WebAPI\WebAPI.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="API\v2\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="API\v2\" />
+  </ItemGroup>
 </Project>

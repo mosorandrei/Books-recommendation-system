@@ -29,20 +29,22 @@ namespace Infrastructure.Test
                 new Book
                 {
                     Id = Guid.Parse("576c63eb-685f-4cd8-926b-de085c683a20"),
-                    Title = "Titanic",
+                    Title = "Divergent",
                     Rating = 10,
                     Description = "",
-                    PublicationDate = DateTime.Now,//for testing purposes
-                    ImageUri = new Uri("https://en.wikipedia.org/wiki/Titanic")
+                    PublicationDate = DateTime.Now, //for testing purposes
+                    ImageUri = new Uri("https://bit.ly/3xlV5i2"),
+                    DownloadUri = new Uri("https://bit.ly/Reads_Divergent")
                 },
                 new Book
                 {
                     Id = Guid.Parse("5ce76653-3bc0-40fd-8a04-661bcd551ca7"),
-                    Title = "Titanic2",
+                    Title = "Lord of the Rings - The Fellowship of the Ring",
                     Rating = 9,
                     Description = "",
-                    PublicationDate = DateTime.Now,//for testing purposes
-                    ImageUri = new Uri("https://en.wikipedia.org/wiki/Titanic2") 
+                    PublicationDate = DateTime.Now, //for testing purposes
+                    ImageUri = new Uri("https://bit.ly/3cKkdpl"),
+                    DownloadUri = new Uri("https://bit.ly/Reads_Lord")
                 }
                   
             };

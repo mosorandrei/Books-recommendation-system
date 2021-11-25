@@ -1,6 +1,6 @@
 ﻿using Domain.Entities;
 using FluentAssertions;
-using Persistence.v1;
+using Persistence.v2;
 using System;
 using System.Threading.Tasks;
 using Xunit;
@@ -24,14 +24,14 @@ namespace Infrastructure.Test.Data
         }
 
         [Fact]
-        public async Task Given_NewUser_WhenUserIsNotNull_Then_AddAsyncShouldReturnANewUser()
+        public async Task GivenNewUserWhenUserIsNotNullThenAddAsyncShouldReturnANewUser()
         {
             var result = await repository.AddAsync(newUser);
             result.Should().BeOfType<User>();
         }
 
         [Fact]
-        public async void Given_NewUser_WhenUserIsNull_ThenAddSyncShouldReturnThrowArgumentNullException()
+        public void GivenNewUserWhenUserIsNullThenAddSyncShouldReturnThrowArgumentNullException()
         {
             _ = repository.Invoking(r => r.AddAsync(null)).Should().ThrowAsync<ArgumentNullException>();
         }

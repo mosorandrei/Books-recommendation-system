@@ -11,8 +11,8 @@ using Persistence.Context;
 namespace Persistence.Migrations.User
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20211110153956_FirstMigration")]
-    partial class FirstMigration
+    [Migration("20211125124504_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,11 +26,9 @@ namespace Persistence.Migrations.User
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Password")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Username")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

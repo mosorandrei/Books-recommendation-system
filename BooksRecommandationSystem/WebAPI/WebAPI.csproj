@@ -19,6 +19,7 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.2.2" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.2.2" />
     <PackageReference Include="ReportGenerator" Version="4.8.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,5 +33,10 @@
     <None Remove="Swashbuckle.AspNetCore.SwaggerGen" />
     <None Remove="Swashbuckle.AspNetCore.SwaggerUI" />
     <None Remove="ReportGenerator" />
+    <None Remove="Controllers\v2\" />
+    <None Remove="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\v2\" />
   </ItemGroup>
 </Project>

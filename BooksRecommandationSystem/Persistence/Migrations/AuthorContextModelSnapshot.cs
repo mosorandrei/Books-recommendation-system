@@ -7,7 +7,7 @@ using Persistence.Context;
 
 #nullable disable
 
-namespace Persistence.Migrations.Author
+namespace Persistence.Migrations
 {
     [DbContext(typeof(AuthorContext))]
     partial class AuthorContextModelSnapshot : ModelSnapshot
@@ -24,11 +24,9 @@ namespace Persistence.Migrations.Author
                         .HasColumnType("TEXT");
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

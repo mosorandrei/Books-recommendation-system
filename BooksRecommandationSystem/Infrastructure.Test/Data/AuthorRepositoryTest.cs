@@ -1,6 +1,6 @@
 ﻿using Domain.Entities;
 using FluentAssertions;
-using Persistence.v1;
+using Persistence.v2;
 using System;
 using System.Threading.Tasks;
 using Xunit;
@@ -24,14 +24,14 @@ namespace Infrastructure.Test.Data
         }
 
         [Fact]
-        public async Task Given_NewAuthor_WhenAuthorIsNotNull_Then_AddAsyncShouldReturnANewAuthor()
+        public async Task GivenNewAuthorWhenAuthorIsNotNullThenAddAsyncShouldReturnANewAuthor()
         {
             var result = await repository.AddAsync(newAuthor);
             result.Should().BeOfType<Author>();
         }
 
         [Fact]
-        public async void Given_NewAuthor_WhenAuthorIsNull_ThenAddSyncShouldReturnThrowArgumentNullException()
+        public void GivenNewAuthorWhenAuthorIsNullThenAddSyncShouldReturnThrowArgumentNullException()
         {
             _ = repository.Invoking(r => r.AddAsync(null)).Should().ThrowAsync<ArgumentNullException>();
         }
