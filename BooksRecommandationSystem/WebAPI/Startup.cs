@@ -1,6 +1,9 @@
 ﻿using Application;
-using Persistence;
+using Domain.AuthModels;
 using Microsoft.OpenApi.Models;
+using Persistence;
+using Persistence.Extensions;
+using WebAPI.Config;
 
 namespace WebAPI
 {
@@ -15,7 +18,16 @@ namespace WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
 
         public void ConfigureServices(IServiceCollection services)
-        { 
+        {
+            // Strongly-typed configurations using IOptions
+            services.Configure<Token>(Configuration.GetSection("token"));
+
+            // Identity DB for Identity
+            services.SetupIdentityDatabase(Configuration);
+
+            // HttpContext
+            services.AddHttpContextAccessor();
+
             services.AddApiVersioning(config =>
             {
                 config.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
@@ -25,7 +37,7 @@ namespace WebAPI
 
             services.AddVersionedApiExplorer(options =>
             {
-               options.SubstituteApiVersionInUrl = true;
+                options.SubstituteApiVersionInUrl = true;
             });
 
             services.AddEndpointsApiExplorer();
@@ -43,7 +55,7 @@ namespace WebAPI
             {
                 var title = "The Book Dealer";
                 var description = "Your trusted Book Dealer that always gets you what you need.";
-                
+
                 config.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
@@ -66,10 +78,17 @@ namespace WebAPI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                // ONLY automatically create development databases
+                // app.EnsureCosmosDbIsCreated();
+                // app.SeedToDoContainerIfEmptyAsync().Wait();
+                // Optional: auto-create and seed Identity DB
+                app.EnsureIdentityDbIsCreated();
+                app.SeedIdentityDataAsync().Wait();
             }
-
+            app.UseAuthorization();
             app.UseSwagger();
-            app.UseSwaggerUI(c => {
+            app.UseSwaggerUI(c =>
+            {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPI v1");
                 c.SwaggerEndpoint("/swagger/v2/swagger.json", "WebAPI v2");
             });

@@ -1,6 +1,3 @@
-using Application;
-using Persistence;
-
 namespace WebAPI
 {
     public class Program
@@ -13,7 +10,7 @@ namespace WebAPI
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
-                { 
+                {
                     webBuilder.UseStartup<Startup>();
                 });
     }

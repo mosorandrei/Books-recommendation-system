@@ -1,13 +1,13 @@
 ﻿using Application.Features.Commands;
 using Application.Features.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers.v2
 {
     [ApiVersion("2.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
-
     public class BooksController : BaseController
     {
         public BooksController(IMediator mediator) : base(mediator)

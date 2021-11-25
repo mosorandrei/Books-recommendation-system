@@ -31,7 +31,4 @@
   <ItemGroup>
     <None Remove="v2\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="v2\" />
-  </ItemGroup>
 </Project>

@@ -8,6 +8,7 @@ namespace Application.Interfaces
         DbSet<Domain.Entities.Genre> Genres { get; set; }
         DbSet<Domain.Entities.Author> Authors { get; set; }
         DbSet<Domain.Entities.User> Users { get; set; }
+        DbSet<Domain.Entities.ApplicationUser> ApplicationUsers { get; set; }
         Task<int> SaveChangesAsync();
     }
 }

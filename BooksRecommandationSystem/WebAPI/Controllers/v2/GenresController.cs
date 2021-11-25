@@ -7,7 +7,6 @@ namespace WebAPI.Controllers.v2
 {
     [ApiVersion("2.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
-
     public class GenresController : BaseController
     {
         public GenresController(IMediator mediator) : base(mediator)
