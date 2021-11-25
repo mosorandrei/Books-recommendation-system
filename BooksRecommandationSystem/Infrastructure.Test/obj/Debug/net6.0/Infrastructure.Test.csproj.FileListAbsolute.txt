@@ -777,3 +777,6 @@ C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\Inf
 C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\Infrastructure.Test\obj\Debug\net6.0\ref\Infrastructure.Test.dll
 C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\Infrastructure.Test\obj\Debug\net6.0\Infrastructure.Test.pdb
 C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\Infrastructure.Test\obj\Debug\net6.0\Infrastructure.Test.genruntimeconfig.cache
+C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\Infrastructure.Test\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\Infrastructure.Test\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\Infrastructure.Test\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

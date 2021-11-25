@@ -8,14 +8,14 @@ namespace Domain.AuthModels
         /// <summary>
         /// The username of the user logging in.
         /// </summary>
-        [Required]
-        [JsonProperty("username")]
-        public string? Username { get; set; }
+        [Required(ErrorMessage = "User Email is required!")]
+        [JsonProperty("email")]
+        public string? Email { get; set; }
 
         /// <summary>
         /// The password for the user logging in.
         /// </summary>
-        [Required]
+        [Required(ErrorMessage = "User Password is required!")]
         [JsonProperty("password")]
         public string? Password { get; set; }
     }

@@ -1,6 +1,7 @@
 ﻿using Application.Features.Commands;
 using Application.Features.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers.v2
@@ -13,18 +14,21 @@ namespace WebAPI.Controllers.v2
         {
         }
 
+        [Authorize(Roles = "Member,Administrator")]
         [HttpGet]
         public async Task<IActionResult> Get()
         {
             return Ok(await mediator.Send(new GetAuthorsQuery()));
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateAuthorCommand command)
         {
             return Ok(await mediator.Send(command));
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpPut]
         public async Task<IActionResult> Update(Guid id, [FromBody] UpdateAuthorCommand command)
         {
@@ -36,6 +40,7 @@ namespace WebAPI.Controllers.v2
             return Ok(await mediator.Send(command));
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpDelete]
         public async Task<IActionResult> Delete(Guid id)
         {

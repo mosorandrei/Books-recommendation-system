@@ -11,5 +11,23 @@ namespace Application.Interfaces
         /// <param name="ipAddress"></param>
         /// <returns></returns>
         Task<TokenResponse> Authenticate(TokenRequest request, string ipAddress);
+        /// <summary>
+        ///     Register a user in database as Member
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        Task<RegisterResponse> RegisterMember(RegisterRequest request);
+        /// <summary>
+        ///     Get all Members from Database
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        Task<IEnumerable<ApplicationUserDTO>> GetAllMembersAsync();
+        /// <summary>
+        ///     Get all Admins from Database
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        Task<IEnumerable<ApplicationUserDTO>> GetAllAdminsAsync();
     }
 }

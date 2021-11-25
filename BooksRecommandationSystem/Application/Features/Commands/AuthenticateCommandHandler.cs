@@ -18,17 +18,12 @@ namespace Application.Features.Commands
         }
         public async Task<AuthenticationResponse> Handle(AuthenticateCommand command, CancellationToken cancellationToken)
         {
-            AuthenticationResponse response = new AuthenticationResponse();
+            AuthenticationResponse response = new();
 
             string ipAddress = _httpContext.Connection.RemoteIpAddress.MapToIPv4().ToString();
 
             TokenResponse tokenResponse = await repository.Authenticate(command, ipAddress);
-            if (tokenResponse == null)
-            {
-                throw new NullReferenceException();
-            }
-
-            response.Resource = tokenResponse;
+            response.Resource = tokenResponse ?? throw new NullReferenceException();
             return response;
         }
     }

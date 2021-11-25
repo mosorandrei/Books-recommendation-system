@@ -14,18 +14,21 @@ namespace WebAPI.Controllers.v2
         {
         }
 
+        [Authorize(Roles = "Member,Administrator")]
         [HttpGet]
         public async Task<IActionResult> Get()
         {
             return Ok(await mediator.Send(new GetBooksQuery()));
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateBookCommand command)
         {
             return Ok(await mediator.Send(command));
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpPut]
         public async Task<IActionResult> Update(Guid id, [FromBody] UpdateBookCommand command)
         {
@@ -37,6 +40,7 @@ namespace WebAPI.Controllers.v2
             return Ok(await mediator.Send(command));
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpDelete]
         public async Task<IActionResult> Delete(Guid id)
         {

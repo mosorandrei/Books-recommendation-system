@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces;
 using Domain.AuthModels;
+using Domain.Constants;
 using Domain.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -30,11 +31,11 @@ namespace Persistence.v2
             _httpContext = httpContextAccessor.HttpContext;
         }
 
-        public async Task<TokenResponse> Authenticate(TokenRequest request, string ipAddress)
+        public async Task<TokenResponse?> Authenticate(TokenRequest request, string ipAddress)
         {
-            if (await IsValidUser(request.Username, request.Password))
+            if (await IsValidUser(request.Email, request.Password))
             {
-                ApplicationUser user = await GetUserByEmail(request.Username);
+                ApplicationUser user = await GetUserByEmail(request.Email);
 
                 if (user != null && user.IsEnabled)
                 {
@@ -54,9 +55,56 @@ namespace Persistence.v2
             return null;
         }
 
-        private async Task<bool> IsValidUser(string username, string password)
+        public async Task<RegisterResponse?> RegisterMember(RegisterRequest request)
         {
-            ApplicationUser user = await GetUserByEmail(username);
+            if (!await IsValidUser(request.Email, request.Password))
+            {
+                ApplicationUser user = new()
+                {
+                    Email = request.Email,
+                    UserName = request.Username,
+                    FirstName = request.FirstName,
+                    LastName = request.LastName,
+                    IsEnabled = true,
+                    EmailConfirmed = true
+                };
+                var result = await _userManager.CreateAsync(user, request.Password);
+                if (!result.Succeeded)
+                    return new RegisterResponse { Status = "Error", Message = "User creation failed!" };
+                await _userManager.AddToRoleAsync(user, ApplicationIdentityConstants.Roles.Member);
+                return new RegisterResponse { Status = "Succes", Message = "User created successfully!" };
+            }
+
+            return new RegisterResponse { Status = "Error", Message = "User already exists!" };
+        }
+
+        public async Task<IEnumerable<ApplicationUserDTO>> GetAllMembersAsync()
+        {
+            List<ApplicationUser> members = new(await _userManager.GetUsersInRoleAsync(ApplicationIdentityConstants.Roles.Member));
+            return members.Select(member => new ApplicationUserDTO()
+            {
+                Username = member.UserName,
+                Email = member.Email,
+                FirstName = member.FirstName,
+                LastName = member.LastName
+            });
+        }
+
+        public async Task<IEnumerable<ApplicationUserDTO>> GetAllAdminsAsync()
+        {
+            List<ApplicationUser> admins = new(await _userManager.GetUsersInRoleAsync(ApplicationIdentityConstants.Roles.Administrator));
+            return admins.Select(member => new ApplicationUserDTO()
+            {
+                Username = member.UserName,
+                Email = member.Email,
+                FirstName = member.FirstName,
+                LastName = member.LastName
+            });
+        }
+
+        private async Task<bool> IsValidUser(string email, string password)
+        {
+            ApplicationUser user = await GetUserByEmail(email);
 
             if (user == null)
             {
@@ -79,8 +127,8 @@ namespace Persistence.v2
             string role = (await _userManager.GetRolesAsync(user))[0];
             byte[] secret = Encoding.ASCII.GetBytes(_token.Secret);
 
-            JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
-            SecurityTokenDescriptor descriptor = new SecurityTokenDescriptor
+            JwtSecurityTokenHandler handler = new();
+            SecurityTokenDescriptor descriptor = new()
             {
                 Issuer = _token.Issuer,
                 Audience = _token.Audience,

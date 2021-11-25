@@ -1,6 +1,8 @@
 ﻿using Application.Features.Commands;
 using Application.Features.Queries;
+using Domain.Constants;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers.v2
@@ -12,17 +14,22 @@ namespace WebAPI.Controllers.v2
         public GenresController(IMediator mediator) : base(mediator)
         {
         }
+
+        [Authorize(Roles = "Member,Administrator")]
         [HttpGet]
         public async Task<IActionResult> Get()
         {
             return Ok(await mediator.Send(new GetGenresQuery()));
         }
+
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateGenreCommand command)
         {
             return Ok(await mediator.Send(command));
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpPut]
         public async Task<IActionResult> Update(Guid id, [FromBody] UpdateGenreCommand command)
         {
@@ -33,6 +40,8 @@ namespace WebAPI.Controllers.v2
 
             return Ok(await mediator.Send(command));
         }
+
+        [Authorize(Roles = "Administrator")]
         [HttpDelete]
         public async Task<IActionResult> Delete(Guid id)
         {
