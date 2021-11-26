@@ -2,6 +2,10 @@ ADR Links:
 <ul>
 <li>[Week7] Bare-Bones API v1 - https://docs.google.com/document/d/1EAvLQpg0PsfW6gh-Pl9SabpMY76x0CsXDt9unk4bRlo/edit</li>
 </ul>
+<br>
+<ul>
+<li>[Week9] Secure API v2 - https://docs.google.com/document/d/1DrVDD5c3Pv-Vs7ydL3bpY7B6Ln5tH0dF3tI9pcQ0das/edit?usp=sharing</li>
+</ul>
 
 Aplicația va oferi utilizatorilor toate facilitățile specifice unei librării
 online, care vor asigura un acces ușor al cărților, fie printr-o căutare după anumite câmpuri, fie prin recomandări personalizate. Utilizatorii vor putea descărca cărțile care le
