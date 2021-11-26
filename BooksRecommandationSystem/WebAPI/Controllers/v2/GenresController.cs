@@ -1,6 +1,5 @@
 ﻿using Application.Features.Commands;
 using Application.Features.Queries;
-using Domain.Constants;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
