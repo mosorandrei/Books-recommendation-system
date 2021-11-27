@@ -9,5 +9,6 @@ namespace Application.Features.Commands
         public string? Description { get; set; }
         public DateTime PublicationDate { get; set; }
         public Uri? ImageUri { get; set; }
+        public Uri? DownloadUri { get; set; }
     }
 }

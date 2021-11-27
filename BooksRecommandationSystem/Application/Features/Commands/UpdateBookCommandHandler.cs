@@ -23,6 +23,7 @@ namespace Application.Features.Commands
             book.Title = request.Title;
             book.PublicationDate = request.PublicationDate;
             book.ImageUri = request.ImageUri;
+            book.DownloadUri = request.DownloadUri;
 
             await repository.UpdateAsync(book);
 

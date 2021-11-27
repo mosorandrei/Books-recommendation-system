@@ -28,4 +28,7 @@
     <ProjectReference Include="..\Application\Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="v2\" />
+  </ItemGroup>
 </Project>

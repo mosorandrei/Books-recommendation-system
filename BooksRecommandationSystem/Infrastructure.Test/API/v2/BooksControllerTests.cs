@@ -1,0 +1,32 @@
+﻿
+using System.Threading.Tasks;
+using Application.Features.Queries;
+using FakeItEasy;
+using MediatR;
+using WebAPI.Controllers.v2;
+using Xunit;
+
+namespace Infrastructure.Test.API.v2
+{
+    public class BooksControllerTests
+    {
+        private readonly BooksController controller;
+        private readonly IMediator mediator;
+
+        public BooksControllerTests()
+        {
+            mediator = A.Fake<IMediator>();
+            controller = new BooksController(mediator);
+        }
+
+        [Fact]
+        public async Task Given_BooksController_When_GetIsCalled_Then_ShouldReturnABookCollection()
+        {
+            await controller.Get();
+            A.CallTo(() => mediator.Send(A<GetBooksQuery>._, default)).MustHaveHappenedOnceExactly();
+
+        }
+
+    }
+}
+

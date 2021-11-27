@@ -1,8 +1,6 @@
-﻿
-
-using Domain.Entities;
+﻿using Domain.Entities;
 using FluentAssertions;
-using Persistence.v1;
+using Persistence.v2;
 using System;
 using System.Threading.Tasks;
 using Xunit;
@@ -20,23 +18,24 @@ namespace Infrastructure.Test.Data
             newBook = new Book() 
             {
                 Id = Guid.Parse("cda75f32-15d8-418b-b174-6ee981a537f0"),
-                Title = "Titanic",
+                Title = "Divergent",
                 Rating = 10,
                 Description = "",
-                PublicationDate = DateTime.Now,//for testing purposes
-                ImageUri = new Uri("https://en.wikipedia.org/wiki/Titanic")
+                PublicationDate = DateTime.Now, //for testing purposes
+                ImageUri = new Uri("https://bit.ly/3xlV5i2"),
+                DownloadUri = new Uri("http://bit.ly/Reads_Divergent")
             };
         }
 
         [Fact]
-        public async Task Given_NewBook_WhenBookIsNotNull_Then_AddAsyncShouldReturnANewBook()
+        public async Task GivenNewBookWhenBookIsNotNullThenAddAsyncShouldReturnANewBook()
         {
             var result = await repository.AddAsync(newBook);
             result.Should().BeOfType<Book>();
         }
 
         [Fact]
-        public async void Given_NewBook_WhenBookIsNull_ThenAddSyncShouldReturnThrowArgumentNullException()
+        public void GivenNewBookWhenBookIsNullThenAddSyncShouldReturnThrowArgumentNullException()
         {
             _ = repository.Invoking(r => r.AddAsync(null)).Should().ThrowAsync<ArgumentNullException>();
         }
