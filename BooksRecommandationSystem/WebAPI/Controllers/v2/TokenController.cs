@@ -14,6 +14,7 @@ namespace WebAPI.Controllers.v2
         public TokenController(IMediator mediator) : base(mediator)
         {
         }
+
         // POST: api/Token/Authenticate
         /// <summary>
         ///     Validate that the user account is valid and return an auth token

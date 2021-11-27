@@ -12,7 +12,7 @@ namespace Persistence.Context
         public ApplicationUserContext(DbContextOptions<ApplicationUserContext> options) : base(options)
         {
         }
-        public DbSet<ApplicationUser>? Authors { get; set; }
+        public DbSet<ApplicationUser>? Users { get; set; }
         public async Task<int> SaveChangesAsync()
         {
             return await base.SaveChangesAsync();
