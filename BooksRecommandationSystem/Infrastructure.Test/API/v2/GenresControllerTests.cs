@@ -1,5 +1,7 @@
 ﻿
+using System;
 using System.Threading.Tasks;
+using Application.Features.Commands;
 using Application.Features.Queries;
 using FakeItEasy;
 using MediatR;
@@ -24,6 +26,29 @@ namespace Infrastructure.Test.API.v2
         {
             await controller.Get();
             A.CallTo(() => mediator.Send(A<GetGenresQuery>._, default)).MustHaveHappenedOnceExactly();
+
+        }
+
+        [Fact]
+        public async Task Given_GenresController_When_CreateIsCalled_Then_ShouldCreateAGenre()
+        {
+            await controller.Create(new CreateGenreCommand());
+            A.CallTo(() => mediator.Send(A<CreateGenreCommand>._, default)).MustHaveHappenedOnceExactly();
+
+        }
+        [Fact]
+        public async Task Given_GenresController_When_UpdateIsCalled_Then_ShouldUpdateAGenre()
+        {
+            await controller.Update(new Guid(), new UpdateGenreCommand());
+            A.CallTo(() => mediator.Send(A<UpdateGenreCommand>._, default)).MustHaveHappenedOnceExactly();
+
+        }
+
+        [Fact]
+        public async Task Given_GenresController_When_DeleteIsCalled_Then_ShouldDeleteAGenre()
+        {
+            await controller.Delete(new Guid());
+            A.CallTo(() => mediator.Send(A<DeleteGenreCommand>._, default)).MustHaveHappenedOnceExactly();
 
         }
 

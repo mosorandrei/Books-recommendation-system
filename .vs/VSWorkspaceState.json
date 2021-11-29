@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BooksRecommandationSystem"
+    "\\BooksRecommandationSystem",
+    "\\BooksRecommandationSystem\\Persistence",
+    "\\BooksRecommandationSystem\\Persistence\\Seed"
   ],
-  "SelectedNode": "\\BooksRecommandationSystem\\BooksRecommandationSystem.sln",
+  "SelectedNode": "\\BooksRecommandationSystem\\Persistence\\Seed\\ApplicationUserContextDataSeed.cs",
   "PreviewInSolutionExplorer": false
 }

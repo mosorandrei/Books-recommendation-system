@@ -1,0 +1,44 @@
+﻿using Application.Features.Queries;
+using Application.Interfaces;
+using Domain.Entities;
+using FakeItEasy;
+using FluentAssertions;
+using System;
+using System.Threading.Tasks;
+using Xunit;
+
+namespace Infrastructure.Test.Service.QueryHandlerTests
+{
+    public class GetBookByIdQueryHandlerTests
+    {
+        private readonly GetBookByIdQueryHandler handler;
+        private readonly IBookRepository repository;
+
+        public GetBookByIdQueryHandlerTests()
+        {
+            this.repository = A.Fake<IBookRepository>();
+            this.handler = new GetBookByIdQueryHandler(this.repository);
+        }
+
+        [Fact]
+        public async void GivenGetBookByIdQueryHandler_WhenHandleIsCalled_ThenGetByIdAsyncIsCalled()
+        {
+            await handler.Handle(new GetBookByIdQuery(), default);
+            A.CallTo(() => repository.GetByIdAsync(A<Guid>._)).MustHaveHappenedOnceExactly();
+        }
+        [Fact]
+        public async void GivenGetBookByIdQueryHandler_WhenHandleIsCalledAndBookDoesNotExist_ThenShouldThrowException()
+        {
+            Book book = null;
+
+            A.CallTo(() => repository.GetByIdAsync(new Guid("8a55c0c8-a75c-4a4a-9714-5a31e431e052"))).Returns(book);
+
+            Func<Task> action = async () => await handler.Handle(new GetBookByIdQuery
+            {
+                Id = new Guid("8a55c0c8-a75c-4a4a-9714-5a31e431e052")
+            }, default);
+
+            _ = action.Should().ThrowAsync<Exception>(); ;
+        }
+    }
+}
