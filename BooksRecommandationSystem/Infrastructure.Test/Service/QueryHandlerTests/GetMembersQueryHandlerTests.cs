@@ -1,4 +1,5 @@
-﻿using Application.Features.Queries;
+﻿using System.Threading.Tasks;
+using Application.Features.Queries;
 using Application.Interfaces;
 using FakeItEasy;
 using Xunit;
@@ -17,7 +18,7 @@ namespace Infrastructure.Test.Service.QueryHandlerTests
         }
 
         [Fact]
-        public async void GivenGetMembersQueryHandler_WhenHandleIsCalled_ThenGetAllMembersAsyncIsCalled()
+        public async Task GivenGetMembersQueryHandlerWhenHandleIsCalledThenGetAllMembersAsyncIsCalled()
         {
             await handler.Handle(new GetMembersQuery(), default);
             A.CallTo(() => repository.GetAllMembersAsync()).MustHaveHappenedOnceExactly();

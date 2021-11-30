@@ -21,15 +21,16 @@ namespace Infrastructure.Test.Service.QueryHandlerTests
         }
 
         [Fact]
-        public async void GivenGetBookByIdQueryHandler_WhenHandleIsCalled_ThenGetByIdAsyncIsCalled()
+        public async Task GivenGetBookByIdQueryHandlerWhenHandleIsCalledThenGetByIdAsyncIsCalled()
         {
             await handler.Handle(new GetBookByIdQuery(), default);
             A.CallTo(() => repository.GetByIdAsync(A<Guid>._)).MustHaveHappenedOnceExactly();
         }
+
         [Fact]
-        public async void GivenGetBookByIdQueryHandler_WhenHandleIsCalledAndBookDoesNotExist_ThenShouldThrowException()
+        public void GivenGetBookByIdQueryHandlerWhenHandleIsCalledAndBookDoesNotExistThenShouldThrowException()
         {
-            Book book = null;
+            Book? book = null;
 
             A.CallTo(() => repository.GetByIdAsync(new Guid("8a55c0c8-a75c-4a4a-9714-5a31e431e052"))).Returns(book);
 

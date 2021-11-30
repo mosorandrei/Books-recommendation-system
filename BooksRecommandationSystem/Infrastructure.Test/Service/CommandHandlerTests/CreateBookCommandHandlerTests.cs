@@ -19,11 +19,10 @@ namespace Infrastructure.Test.Service
         }
 
         [Fact]
-        public async Task Given_CreateBookCommandHandler_When_HandleIsCalled_Then_AddAsyncBookIsCalled()
+        public async Task GivenCreateBookCommandHandlerWhenHandleIsCalledThenAddAsyncBookIsCalled()
         {
             await handler.Handle(new CreateBookCommand(), default);
             A.CallTo(() => repository.AddAsync(A<Book>._)).MustHaveHappenedOnceExactly();
-
         }
     }
 }

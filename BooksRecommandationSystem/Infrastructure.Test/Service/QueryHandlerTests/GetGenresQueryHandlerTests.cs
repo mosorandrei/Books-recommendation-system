@@ -1,4 +1,5 @@
-﻿using Application.Features.Queries;
+﻿using System.Threading.Tasks;
+using Application.Features.Queries;
 using Application.Interfaces;
 using FakeItEasy;
 using Xunit;
@@ -17,7 +18,7 @@ namespace Infrastructure.Test.Service.QueryHandlerTests
         }
 
         [Fact]
-        public async void GivenGetGenresQueryHandler_WhenHandleIsCalled_ThenGetAllAsyncIsCalled()
+        public async Task GivenGetGenresQueryHandlerWhenHandleIsCalledThenGetAllAsyncIsCalled()
         {
             await handler.Handle(new GetGenresQuery(), default);
             A.CallTo(() => repository.GetAllAsync()).MustHaveHappenedOnceExactly();

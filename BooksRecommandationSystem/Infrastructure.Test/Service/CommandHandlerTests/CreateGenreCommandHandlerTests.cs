@@ -19,11 +19,10 @@ namespace Infrastructure.Test.Service
         }
 
         [Fact]
-        public async Task Given_CreateGenreCommandHandler_When_HandleIsCalled_Then_AddAsyncGenreIsCalled()
+        public async Task GivenCreateGenreCommandHandlerWhenHandleIsCalledThenAddAsyncGenreIsCalled()
         {
             await handler.Handle(new CreateGenreCommand(), default);
             A.CallTo(() => repository.AddAsync(A<Genre>._)).MustHaveHappenedOnceExactly();
-
         }
     }
 }

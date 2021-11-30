@@ -21,9 +21,9 @@ namespace Infrastructure.Test.Service
         }
 
         [Fact]
-        public async void Given_DeleteBookCommand_WhenHandleIsCalled_ThenDeleteAsyncBookIsCalled()
+        public async Task GivenDeleteBookCommandWhenHandleIsCalledThenDeleteAsyncBookIsCalled()
         {
-            Book book = new Book
+            Book book = new()
             {
                 Id = new Guid("25bb7416-4cbb-4b46-931b-604199ae6cba")
             };
@@ -39,9 +39,9 @@ namespace Infrastructure.Test.Service
         }
 
         [Fact]
-        public async void Given_DeleteBookCommand_When_HandleIsCalledAndBookIsNull_Then_ShouldThrowException()
+        public void GivenDeleteBookCommandWhenHandleIsCalledAndBookIsNullThenShouldThrowException()
         {
-            Book book = null;
+            Book? book = null;
 
             A.CallTo(() => repository.GetByIdAsync(new Guid("25bb7416-4cbb-4b46-931b-604199ae6cba"))).Returns(book);
 

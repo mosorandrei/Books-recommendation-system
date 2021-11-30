@@ -22,11 +22,10 @@ namespace Infrastructure.Test.API.v2
         }
 
         [Fact]
-        public async Task Given_BooksController_When_GetIsCalled_Then_ShouldReturnABookCollection()
+        public async Task GivenBooksControllerWhenGetIsCalledThenShouldReturnABookCollection()
         {
             await controller.Get();
             A.CallTo(() => mediator.Send(A<GetBooksQuery>._, default)).MustHaveHappenedOnceExactly();
-
         }
 
         [Fact]
@@ -34,14 +33,13 @@ namespace Infrastructure.Test.API.v2
         {
             await controller.Create(new CreateBookCommand());
             A.CallTo(() => mediator.Send(A<CreateBookCommand>._, default)).MustHaveHappenedOnceExactly();
-
         }
+
         [Fact]
         public async Task Given_BooksController_When_UpdateIsCalled_Then_ShouldUpdateABook()
         {
             await controller.Update(new Guid(), new UpdateBookCommand());
             A.CallTo(() => mediator.Send(A<UpdateBookCommand>._, default)).MustHaveHappenedOnceExactly();
-
         }
 
         [Fact]
@@ -49,9 +47,7 @@ namespace Infrastructure.Test.API.v2
         {
             await controller.Delete(new Guid());
             A.CallTo(() => mediator.Send(A<DeleteBookCommand>._, default)).MustHaveHappenedOnceExactly();
-
         }
-
     }
 }
 

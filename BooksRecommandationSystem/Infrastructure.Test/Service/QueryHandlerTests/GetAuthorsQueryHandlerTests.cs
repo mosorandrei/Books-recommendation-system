@@ -22,7 +22,7 @@ namespace Infrastructure.Test.Service.QueryHandlerTests
         }
 
         [Fact]
-        public async void GivenGetAuthorsQueryHandler_WhenHandleIsCalled_ThenGetAllAsyncIsCalled()
+        public async Task GivenGetAuthorsQueryHandlerWhenHandleIsCalledThenGetAllAsyncIsCalled()
         {
             await handler.Handle(new GetAuthorsQuery(), default);
             A.CallTo(() => repository.GetAllAsync()).MustHaveHappenedOnceExactly();

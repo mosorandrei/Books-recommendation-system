@@ -22,12 +22,12 @@ namespace Application.Interfaces
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        Task<IEnumerable<ApplicationUserDTO>> GetAllMembersAsync();
+        Task<IEnumerable<ApplicationUserDto>> GetAllMembersAsync();
         /// <summary>
         ///     Get all Admins from Database
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        Task<IEnumerable<ApplicationUserDTO>> GetAllAdminsAsync();
+        Task<IEnumerable<ApplicationUserDto>> GetAllAdminsAsync();
     }
 }

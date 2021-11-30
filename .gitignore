@@ -1,0 +1,5 @@
+.sonarqube/**
+.sonarqube/*
+.sonarqube/
+.sonarqube
+BooksRecommandationSystem/.sonarqube/conf/0/FilesToAnalyze.txt

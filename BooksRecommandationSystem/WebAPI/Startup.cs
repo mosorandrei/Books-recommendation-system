@@ -132,7 +132,7 @@ namespace WebAPI
                     ValidateAudience = true,
                     ValidAudience = token.Audience,
                     ValidIssuer = token.Issuer,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(token.Secret))
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(s: token.Secret is not null ? token.Secret : ""))
                 };
             });
 

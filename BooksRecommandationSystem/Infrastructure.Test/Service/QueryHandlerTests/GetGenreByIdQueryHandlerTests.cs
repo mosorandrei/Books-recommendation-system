@@ -21,15 +21,16 @@ namespace Infrastructure.Test.Service.QueryHandlerTests
         }
 
         [Fact]
-        public async void GivenGetGenreByIdQueryHandler_WhenHandleIsCalled_ThenGetByIdAsyncIsCalled()
+        public async Task GivenGetGenreByIdQueryHandlerWhenHandleIsCalledThenGetByIdAsyncIsCalled()
         {
             await handler.Handle(new GetGenreByIdQuery(), default);
             A.CallTo(() => repository.GetByIdAsync(A<Guid>._)).MustHaveHappenedOnceExactly();
         }
+
         [Fact]
-        public async void GivenGetGenreByIdQueryHandler_WhenHandleIsCalledAndGenreDoesNotExist_ThenShouldThrowException()
+        public void GivenGetGenreByIdQueryHandlerWhenHandleIsCalledAndGenreDoesNotExistThenShouldThrowException()
         {
-            Genre genre = null;
+            Genre? genre = null;
 
             A.CallTo(() => repository.GetByIdAsync(new Guid("8a55c0c8-a75c-4a4a-9714-5a31e431e052"))).Returns(genre);
 

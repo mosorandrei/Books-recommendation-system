@@ -22,34 +22,31 @@ namespace Infrastructure.Test.API.v2
         }
 
         [Fact]
-        public async Task Given_GenresController_When_GetIsCalled_Then_ShouldReturnAGenreCollection()
+        public async Task GivenGenresControllerWhenGetIsCalledThenShouldReturnAGenreCollection()
         {
             await controller.Get();
             A.CallTo(() => mediator.Send(A<GetGenresQuery>._, default)).MustHaveHappenedOnceExactly();
-
         }
 
         [Fact]
-        public async Task Given_GenresController_When_CreateIsCalled_Then_ShouldCreateAGenre()
+        public async Task GivenGenresControllerWhenCreateIsCalledThenShouldCreateAGenre()
         {
             await controller.Create(new CreateGenreCommand());
             A.CallTo(() => mediator.Send(A<CreateGenreCommand>._, default)).MustHaveHappenedOnceExactly();
-
         }
+
         [Fact]
-        public async Task Given_GenresController_When_UpdateIsCalled_Then_ShouldUpdateAGenre()
+        public async Task GivenGenresControllerWhenUpdateIsCalledThenShouldUpdateAGenre()
         {
             await controller.Update(new Guid(), new UpdateGenreCommand());
             A.CallTo(() => mediator.Send(A<UpdateGenreCommand>._, default)).MustHaveHappenedOnceExactly();
-
         }
 
         [Fact]
-        public async Task Given_GenresController_When_DeleteIsCalled_Then_ShouldDeleteAGenre()
+        public async Task GivenGenresControllerWhenDeleteIsCalledThenShouldDeleteAGenre()
         {
             await controller.Delete(new Guid());
             A.CallTo(() => mediator.Send(A<DeleteGenreCommand>._, default)).MustHaveHappenedOnceExactly();
-
         }
 
     }

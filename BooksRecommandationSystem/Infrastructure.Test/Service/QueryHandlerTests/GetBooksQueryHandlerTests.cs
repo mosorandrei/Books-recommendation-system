@@ -1,4 +1,5 @@
-﻿using Application.Features.Queries;
+﻿using System.Threading.Tasks;
+using Application.Features.Queries;
 using Application.Interfaces;
 using FakeItEasy;
 using Xunit;
@@ -17,7 +18,7 @@ namespace Infrastructure.Test.Service.QueryHandlerTests
         }
 
         [Fact]
-        public async void GivenGetBooksQueryHandler_WhenHandleIsCalled_ThenGetAllAsyncIsCalled()
+        public async Task GivenGetBooksQueryHandlerWhenHandleIsCalledThenGetAllAsyncIsCalled()
         {
             await handler.Handle(new GetBooksQuery(), default);
             A.CallTo(() => repository.GetAllAsync()).MustHaveHappenedOnceExactly();

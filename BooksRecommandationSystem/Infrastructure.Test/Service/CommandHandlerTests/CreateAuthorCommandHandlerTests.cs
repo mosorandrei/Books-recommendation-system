@@ -19,11 +19,10 @@ namespace Infrastructure.Test.Service
         }
 
         [Fact]
-        public async Task Given_CreateAuthorCommandHandler_When_HandleIsCalled_Then_AddAsyncAuthorIsCalled() 
+        public async Task GivenCreateAuthorCommandHandlerWhenHandleIsCalledThenAddAsyncAuthorIsCalled() 
         {
             await handler.Handle(new CreateAuthorCommand(), default);
             A.CallTo(() => repository.AddAsync(A<Author>._)).MustHaveHappenedOnceExactly();
-
         }
     }
 }

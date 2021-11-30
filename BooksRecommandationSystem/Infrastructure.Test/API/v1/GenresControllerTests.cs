@@ -20,7 +20,7 @@ namespace Infrastructure.Test.API.v1
         }
 
         [Fact]
-        public async Task Given_GenresController_When_GetIsCalled_Then_ShouldReturnAGenreCollection()
+        public async Task GivenGenresControllerWhenGetIsCalledThenShouldReturnAGenreCollection()
         {
             await controller.Get();
             A.CallTo(() => mediator.Send(A<GetGenresQuery>._, default)).MustHaveHappenedOnceExactly();

@@ -12,7 +12,7 @@ namespace Persistence.v2
         {
             this.context = context;
         }
-        public async Task<TEntity> AddAsync(TEntity entity)
+        public async Task<TEntity> AddAsync(TEntity? entity)
         {
             if (entity == null)
             {

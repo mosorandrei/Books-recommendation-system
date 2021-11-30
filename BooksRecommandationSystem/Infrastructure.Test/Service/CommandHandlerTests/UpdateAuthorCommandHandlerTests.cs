@@ -21,9 +21,9 @@ namespace Infrastructure.Test.Service
         }
 
         [Fact]
-        public async void Given_UpdateAuthorCommand_When_HandleIsCalled_Then_ShouldReturnUpdateAuthor()
+        public async Task GivenUpdateAuthorCommandWhenHandleIsCalledThenShouldReturnUpdateAuthor()
         {
-            Author author = new Author
+            Author author = new()
             {
                 Id = new Guid("25bb7416-4cbb-4b46-931b-604199ae6cba")
             };
@@ -39,9 +39,9 @@ namespace Infrastructure.Test.Service
         }
 
         [Fact]
-        public async void Given_UpdateAuthorCommand_When_HandleIsCalledAndAuthorIsNull_Then_ShouldThrowException()
+        public void GivenUpdateAuthorCommandWhenHandleIsCalledAndAuthorIsNullThenShouldThrowException()
         {
-            Author author = null;
+            Author? author = null;
 
             A.CallTo(() => repository.GetByIdAsync(new Guid("25bb7416-4cbb-4b46-931b-604199ae6cba"))).Returns(author);
 

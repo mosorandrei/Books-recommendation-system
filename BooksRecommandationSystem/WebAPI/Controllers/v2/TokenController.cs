@@ -15,6 +15,7 @@ namespace WebAPI.Controllers.v2
         {
         }
 
+        /*
         // POST: api/Token/Authenticate
         /// <summary>
         ///     Validate that the user account is valid and return an auth token
@@ -22,6 +23,8 @@ namespace WebAPI.Controllers.v2
         /// </summary>
         /// <param name="command"></param>
         /// <returns></returns>
+        */
+
         [AllowAnonymous]
         [HttpPost("Authenticate")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -30,14 +33,18 @@ namespace WebAPI.Controllers.v2
         public async Task<TokenResponse> AuthenticateAsync([FromBody] AuthenticateCommand command)
         {
             var response = await mediator.Send(command);
-            return response.Resource;
+            return response.Resource is not null ? response.Resource : throw new ArgumentNullException(nameof(command));
         }
+
+        /*
         // POST: api/Token/Authenticate
         /// <summary>
         ///     Register a new User in the Database
         /// </summary>
         /// <param name="command"></param>
         /// <returns></returns>
+        */
+
         [AllowAnonymous]
         [HttpPost("RegisterMember")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -46,12 +53,16 @@ namespace WebAPI.Controllers.v2
         public async Task<RegisterResponse> RegisterAsync([FromBody] RegisterMemberCommand command)
         {
             var response = await mediator.Send(command);
-            return response.Resource;
+            return response.Resource is not null ? response.Resource : throw new ArgumentNullException(nameof(command));
         }
+
+        /*
         // GET: api/Token/Authenticate
         /// <summary>
         ///     Get all Members in Database
         /// </summary>
+        */
+
         [AllowAnonymous]
         [HttpGet("GetAllMembers")]
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
@@ -59,10 +70,14 @@ namespace WebAPI.Controllers.v2
         {
             return Ok(await mediator.Send(new GetMembersQuery()));
         }
+
+        /*
         // GET: api/Token/Authenticate
         /// <summary>
         ///     Get all Admins in Database
         /// </summary>
+        */
+
         [AllowAnonymous]
         [HttpGet("GetAllAdmins")]
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]

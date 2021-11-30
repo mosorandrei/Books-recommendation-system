@@ -9,10 +9,13 @@ namespace Persistence.Context
         public ApplicationUserContext()
         {
         }
+
         public ApplicationUserContext(DbContextOptions<ApplicationUserContext> options) : base(options)
         {
         }
-        public DbSet<ApplicationUser>? Users { get; set; }
+
+        public override DbSet<ApplicationUser>? Users { get; set; }
+
         public async Task<int> SaveChangesAsync()
         {
             return await base.SaveChangesAsync();

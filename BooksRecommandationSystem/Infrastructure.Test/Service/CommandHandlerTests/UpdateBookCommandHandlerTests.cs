@@ -21,9 +21,9 @@ namespace Infrastructure.Test.Service
         }
 
         [Fact]
-        public async void Given_UpdateBookCommand_When_HandleIsCalled_Then_ShouldUpdateBook()
+        public async Task GivenUpdateBookCommandWhenHandleIsCalledThenShouldUpdateBook()
         {
-            Book book = new Book
+            Book book = new()
             {
                 Id = new Guid("8a55c0c8-a75c-4a4a-9714-5a31e431e052")
             };
@@ -39,9 +39,9 @@ namespace Infrastructure.Test.Service
         }
 
         [Fact]
-        public async void Given_UpdateBookCommand_When_HandleIsCalledAndBookIsNull_Then_ShouldThrowException()
+        public void GivenUpdateBookCommandWhenHandleIsCalledAndBookIsNullThenShouldThrowException()
         {
-            Book book = null;
+            Book? book = null;
 
             A.CallTo(() => repository.GetByIdAsync(new Guid("8a55c0c8-a75c-4a4a-9714-5a31e431e052"))).Returns(book);
 

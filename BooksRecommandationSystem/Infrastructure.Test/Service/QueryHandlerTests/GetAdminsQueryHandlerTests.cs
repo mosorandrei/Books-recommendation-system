@@ -1,6 +1,4 @@
-﻿
-
-using Application.Features.Queries;
+﻿using Application.Features.Queries;
 using Application.Interfaces;
 using Domain.AuthModels;
 using FakeItEasy;
@@ -22,7 +20,7 @@ namespace Infrastructure.Test.Service.QueryHandlerTests
         }
 
         [Fact]
-        public async void GivenGetAdminsQueryHandler_WhenHandleIsCalled_ThenGetAllAdminsAsyncIsCalled()
+        public async Task GivenGetAdminsQueryHandlerWhenHandleIsCalledThenGetAllAdminsAsyncIsCalled()
         {
             await handler.Handle(new GetAdminsQuery(), default);
             A.CallTo(() => repository.GetAllAdminsAsync()).MustHaveHappenedOnceExactly();

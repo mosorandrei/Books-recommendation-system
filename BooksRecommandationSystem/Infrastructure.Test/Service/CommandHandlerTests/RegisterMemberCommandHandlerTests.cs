@@ -1,5 +1,6 @@
 ﻿
 
+using System.Threading.Tasks;
 using Application.Features.Commands;
 using Application.Interfaces;
 using FakeItEasy;
@@ -21,7 +22,7 @@ namespace Infrastructure.Test.Service
             this.handler = new RegisterMemberCommandHandler(this.repository, this.httpContextAccessor);
         }
         [Fact]
-        public async void Given_RegisterMemberCommand_When_HandleIsCalled_Then_ShouldRegisterTheUser()
+        public async Task GivenRegisterMemberCommandWhenHandleIsCalledThenShouldRegisterTheUser()
         {
             await handler.Handle(new RegisterMemberCommand(), default);
             A.CallTo(() => repository.RegisterMember(A<RegisterMemberCommand>._)).MustHaveHappenedOnceExactly();

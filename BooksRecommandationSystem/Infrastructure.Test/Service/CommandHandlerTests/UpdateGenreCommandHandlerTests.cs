@@ -21,9 +21,9 @@ namespace Infrastructure.Test.Service
         }
 
         [Fact]
-        public async void Given_UpdateGenreCommand_When_HandleIsCalled_Then_ShouldUpdateGenre()
+        public async Task GivenUpdateGenreCommandWhenHandleIsCalledThenShouldUpdateGenre()
         { 
-            Genre genre = new Genre()
+            Genre genre = new()
             {
                 Id = new Guid("25bb7416-4cbb-4b46-931b-604199ae6cba")
             };
@@ -39,9 +39,9 @@ namespace Infrastructure.Test.Service
         }
 
         [Fact]
-        public async void Given_UpdateGenreCommand_When_HandleIsCalledAndGenreIsNull_Then_ShouldThrowException()
+        public void GivenUpdateGenreCommandWhenHandleIsCalledAndGenreIsNullThenShouldThrowException()
         {
-            Genre genre = null;
+            Genre? genre = null;
 
             A.CallTo(() => repository.GetByIdAsync(new Guid("328eda97-05f0-4b4a-8532-800d292282b4"))).Returns(genre);
 

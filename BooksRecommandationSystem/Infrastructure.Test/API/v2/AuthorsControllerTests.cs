@@ -22,25 +22,24 @@ namespace Infrastructure.Test.API.v2
         }
 
         [Fact]
-        public async Task Given_AuthorsController_When_GetIsCalled_Then_ShouldReturnAnAuthorCollection()
+        public async Task GivenAuthorsControllerWhenGetIsCalledThenShouldReturnAnAuthorCollection()
         {
             await controller.Get();
             A.CallTo(() => mediator.Send(A<GetAuthorsQuery>._, default)).MustHaveHappenedOnceExactly();
-
         }
+
         [Fact]
-        public async Task Given_AuthorsController_When_CreateIsCalled_Then_ShouldCreateAnAuthor()
+        public async Task GivenAuthorsControllerWhenCreateIsCalledThenShouldCreateAnAuthor()
         {
             await controller.Create(new CreateAuthorCommand());
             A.CallTo(() => mediator.Send(A<CreateAuthorCommand>._, default)).MustHaveHappenedOnceExactly();
-
         }
+
         [Fact]
-        public async Task Given_AuthorsController_When_UpdateIsCalled_Then_ShouldUpdateAnAuthor()
+        public async Task GivenAuthorsControllerWhenUpdateIsCalledThenShouldUpdateAnAuthor()
         {
             await controller.Update(new Guid(),new UpdateAuthorCommand());
             A.CallTo(() => mediator.Send(A<UpdateAuthorCommand>._, default)).MustHaveHappenedOnceExactly();
-
         }
 
         [Fact]
@@ -48,9 +47,6 @@ namespace Infrastructure.Test.API.v2
         {
             await controller.Delete(new Guid());
             A.CallTo(() => mediator.Send(A<DeleteAuthorCommand>._, default)).MustHaveHappenedOnceExactly();
-
         }
-
-
     }
 }

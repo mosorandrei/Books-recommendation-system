@@ -1,5 +1,4 @@
-﻿
-
+﻿using System.Threading.Tasks;
 using Application.Features.Commands;
 using Application.Interfaces;
 using FakeItEasy;
@@ -22,7 +21,7 @@ namespace Infrastructure.Test.Service
         }
 
         [Fact]
-        public async void Given_AuthenticateCommand_When_HandleIsCalled_Then_ShouldAuthenticateTheUser()
+        public async Task GivenAuthenticateCommandWhenHandleIsCalledThenShouldAuthenticateTheUser()
         {
             await handler.Handle(new AuthenticateCommand(), default);
             A.CallTo(() => repository.Authenticate(A<AuthenticateCommand>._,A<string>._)).MustHaveHappenedOnceExactly();

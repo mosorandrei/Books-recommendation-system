@@ -31,8 +31,12 @@ namespace Persistence.v2
             _httpContext = httpContextAccessor.HttpContext;
         }
 
-        public async Task<TokenResponse?> Authenticate(TokenRequest request, string ipAddress)
+        public async Task<TokenResponse> Authenticate(TokenRequest request, string ipAddress)
         {
+            if (request.Email is null || request.Password is null)
+                throw new ArgumentNullException(nameof(request));
+
+
             if (await IsValidUser(request.Email, request.Password))
             {
                 ApplicationUser user = await GetUserByEmail(request.Email);
@@ -52,11 +56,14 @@ namespace Persistence.v2
                 }
             }
 
-            return null;
+            throw new ArgumentNullException(nameof(request));
         }
 
-        public async Task<RegisterResponse?> RegisterMember(RegisterRequest request)
+        public async Task<RegisterResponse> RegisterMember(RegisterRequest request)
         {
+            if (request.Email is null || request.Password is null)
+                throw new ArgumentNullException(nameof(request));
+
             if (!await IsValidUser(request.Email, request.Password))
             {
                 ApplicationUser user = new()
@@ -78,10 +85,10 @@ namespace Persistence.v2
             return new RegisterResponse { Status = "Error", Message = "User already exists!" };
         }
 
-        public async Task<IEnumerable<ApplicationUserDTO>> GetAllMembersAsync()
+        public async Task<IEnumerable<ApplicationUserDto>> GetAllMembersAsync()
         {
             List<ApplicationUser> members = new(await _userManager.GetUsersInRoleAsync(ApplicationIdentityConstants.Roles.Member));
-            return members.Select(member => new ApplicationUserDTO()
+            return members.Select(member => new ApplicationUserDto()
             {
                 Username = member.UserName,
                 Email = member.Email,
@@ -90,10 +97,10 @@ namespace Persistence.v2
             });
         }
 
-        public async Task<IEnumerable<ApplicationUserDTO>> GetAllAdminsAsync()
+        public async Task<IEnumerable<ApplicationUserDto>> GetAllAdminsAsync()
         {
             List<ApplicationUser> admins = new(await _userManager.GetUsersInRoleAsync(ApplicationIdentityConstants.Roles.Administrator));
-            return admins.Select(member => new ApplicationUserDTO()
+            return admins.Select(member => new ApplicationUserDto()
             {
                 Username = member.UserName,
                 Email = member.Email,
@@ -125,7 +132,7 @@ namespace Persistence.v2
         private async Task<string> GenerateJwtToken(ApplicationUser user)
         {
             string role = (await _userManager.GetRolesAsync(user))[0];
-            byte[] secret = Encoding.ASCII.GetBytes(_token.Secret);
+            byte[] secret = Encoding.ASCII.GetBytes(s: _token.Secret is not null ? _token.Secret : throw new ArgumentNullException(nameof(user)));
 
             JwtSecurityTokenHandler handler = new();
             SecurityTokenDescriptor descriptor = new()
