@@ -1,0 +1,55 @@
+@import "./../../utils/colors";
+
+.dashboard {
+  display: flex;
+  .lhp {
+    display: flex;
+    flex-direction: column;
+
+    width: 305px;
+    height: 100vh;
+    background-color: $color-white;
+
+    padding: 40px;
+
+    > * {
+      margin-bottom: 20px;
+    }
+
+    .status {
+      height: 36px;
+    }
+
+    nav {
+      margin-top: 40px;
+    }
+
+    .lhp-bottom {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      a {
+        border: none;
+        text-decoration: none;
+        margin-top: 20px;
+        align-self: flex-start;
+        color: $color-black;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .rhp {
+    width: calc(100% - 305px);
+    height: 100vh;
+    background-color: $color-gray-100;
+
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
