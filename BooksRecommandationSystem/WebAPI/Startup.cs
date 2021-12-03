@@ -24,6 +24,14 @@ namespace WebAPI
 
         public void ConfigureServices(IServiceCollection services)
         {
+            // Add Cors
+            services.AddCors(o => o.AddPolicy("FEPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+
             services.AddApiVersioning(config =>
             {
                 config.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
@@ -142,6 +150,7 @@ namespace WebAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -158,6 +167,8 @@ namespace WebAPI
 
             app.UseHttpsRedirection();
             app.UseRouting();
+
+            app.UseCors("FEPolicy");
 
             app.UseAuthentication();
             app.UseAuthorization();

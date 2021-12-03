@@ -11,6 +11,6 @@ namespace Domain.AuthModels
 
         [Required(ErrorMessage = "Expire time is required!")]
         [JsonProperty("expireTime")]
-        public DateTime ExpireTime { get; set; }
+        public long ExpireTime { get; set; }
     }
 }

@@ -3,6 +3,7 @@ using Application.Features.Queries;
 using Domain.AuthModels;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
@@ -10,6 +11,7 @@ namespace WebAPI.Controllers.v2
 {
     [ApiVersion("2.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
+    [EnableCors("FEPolicy")]
     public class TokenController : BaseController
     {
         public TokenController(IMediator mediator) : base(mediator)
@@ -33,12 +35,13 @@ namespace WebAPI.Controllers.v2
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Post))]
         public async Task<TokenResponse> AuthenticateAsync([FromBody] AuthenticateCommand command)
         {
+            Console.WriteLine(command);
             var response = await mediator.Send(command);
             return response.Resource is not null ? response.Resource : throw new ArgumentNullException(nameof(command));
         }
 
         /*
-        // POST: api/Token/Authenticate
+        // POST: api/Token/RegisterAsync
         /// <summary>
         ///     Register a new User in the Database
         /// </summary>
@@ -58,7 +61,7 @@ namespace WebAPI.Controllers.v2
         }
 
         /*
-        // GET: api/Token/Authenticate
+        // GET: api/Token/GetMembers
         /// <summary>
         ///     Get all Members in Database
         /// </summary>
@@ -73,7 +76,7 @@ namespace WebAPI.Controllers.v2
         }
 
         /*
-        // GET: api/Token/Authenticate
+        // GET: api/Token/GetUser
         /// <summary>
         ///     Get specific member based on its token
         /// </summary>
@@ -113,7 +116,7 @@ namespace WebAPI.Controllers.v2
         }
 
         /*
-        // GET: api/Token/Authenticate
+        // GET: api/Token/GetAllAdmins
         /// <summary>
         ///     Get all Admins in Database
         /// </summary>

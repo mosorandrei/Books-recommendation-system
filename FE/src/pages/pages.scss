@@ -1,0 +1,49 @@
+@import "/src/utils/_colors.scss";
+
+.cards {
+  padding: 30px;
+  margin-bottom: 40px;
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 20px;
+    color: $color-gray-600;
+
+    margin-bottom: 28px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    > * {
+      margin-right: 40px;
+      margin-bottom: 40px;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .double-button {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .final-card {
+      width: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+  }
+}

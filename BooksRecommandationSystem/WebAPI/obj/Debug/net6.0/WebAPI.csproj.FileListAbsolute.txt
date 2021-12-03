@@ -656,3 +656,8 @@ C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\Web
 C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\WebAPI\obj\Debug\net6.0\scopedcss\bundle\WebAPI.styles.css
 C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\WebAPI\obj\Debug\net6.0\WebAPI.csproj.CopyComplete
 C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\WebAPI\obj\Debug\net6.0\WebAPI.genruntimeconfig.cache
+C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\WebAPI\bin\Debug\net6.0\System.Web.Cors.dll
+C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\WebAPI\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\WebAPI\bin\Debug\net6.0\System.Web.Http.dll
+C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\WebAPI\bin\Debug\net6.0\System.Web.Http.Cors.dll
+C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\WebAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

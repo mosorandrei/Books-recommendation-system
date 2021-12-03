@@ -1,0 +1,61 @@
+@import "/src/utils/_colors.scss";
+
+.sign-in-form {
+  width: 100%;
+
+  .form-input-split,
+  .form-button-split {
+    display: flex;
+    justify-content: space-between;
+
+    > :not(:first-child) {
+      margin-left: 30px;
+    }
+
+    &.right {
+      justify-content: flex-end;
+    }
+
+    &.left {
+      justify-content: flex-start;
+    }
+  }
+
+  > :not(:first-child) {
+    margin-top: 32px;
+  }
+
+  .error-message {
+    position: absolute;
+    font-size: 14px;
+    color: $color-red;
+  }
+
+  .form-bottom {
+    margin-top: 157px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      color: $color-gray-300;
+
+      a {
+        color: $color-purple-100;
+
+        transition: all 0.5s;
+
+        &:hover {
+          cursor: pointer;
+          color: $color-red;
+        }
+      }
+    }
+
+    > :not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+}
