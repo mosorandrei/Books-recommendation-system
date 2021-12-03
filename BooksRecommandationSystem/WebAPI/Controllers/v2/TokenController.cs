@@ -4,6 +4,7 @@ using Domain.AuthModels;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace WebAPI.Controllers.v2
 {
@@ -69,6 +70,46 @@ namespace WebAPI.Controllers.v2
         public async Task<IActionResult> GetMembers()
         {
             return Ok(await mediator.Send(new GetMembersQuery()));
+        }
+
+        /*
+        // GET: api/Token/Authenticate
+        /// <summary>
+        ///     Get specific member based on its token
+        /// </summary>
+        */
+
+        [Authorize]
+        [HttpGet("GetUser")]
+        [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
+        public IActionResult GetUser()
+        {
+            var currentUser = new ApplicationUserDtoFE
+            {
+                UserId = User.Claims.FirstOrDefault(x => x.Type == "UserId")?.Value,
+                FullName = User.Claims.FirstOrDefault(x => x.Type == "FullName")?.Value,
+                Email = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Name)?.Value,
+                IsAdmin = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Role)?.Value == "Administrator" ? 1 : 0
+            };
+            return Ok(currentUser);
+        }
+
+        /*
+        // GET: api/Token/RefreshToken
+        /// <summary>
+        ///     Refresh a token
+        /// </summary>
+        */
+
+        [Authorize]
+        [HttpGet("RefreshToken")]
+        [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
+        public async Task<IActionResult> RefreshTokenAsync()
+        {
+            string? email = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Name)?.Value;
+            if(email == null)
+                throw new ArgumentNullException("Email is null for the provided token!");
+            return Ok(await mediator.Send(new RefreshTokenQuery(email)));
         }
 
         /*

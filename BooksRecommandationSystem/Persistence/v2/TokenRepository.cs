@@ -109,6 +109,26 @@ namespace Persistence.v2
             });
         }
 
+        public async Task<RefreshTokenDto> RefreshToken(string Email)
+        {
+            ApplicationUser user = await _userManager.FindByEmailAsync(Email);
+
+            if (user != null && user.IsEnabled)
+            {
+                string jwtRefreshToken = await GenerateJwtToken(user);
+
+                await _userManager.UpdateAsync(user);
+
+                return new RefreshTokenDto
+                {
+                    Token = jwtRefreshToken,
+                    ExpireTime = new JwtSecurityTokenHandler().ReadJwtToken(jwtRefreshToken).ValidTo
+                };
+            }
+
+            throw new InvalidDataException("Something went wrong when fetching the User!");
+        }
+
         private async Task<bool> IsValidUser(string email, string password)
         {
             ApplicationUser user = await GetUserByEmail(email);
