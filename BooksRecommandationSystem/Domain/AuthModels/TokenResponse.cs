@@ -14,7 +14,7 @@ namespace Domain.AuthModels
             FullName = user.FullName;
             EmailAddress = user.Email;
             Token = token;
-            ExpireTime = ((DateTimeOffset)new JwtSecurityTokenHandler().ReadJwtToken(Token).ValidTo).ToUnixTimeSeconds();
+            ExpireTime = (long)(new JwtSecurityTokenHandler().ReadJwtToken(Token).ValidTo - DateTime.UtcNow).TotalSeconds;
             Role = role;
         }
 

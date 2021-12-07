@@ -122,7 +122,7 @@ namespace Persistence.v2
                 return new RefreshTokenDto
                 {
                     Token = jwtRefreshToken,
-                    ExpireTime = ((DateTimeOffset)new JwtSecurityTokenHandler().ReadJwtToken(jwtRefreshToken).ValidTo).ToUnixTimeSeconds()
+                    ExpireTime = (long)(new JwtSecurityTokenHandler().ReadJwtToken(jwtRefreshToken).ValidTo - DateTime.UtcNow).TotalSeconds
                 };
             }
 
