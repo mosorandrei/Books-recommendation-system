@@ -20,7 +20,7 @@ namespace Infrastructure.Test.API.v1
         }
 
         [Fact]
-        public async Task Given_BooksController_When_GetIsCalled_Then_ShouldReturnABookCollection()
+        public async Task GivenBooksControllerWhenGetIsCalledThenShouldReturnABookCollection()
         {
             await controller.Get();
             A.CallTo(() => mediator.Send(A<GetBooksQuery>._, default)).MustHaveHappenedOnceExactly();

@@ -20,11 +20,10 @@ namespace Infrastructure.Test.API.v1
         }
 
         [Fact]
-        public async Task Given_AuthorsController_When_GetIsCalled_Then_ShouldReturnAnAuthorCollection()
+        public async Task GivenAuthorsControllerWhenGetIsCalledThenShouldReturnAnAuthorCollection()
         {
             await controller.Get();
             A.CallTo(() => mediator.Send(A<GetAuthorsQuery>._, default)).MustHaveHappenedOnceExactly();
-
         }
 
     }

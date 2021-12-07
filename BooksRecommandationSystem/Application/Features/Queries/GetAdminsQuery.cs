@@ -3,7 +3,7 @@ using MediatR;
 
 namespace Application.Features.Queries
 {
-    public class GetAdminsQuery : IRequest<IEnumerable<ApplicationUserDTO>>
+    public class GetAdminsQuery : IRequest<IEnumerable<ApplicationUserDto>>
     {
     }
 }

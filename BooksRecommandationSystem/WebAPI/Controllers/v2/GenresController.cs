@@ -2,12 +2,14 @@
 using Application.Features.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers.v2
 {
     [ApiVersion("2.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
+    [EnableCors("FEPolicy")]
     public class GenresController : BaseController
     {
         public GenresController(IMediator mediator) : base(mediator)

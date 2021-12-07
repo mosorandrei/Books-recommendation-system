@@ -1,9 +1,0 @@
-{
-r/Users/alex-ama/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Common/BaseEntity.csutf-8y
-p/Users/alex-ama/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Entities/Author.csutf-8w
-n/Users/alex-ama/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Entities/Book.csutf-8x
-o/Users/alex-ama/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Entities/Genre.csutf-8w
-n/Users/alex-ama/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Entities/User.csutf-8ì
-á/Users/alex-ama/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/obj/Debug/net6.0/Domain.GlobalUsings.g.csutf-8©
-ù/Users/alex-ama/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.csutf-8ë
-Ö/Users/alex-ama/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/obj/Debug/net6.0/Domain.AssemblyInfo.csutf-8

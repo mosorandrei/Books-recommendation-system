@@ -14,7 +14,7 @@ namespace Application.Features.Commands
         public RegisterMemberCommandHandler(ITokenRepository repository, IHttpContextAccessor httpContextAccessor)
         {
             this.repository = repository ?? throw new ArgumentNullException(nameof(repository));
-            this._httpContext = (httpContextAccessor != null) ? httpContextAccessor.HttpContext : throw new ArgumentNullException(nameof(httpContextAccessor));
+            this._httpContext = (httpContextAccessor is not null) ? httpContextAccessor.HttpContext : throw new ArgumentNullException(nameof(httpContextAccessor));
         }
         public async Task<RegistrationResponse> Handle(RegisterMemberCommand command, CancellationToken cancellationToken)
         {

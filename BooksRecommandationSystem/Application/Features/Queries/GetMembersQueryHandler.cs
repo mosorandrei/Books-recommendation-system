@@ -4,7 +4,7 @@ using MediatR;
 
 namespace Application.Features.Queries
 {
-    public class GetMembersQueryHandler : IRequestHandler<GetMembersQuery, IEnumerable<ApplicationUserDTO>>
+    public class GetMembersQueryHandler : IRequestHandler<GetMembersQuery, IEnumerable<ApplicationUserDto>>
     {
         private readonly ITokenRepository repository;
 
@@ -12,7 +12,7 @@ namespace Application.Features.Queries
         {
             this.repository = repository;
         }
-        public async Task<IEnumerable<ApplicationUserDTO>> Handle(GetMembersQuery request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<ApplicationUserDto>> Handle(GetMembersQuery request, CancellationToken cancellationToken)
         {
             return await repository.GetAllMembersAsync();
         }

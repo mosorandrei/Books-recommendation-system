@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Persistence.Seed
 {
-    public class ApplicationUserContextDataSeed
+    public static class ApplicationUserContextDataSeed
     {
         /// <summary>
         ///     Seed users and roles in the Identity database.

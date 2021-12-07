@@ -1,0 +1,3990 @@
+{
+  "WebAPI.dll": {
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/NamespaceConvention.cs": {
+      "WebAPI.NamespaceConvention": {
+        "System.Void WebAPI.NamespaceConvention::Apply(Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerModel)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0
+          },
+          "Branches": [
+            {
+              "Line": 11,
+              "Offset": 19,
+              "EndOffset": 21,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 11,
+              "Offset": 19,
+              "EndOffset": 42,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 18,
+              "Offset": 93,
+              "EndOffset": 95,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 18,
+              "Offset": 93,
+              "EndOffset": 103,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/Program.cs": {
+      "WebAPI.Program": {
+        "System.Void WebAPI.Program::Main(System.String[])": {
+          "Lines": {
+            "6": 0,
+            "7": 0,
+            "8": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.Extensions.Hosting.IHostBuilder WebAPI.Program::CreateHostBuilder(System.String[])": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/Startup.cs": {
+      "WebAPI.Startup": {
+        "Microsoft.Extensions.Configuration.IConfiguration WebAPI.Startup::get_Configuration()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": []
+        },
+        "System.Void WebAPI.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "41": 0,
+            "43": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "91": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "116": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "140": 0,
+            "141": 0
+          },
+          "Branches": [
+            {
+              "Line": 129,
+              "Offset": 92,
+              "EndOffset": 94,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 129,
+              "Offset": 92,
+              "EndOffset": 101,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void WebAPI.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)": {
+          "Lines": {
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "159": 0,
+            "160": 0,
+            "162": 0,
+            "163": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0
+          },
+          "Branches": [
+            {
+              "Line": 145,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 145,
+              "Offset": 9,
+              "EndOffset": 39,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void WebAPI.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/Controllers/BaseController.cs": {
+      "WebAPI.Controllers.BaseController": {
+        "System.Void WebAPI.Controllers.BaseController::.ctor(MediatR.IMediator)": {
+          "Lines": {
+            "11": 19,
+            "12": 19,
+            "13": 19,
+            "14": 19
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/Controllers/v2/AuthorsController.cs": {
+      "WebAPI.Controllers.v2.AuthorsController": {
+        "System.Void WebAPI.Controllers.v2.AuthorsController::.ctor(MediatR.IMediator)": {
+          "Lines": {
+            "13": 4,
+            "14": 4,
+            "15": 4
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.AuthorsController/<Get>d__1": {
+        "System.Void WebAPI.Controllers.v2.AuthorsController/<Get>d__1::MoveNext()": {
+          "Lines": {
+            "20": 1,
+            "21": 1,
+            "22": 1
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.AuthorsController/<Create>d__2": {
+        "System.Void WebAPI.Controllers.v2.AuthorsController/<Create>d__2::MoveNext()": {
+          "Lines": {
+            "27": 1,
+            "28": 1,
+            "29": 1
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.AuthorsController/<Update>d__3": {
+        "System.Void WebAPI.Controllers.v2.AuthorsController/<Update>d__3::MoveNext()": {
+          "Lines": {
+            "34": 1,
+            "35": 1,
+            "36": 0,
+            "37": 0,
+            "40": 1,
+            "41": 1
+          },
+          "Branches": [
+            {
+              "Line": 35,
+              "Offset": 42,
+              "EndOffset": 44,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 42,
+              "EndOffset": 62,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "WebAPI.Controllers.v2.AuthorsController/<Delete>d__4": {
+        "System.Void WebAPI.Controllers.v2.AuthorsController/<Delete>d__4::MoveNext()": {
+          "Lines": {
+            "46": 1,
+            "47": 1,
+            "48": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/Controllers/v2/BooksController.cs": {
+      "WebAPI.Controllers.v2.BooksController": {
+        "System.Void WebAPI.Controllers.v2.BooksController::.ctor(MediatR.IMediator)": {
+          "Lines": {
+            "13": 4,
+            "14": 4,
+            "15": 4
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.BooksController/<Get>d__1": {
+        "System.Void WebAPI.Controllers.v2.BooksController/<Get>d__1::MoveNext()": {
+          "Lines": {
+            "20": 1,
+            "21": 1,
+            "22": 1
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.BooksController/<Create>d__2": {
+        "System.Void WebAPI.Controllers.v2.BooksController/<Create>d__2::MoveNext()": {
+          "Lines": {
+            "27": 1,
+            "28": 1,
+            "29": 1
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.BooksController/<Update>d__3": {
+        "System.Void WebAPI.Controllers.v2.BooksController/<Update>d__3::MoveNext()": {
+          "Lines": {
+            "34": 1,
+            "35": 1,
+            "36": 0,
+            "37": 0,
+            "40": 1,
+            "41": 1
+          },
+          "Branches": [
+            {
+              "Line": 35,
+              "Offset": 42,
+              "EndOffset": 44,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 42,
+              "EndOffset": 62,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "WebAPI.Controllers.v2.BooksController/<Delete>d__4": {
+        "System.Void WebAPI.Controllers.v2.BooksController/<Delete>d__4::MoveNext()": {
+          "Lines": {
+            "46": 1,
+            "47": 1,
+            "48": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/Controllers/v2/GenresController.cs": {
+      "WebAPI.Controllers.v2.GenresController": {
+        "System.Void WebAPI.Controllers.v2.GenresController::.ctor(MediatR.IMediator)": {
+          "Lines": {
+            "13": 4,
+            "14": 4,
+            "15": 4
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.GenresController/<Get>d__1": {
+        "System.Void WebAPI.Controllers.v2.GenresController/<Get>d__1::MoveNext()": {
+          "Lines": {
+            "20": 1,
+            "21": 1,
+            "22": 1
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.GenresController/<Create>d__2": {
+        "System.Void WebAPI.Controllers.v2.GenresController/<Create>d__2::MoveNext()": {
+          "Lines": {
+            "27": 1,
+            "28": 1,
+            "29": 1
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.GenresController/<Update>d__3": {
+        "System.Void WebAPI.Controllers.v2.GenresController/<Update>d__3::MoveNext()": {
+          "Lines": {
+            "34": 1,
+            "35": 1,
+            "36": 0,
+            "37": 0,
+            "40": 1,
+            "41": 1
+          },
+          "Branches": [
+            {
+              "Line": 35,
+              "Offset": 42,
+              "EndOffset": 44,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 42,
+              "EndOffset": 62,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "WebAPI.Controllers.v2.GenresController/<Delete>d__4": {
+        "System.Void WebAPI.Controllers.v2.GenresController/<Delete>d__4::MoveNext()": {
+          "Lines": {
+            "46": 1,
+            "47": 1,
+            "48": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/Controllers/v2/TokenController.cs": {
+      "WebAPI.Controllers.v2.TokenController": {
+        "System.Void WebAPI.Controllers.v2.TokenController::.ctor(MediatR.IMediator)": {
+          "Lines": {
+            "14": 4,
+            "15": 4,
+            "16": 4
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.TokenController/<AuthenticateAsync>d__1": {
+        "System.Void WebAPI.Controllers.v2.TokenController/<AuthenticateAsync>d__1::MoveNext()": {
+          "Lines": {
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "34": 0
+          },
+          "Branches": [
+            {
+              "Line": 33,
+              "Offset": 172,
+              "EndOffset": 174,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 33,
+              "Offset": 172,
+              "EndOffset": 185,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "WebAPI.Controllers.v2.TokenController/<RegisterAsync>d__2": {
+        "System.Void WebAPI.Controllers.v2.TokenController/<RegisterAsync>d__2::MoveNext()": {
+          "Lines": {
+            "47": 1,
+            "48": 1,
+            "49": 1,
+            "50": 0
+          },
+          "Branches": [
+            {
+              "Line": 49,
+              "Offset": 172,
+              "EndOffset": 174,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 49,
+              "Offset": 172,
+              "EndOffset": 185,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "WebAPI.Controllers.v2.TokenController/<GetMembers>d__3": {
+        "System.Void WebAPI.Controllers.v2.TokenController/<GetMembers>d__3::MoveNext()": {
+          "Lines": {
+            "59": 1,
+            "60": 1,
+            "61": 1
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.TokenController/<GetAdmins>d__4": {
+        "System.Void WebAPI.Controllers.v2.TokenController/<GetAdmins>d__4::MoveNext()": {
+          "Lines": {
+            "70": 1,
+            "71": 1,
+            "72": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/Controllers/v1/AuthorsController.cs": {
+      "WebAPI.Controllers.v1.AuthorsController": {
+        "System.Void WebAPI.Controllers.v1.AuthorsController::.ctor(MediatR.IMediator)": {
+          "Lines": {
+            "13": 1,
+            "14": 1,
+            "15": 1
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v1.AuthorsController/<Get>d__1": {
+        "System.Void WebAPI.Controllers.v1.AuthorsController/<Get>d__1::MoveNext()": {
+          "Lines": {
+            "19": 1,
+            "20": 1,
+            "21": 1
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v1.AuthorsController/<Create>d__2": {
+        "System.Void WebAPI.Controllers.v1.AuthorsController/<Create>d__2::MoveNext()": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v1.AuthorsController/<Update>d__3": {
+        "System.Void WebAPI.Controllers.v1.AuthorsController/<Update>d__3::MoveNext()": {
+          "Lines": {
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": [
+            {
+              "Line": 32,
+              "Offset": 42,
+              "EndOffset": 44,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 42,
+              "EndOffset": 62,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "WebAPI.Controllers.v1.AuthorsController/<Delete>d__4": {
+        "System.Void WebAPI.Controllers.v1.AuthorsController/<Delete>d__4::MoveNext()": {
+          "Lines": {
+            "42": 0,
+            "43": 0,
+            "44": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/Controllers/v1/BooksController.cs": {
+      "WebAPI.Controllers.v1.BooksController": {
+        "System.Void WebAPI.Controllers.v1.BooksController::.ctor(MediatR.IMediator)": {
+          "Lines": {
+            "13": 1,
+            "14": 1,
+            "15": 1
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v1.BooksController/<Get>d__1": {
+        "System.Void WebAPI.Controllers.v1.BooksController/<Get>d__1::MoveNext()": {
+          "Lines": {
+            "18": 1,
+            "19": 1,
+            "20": 1
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v1.BooksController/<Create>d__2": {
+        "System.Void WebAPI.Controllers.v1.BooksController/<Create>d__2::MoveNext()": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "25": 0
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v1.BooksController/<Update>d__3": {
+        "System.Void WebAPI.Controllers.v1.BooksController/<Update>d__3::MoveNext()": {
+          "Lines": {
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": [
+            {
+              "Line": 30,
+              "Offset": 42,
+              "EndOffset": 44,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 42,
+              "EndOffset": 62,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "WebAPI.Controllers.v1.BooksController/<Delete>d__4": {
+        "System.Void WebAPI.Controllers.v1.BooksController/<Delete>d__4::MoveNext()": {
+          "Lines": {
+            "39": 0,
+            "40": 0,
+            "41": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/Controllers/v1/GenresController.cs": {
+      "WebAPI.Controllers.v1.GenresController": {
+        "System.Void WebAPI.Controllers.v1.GenresController::.ctor(MediatR.IMediator)": {
+          "Lines": {
+            "13": 1,
+            "14": 1,
+            "15": 1
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v1.GenresController/<Get>d__1": {
+        "System.Void WebAPI.Controllers.v1.GenresController/<Get>d__1::MoveNext()": {
+          "Lines": {
+            "18": 1,
+            "19": 1,
+            "20": 1
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v1.GenresController/<Create>d__2": {
+        "System.Void WebAPI.Controllers.v1.GenresController/<Create>d__2::MoveNext()": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "25": 0
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v1.GenresController/<Update>d__3": {
+        "System.Void WebAPI.Controllers.v1.GenresController/<Update>d__3::MoveNext()": {
+          "Lines": {
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": [
+            {
+              "Line": 30,
+              "Offset": 42,
+              "EndOffset": 44,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 42,
+              "EndOffset": 62,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "WebAPI.Controllers.v1.GenresController/<Delete>d__4": {
+        "System.Void WebAPI.Controllers.v1.GenresController/<Delete>d__4::MoveNext()": {
+          "Lines": {
+            "39": 0,
+            "40": 0,
+            "41": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "Persistence.dll": {
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/PersistenceDI.cs": {
+      "Persistence.PersistenceDI": {
+        "System.Void Persistence.PersistenceDI::AddPersistence(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/v2/AuthorRepository.cs": {
+      "Persistence.v2.AuthorRepository": {
+        "System.Void Persistence.v2.AuthorRepository::.ctor(Persistence.Context.AuthorContext)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/v2/BookRepository.cs": {
+      "Persistence.v2.BookRepository": {
+        "System.Void Persistence.v2.BookRepository::.ctor(Persistence.Context.BookContext)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/v2/GenreRepository.cs": {
+      "Persistence.v2.GenreRepository": {
+        "System.Void Persistence.v2.GenreRepository::.ctor(Persistence.Context.GenreContext)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/v2/Repository.cs": {
+      "Persistence.v2.Repository`1": {
+        "System.Void Persistence.v2.Repository`1::.ctor(Microsoft.EntityFrameworkCore.DbContext)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      },
+      "Persistence.v2.Repository`1/<AddAsync>d__2": {
+        "System.Void Persistence.v2.Repository`1/<AddAsync>d__2::MoveNext()": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 42,
+              "EndOffset": 44,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 17,
+              "Offset": 42,
+              "EndOffset": 56,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Persistence.v2.Repository`1/<DeleteAsync>d__3": {
+        "System.Void Persistence.v2.Repository`1/<DeleteAsync>d__3::MoveNext()": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 34,
+              "EndOffset": 36,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 34,
+              "EndOffset": 48,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Persistence.v2.Repository`1/<GetAllAsync>d__4": {
+        "System.Void Persistence.v2.Repository`1/<GetAllAsync>d__4::MoveNext()": {
+          "Lines": {
+            "39": 0,
+            "40": 0,
+            "41": 0
+          },
+          "Branches": []
+        }
+      },
+      "Persistence.v2.Repository`1/<GetByIdAsync>d__5": {
+        "System.Void Persistence.v2.Repository`1/<GetByIdAsync>d__5::MoveNext()": {
+          "Lines": {
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "50": 0,
+            "51": 0
+          },
+          "Branches": [
+            {
+              "Line": 45,
+              "Offset": 33,
+              "EndOffset": 35,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 45,
+              "Offset": 33,
+              "EndOffset": 47,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Persistence.v2.Repository`1/<UpdateAsync>d__6": {
+        "System.Void Persistence.v2.Repository`1/<UpdateAsync>d__6::MoveNext()": {
+          "Lines": {
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0
+          },
+          "Branches": [
+            {
+              "Line": 55,
+              "Offset": 34,
+              "EndOffset": 36,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 55,
+              "Offset": 34,
+              "EndOffset": 48,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/v2/TokenRepository.cs": {
+      "Persistence.v2.TokenRepository": {
+        "System.Void Persistence.v2.TokenRepository::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<Domain.Entities.ApplicationUser>,Microsoft.AspNetCore.Identity.SignInManager`1<Domain.Entities.ApplicationUser>,Microsoft.Extensions.Options.IOptions`1<Domain.AuthModels.Token>,Microsoft.AspNetCore.Http.IHttpContextAccessor)": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0
+          },
+          "Branches": []
+        }
+      },
+      "Persistence.v2.TokenRepository/<Authenticate>d__5": {
+        "System.Void Persistence.v2.TokenRepository/<Authenticate>d__5::MoveNext()": {
+          "Lines": {
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "49": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "57": 0,
+            "59": 0,
+            "60": 0
+          },
+          "Branches": [
+            {
+              "Line": 36,
+              "Offset": 72,
+              "EndOffset": 74,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 72,
+              "EndOffset": 90,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 93,
+              "EndOffset": 95,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 93,
+              "EndOffset": 106,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 40,
+              "Offset": 246,
+              "EndOffset": 251,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 398,
+              "EndOffset": 400,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 398,
+              "EndOffset": 413,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 418,
+              "EndOffset": 423,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 418,
+              "EndOffset": 847,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 40,
+              "Offset": 246,
+              "EndOffset": 855,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Persistence.v2.TokenRepository/<RegisterMember>d__6": {
+        "System.Void Persistence.v2.TokenRepository/<RegisterMember>d__6::MoveNext()": {
+          "Lines": {
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "85": 0,
+            "86": 0
+          },
+          "Branches": [
+            {
+              "Line": 64,
+              "Offset": 54,
+              "EndOffset": 56,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 64,
+              "Offset": 54,
+              "EndOffset": 72,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 64,
+              "Offset": 75,
+              "EndOffset": 77,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 64,
+              "Offset": 75,
+              "EndOffset": 88,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 67,
+              "Offset": 231,
+              "EndOffset": 236,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 79,
+              "Offset": 505,
+              "EndOffset": 507,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 79,
+              "Offset": 505,
+              "EndOffset": 542,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 67,
+              "Offset": 231,
+              "EndOffset": 695,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Persistence.v2.TokenRepository/<>c": {
+        "Domain.AuthModels.ApplicationUserDto Persistence.v2.TokenRepository/<>c::<GetAllMembersAsync>b__7_0(Domain.Entities.ApplicationUser)": {
+          "Lines": {
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0
+          },
+          "Branches": []
+        },
+        "Domain.AuthModels.ApplicationUserDto Persistence.v2.TokenRepository/<>c::<GetAllAdminsAsync>b__8_0(Domain.Entities.ApplicationUser)": {
+          "Lines": {
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0
+          },
+          "Branches": []
+        }
+      },
+      "Persistence.v2.TokenRepository/<GetAllMembersAsync>d__7": {
+        "System.Void Persistence.v2.TokenRepository/<GetAllMembersAsync>d__7::MoveNext()": {
+          "Lines": {
+            "89": 0,
+            "90": 0,
+            "98": 0
+          },
+          "Branches": []
+        }
+      },
+      "Persistence.v2.TokenRepository/<GetAllAdminsAsync>d__8": {
+        "System.Void Persistence.v2.TokenRepository/<GetAllAdminsAsync>d__8::MoveNext()": {
+          "Lines": {
+            "101": 0,
+            "102": 0,
+            "110": 0
+          },
+          "Branches": []
+        }
+      },
+      "Persistence.v2.TokenRepository/<IsValidUser>d__9": {
+        "System.Void Persistence.v2.TokenRepository/<IsValidUser>d__9::MoveNext()": {
+          "Lines": {
+            "113": 0,
+            "114": 0,
+            "116": 0,
+            "117": 0,
+            "119": 0,
+            "122": 0,
+            "124": 0,
+            "125": 0
+          },
+          "Branches": [
+            {
+              "Line": 116,
+              "Offset": 170,
+              "EndOffset": 172,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 116,
+              "Offset": 170,
+              "EndOffset": 180,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Persistence.v2.TokenRepository/<GetUserByEmail>d__10": {
+        "System.Void Persistence.v2.TokenRepository/<GetUserByEmail>d__10::MoveNext()": {
+          "Lines": {
+            "128": 0,
+            "129": 0,
+            "130": 0
+          },
+          "Branches": []
+        }
+      },
+      "Persistence.v2.TokenRepository/<GenerateJwtToken>d__11": {
+        "System.Void Persistence.v2.TokenRepository/<GenerateJwtToken>d__11::MoveNext()": {
+          "Lines": {
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0
+          },
+          "Branches": [
+            {
+              "Line": 135,
+              "Offset": 179,
+              "EndOffset": 181,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 135,
+              "Offset": 179,
+              "EndOffset": 192,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/v1/AuthorRepository.cs": {
+      "Persistence.v1.AuthorRepository": {
+        "System.Void Persistence.v1.AuthorRepository::.ctor(Persistence.Context.AuthorContext)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/v1/BookRepository.cs": {
+      "Persistence.v1.BookRepository": {
+        "System.Void Persistence.v1.BookRepository::.ctor(Persistence.Context.BookContext)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/v1/GenreRepository.cs": {
+      "Persistence.v1.GenreRepository": {
+        "System.Void Persistence.v1.GenreRepository::.ctor(Persistence.Context.GenreContext)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/v1/Repository.cs": {
+      "Persistence.v1.Repository`1": {
+        "System.Void Persistence.v1.Repository`1::.ctor(Microsoft.EntityFrameworkCore.DbContext)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      },
+      "Persistence.v1.Repository`1/<AddAsync>d__2": {
+        "System.Void Persistence.v1.Repository`1/<AddAsync>d__2::MoveNext()": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 42,
+              "EndOffset": 44,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 17,
+              "Offset": 42,
+              "EndOffset": 56,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Persistence.v1.Repository`1/<DeleteAsync>d__3": {
+        "System.Void Persistence.v1.Repository`1/<DeleteAsync>d__3::MoveNext()": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 34,
+              "EndOffset": 36,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 34,
+              "EndOffset": 48,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Persistence.v1.Repository`1/<GetAllAsync>d__4": {
+        "System.Void Persistence.v1.Repository`1/<GetAllAsync>d__4::MoveNext()": {
+          "Lines": {
+            "39": 0,
+            "40": 0,
+            "41": 0
+          },
+          "Branches": []
+        }
+      },
+      "Persistence.v1.Repository`1/<GetByIdAsync>d__5": {
+        "System.Void Persistence.v1.Repository`1/<GetByIdAsync>d__5::MoveNext()": {
+          "Lines": {
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "50": 0,
+            "51": 0
+          },
+          "Branches": [
+            {
+              "Line": 45,
+              "Offset": 33,
+              "EndOffset": 35,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 45,
+              "Offset": 33,
+              "EndOffset": 47,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Persistence.v1.Repository`1/<UpdateAsync>d__6": {
+        "System.Void Persistence.v1.Repository`1/<UpdateAsync>d__6::MoveNext()": {
+          "Lines": {
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0
+          },
+          "Branches": [
+            {
+              "Line": 55,
+              "Offset": 34,
+              "EndOffset": 36,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 55,
+              "Offset": 34,
+              "EndOffset": 48,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Seed/ApplicationUserContextDataSeed.cs": {
+      "Persistence.Seed.ApplicationUserContextDataSeed/<SeedAsync>d__0": {
+        "System.Void Persistence.Seed.ApplicationUserContextDataSeed/<SeedAsync>d__0::MoveNext()": {
+          "Lines": {
+            "16": 0,
+            "18": 0,
+            "19": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Migrations/20211125124235_InitialCreate.cs": {
+      "Persistence.Migrations.InitialCreate": {
+        "System.Void Persistence.Migrations.InitialCreate::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Void Persistence.Migrations.InitialCreate::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Migrations/20211125124235_InitialCreate.Designer.cs": {
+      "Persistence.Migrations.InitialCreate": {
+        "System.Void Persistence.Migrations.InitialCreate::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "18": 0,
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Migrations/AuthorContextModelSnapshot.cs": {
+      "Persistence.Migrations.AuthorContextModelSnapshot": {
+        "System.Void Persistence.Migrations.AuthorContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "16": 0,
+            "18": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "37": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Migrations/Genre/20211125124336_InitialCreate.cs": {
+      "Persistence.Migrations.Genre.InitialCreate": {
+        "System.Void Persistence.Migrations.Genre.InitialCreate::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "8": 0,
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Void Persistence.Migrations.Genre.InitialCreate::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Migrations/Genre/20211125124336_InitialCreate.Designer.cs": {
+      "Persistence.Migrations.Genre.InitialCreate": {
+        "System.Void Persistence.Migrations.Genre.InitialCreate::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "18": 0,
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "36": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Migrations/Genre/GenreContextModelSnapshot.cs": {
+      "Persistence.Migrations.Genre.GenreContextModelSnapshot": {
+        "System.Void Persistence.Migrations.Genre.GenreContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "16": 0,
+            "18": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "34": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Migrations/Book/20211125124306_InitialCreate.cs": {
+      "Persistence.Migrations.Book.InitialCreate": {
+        "System.Void Persistence.Migrations.Book.InitialCreate::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Void Persistence.Migrations.Book.InitialCreate::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Migrations/Book/20211125124306_InitialCreate.Designer.cs": {
+      "Persistence.Migrations.Book.InitialCreate": {
+        "System.Void Persistence.Migrations.Book.InitialCreate::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "18": 0,
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "51": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Migrations/Book/BookContextModelSnapshot.cs": {
+      "Persistence.Migrations.Book.BookContextModelSnapshot": {
+        "System.Void Persistence.Migrations.Book.BookContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "16": 0,
+            "18": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "49": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Migrations/ApplicationUser/20211125145134_AppUserMigration.cs": {
+      "Persistence.Migrations.ApplicationUser.AppUserMigration": {
+        "System.Void Persistence.Migrations.ApplicationUser.AppUserMigration::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "163": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "176": 0,
+            "177": 0,
+            "178": 0,
+            "179": 0,
+            "181": 0,
+            "182": 0,
+            "183": 0,
+            "184": 0,
+            "186": 0,
+            "187": 0,
+            "188": 0,
+            "189": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0,
+            "196": 0
+          },
+          "Branches": []
+        },
+        "System.Void Persistence.Migrations.ApplicationUser.AppUserMigration::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "199": 0,
+            "200": 0,
+            "201": 0,
+            "203": 0,
+            "204": 0,
+            "206": 0,
+            "207": 0,
+            "209": 0,
+            "210": 0,
+            "212": 0,
+            "213": 0,
+            "215": 0,
+            "216": 0,
+            "218": 0,
+            "219": 0,
+            "220": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Migrations/ApplicationUser/20211125145134_AppUserMigration.Designer.cs": {
+      "Persistence.Migrations.ApplicationUser.AppUserMigration": {
+        "System.Void Persistence.Migrations.ApplicationUser.AppUserMigration::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "18": 0,
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "163": 0,
+            "164": 0,
+            "165": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "170": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "175": 0,
+            "176": 0,
+            "177": 0,
+            "178": 0,
+            "179": 0,
+            "180": 0,
+            "181": 0,
+            "182": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "187": 0,
+            "189": 0,
+            "190": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0,
+            "196": 0,
+            "197": 0,
+            "198": 0,
+            "199": 0,
+            "200": 0,
+            "201": 0,
+            "202": 0,
+            "204": 0,
+            "205": 0,
+            "206": 0,
+            "207": 0,
+            "208": 0,
+            "209": 0,
+            "210": 0,
+            "211": 0,
+            "212": 0,
+            "213": 0,
+            "214": 0,
+            "215": 0,
+            "216": 0,
+            "217": 0,
+            "218": 0,
+            "219": 0,
+            "220": 0,
+            "221": 0,
+            "223": 0,
+            "224": 0,
+            "225": 0,
+            "226": 0,
+            "227": 0,
+            "228": 0,
+            "229": 0,
+            "230": 0,
+            "232": 0,
+            "233": 0,
+            "234": 0,
+            "235": 0,
+            "236": 0,
+            "237": 0,
+            "238": 0,
+            "239": 0,
+            "241": 0,
+            "242": 0,
+            "243": 0,
+            "244": 0,
+            "245": 0,
+            "246": 0,
+            "247": 0,
+            "248": 0,
+            "250": 0,
+            "251": 0,
+            "252": 0,
+            "253": 0,
+            "254": 0,
+            "255": 0,
+            "256": 0,
+            "257": 0,
+            "258": 0,
+            "259": 0,
+            "260": 0,
+            "261": 0,
+            "262": 0,
+            "263": 0,
+            "265": 0,
+            "266": 0,
+            "267": 0,
+            "268": 0,
+            "269": 0,
+            "270": 0,
+            "271": 0,
+            "272": 0,
+            "274": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Migrations/ApplicationUser/ApplicationUserContextModelSnapshot.cs": {
+      "Persistence.Migrations.ApplicationUser.ApplicationUserContextModelSnapshot": {
+        "System.Void Persistence.Migrations.ApplicationUser.ApplicationUserContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "16": 0,
+            "18": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "163": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "170": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "175": 0,
+            "176": 0,
+            "177": 0,
+            "178": 0,
+            "179": 0,
+            "180": 0,
+            "181": 0,
+            "182": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "187": 0,
+            "188": 0,
+            "189": 0,
+            "190": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0,
+            "196": 0,
+            "197": 0,
+            "198": 0,
+            "199": 0,
+            "200": 0,
+            "202": 0,
+            "203": 0,
+            "204": 0,
+            "205": 0,
+            "206": 0,
+            "207": 0,
+            "208": 0,
+            "209": 0,
+            "210": 0,
+            "211": 0,
+            "212": 0,
+            "213": 0,
+            "214": 0,
+            "215": 0,
+            "216": 0,
+            "217": 0,
+            "218": 0,
+            "219": 0,
+            "221": 0,
+            "222": 0,
+            "223": 0,
+            "224": 0,
+            "225": 0,
+            "226": 0,
+            "227": 0,
+            "228": 0,
+            "230": 0,
+            "231": 0,
+            "232": 0,
+            "233": 0,
+            "234": 0,
+            "235": 0,
+            "236": 0,
+            "237": 0,
+            "239": 0,
+            "240": 0,
+            "241": 0,
+            "242": 0,
+            "243": 0,
+            "244": 0,
+            "245": 0,
+            "246": 0,
+            "248": 0,
+            "249": 0,
+            "250": 0,
+            "251": 0,
+            "252": 0,
+            "253": 0,
+            "254": 0,
+            "255": 0,
+            "256": 0,
+            "257": 0,
+            "258": 0,
+            "259": 0,
+            "260": 0,
+            "261": 0,
+            "263": 0,
+            "264": 0,
+            "265": 0,
+            "266": 0,
+            "267": 0,
+            "268": 0,
+            "269": 0,
+            "270": 0,
+            "272": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Extensions/IApplicationBuilderExtensions.cs": {
+      "Persistence.Extensions.IApplicationBuilderExtensions": {
+        "System.Void Persistence.Extensions.IApplicationBuilderExtensions::EnsureIdentityDbIsCreated(Microsoft.AspNetCore.Builder.IApplicationBuilder)": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0
+          },
+          "Branches": []
+        }
+      },
+      "Persistence.Extensions.IApplicationBuilderExtensions/<SeedIdentityDataAsync>d__1": {
+        "System.Void Persistence.Extensions.IApplicationBuilderExtensions/<SeedIdentityDataAsync>d__1::MoveNext()": {
+          "Lines": {
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "44": 0,
+            "45": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "Domain.dll": {
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Entities/ApplicationUser.cs": {
+      "Domain.Entities.ApplicationUser": {
+        "System.String Domain.Entities.ApplicationUser::get_FirstName()": {
+          "Lines": {
+            "8": 1
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.ApplicationUser::get_LastName()": {
+          "Lines": {
+            "9": 1
+          },
+          "Branches": []
+        },
+        "System.Boolean Domain.Entities.ApplicationUser::get_IsEnabled()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.ApplicationUser::get_FullName()": {
+          "Lines": {
+            "16": 1,
+            "17": 1,
+            "18": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Entities/Author.cs": {
+      "Domain.Entities.Author": {
+        "System.String Domain.Entities.Author::get_FirstName()": {
+          "Lines": {
+            "7": 2
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Author::get_LastName()": {
+          "Lines": {
+            "8": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Entities/Book.cs": {
+      "Domain.Entities.Book": {
+        "System.String Domain.Entities.Book::get_Title()": {
+          "Lines": {
+            "7": 2
+          },
+          "Branches": []
+        },
+        "System.Decimal Domain.Entities.Book::get_Rating()": {
+          "Lines": {
+            "8": 2
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Book::get_Description()": {
+          "Lines": {
+            "9": 2
+          },
+          "Branches": []
+        },
+        "System.DateTime Domain.Entities.Book::get_PublicationDate()": {
+          "Lines": {
+            "10": 2
+          },
+          "Branches": []
+        },
+        "System.Uri Domain.Entities.Book::get_ImageUri()": {
+          "Lines": {
+            "11": 2
+          },
+          "Branches": []
+        },
+        "System.Uri Domain.Entities.Book::get_DownloadUri()": {
+          "Lines": {
+            "12": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Entities/BookPoints.cs": {
+      "Domain.Entities.BookPoints": {
+        "System.Guid Domain.Entities.BookPoints::get_UserId()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.Guid Domain.Entities.BookPoints::get_BookId()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.BookPoints::get_Points()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Entities/Genre.cs": {
+      "Domain.Entities.Genre": {
+        "System.String Domain.Entities.Genre::get_Name()": {
+          "Lines": {
+            "7": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Entities/UserList.cs": {
+      "Domain.Entities.UserList": {
+        "System.Guid Domain.Entities.UserList::get_UserId()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.ListType Domain.Entities.UserList::get_Type()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Constants/ApplicationIdentityConstants.cs": {
+      "Domain.Constants.ApplicationIdentityConstants": {
+        "System.Void Domain.Constants.ApplicationIdentityConstants::.cctor()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      },
+      "Domain.Constants.ApplicationIdentityConstants/Roles": {
+        "System.Void Domain.Constants.ApplicationIdentityConstants/Roles::.cctor()": {
+          "Lines": {
+            "7": 0,
+            "8": 0,
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Common/BaseEntity.cs": {
+      "Domain.Common.BaseEntity": {
+        "System.Guid Domain.Common.BaseEntity::get_Id()": {
+          "Lines": {
+            "5": 18
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/AuthModels/ApplicationUserDto.cs": {
+      "Domain.AuthModels.ApplicationUserDto": {
+        "System.String Domain.AuthModels.ApplicationUserDto::get_Username()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.AuthModels.ApplicationUserDto::get_Email()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.AuthModels.ApplicationUserDto::get_FirstName()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.AuthModels.ApplicationUserDto::get_LastName()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/AuthModels/RegisterRequest.cs": {
+      "Domain.AuthModels.RegisterRequest": {
+        "System.String Domain.AuthModels.RegisterRequest::get_Username()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.AuthModels.RegisterRequest::get_Email()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.AuthModels.RegisterRequest::get_Password()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.AuthModels.RegisterRequest::get_FirstName()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.AuthModels.RegisterRequest::get_LastName()": {
+          "Lines": {
+            "27": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/AuthModels/RegisterResponse.cs": {
+      "Domain.AuthModels.RegisterResponse": {
+        "System.String Domain.AuthModels.RegisterResponse::get_Status()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.AuthModels.RegisterResponse::get_Message()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/AuthModels/Token.cs": {
+      "Domain.AuthModels.Token": {
+        "System.String Domain.AuthModels.Token::get_Secret()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.AuthModels.Token::get_Issuer()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.AuthModels.Token::get_Audience()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.AuthModels.Token::get_Expiry()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.AuthModels.Token::get_RefreshExpiry()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/AuthModels/TokenRequest.cs": {
+      "Domain.AuthModels.TokenRequest": {
+        "System.String Domain.AuthModels.TokenRequest::get_Email()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.AuthModels.TokenRequest::get_Password()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/AuthModels/TokenResponse.cs": {
+      "Domain.AuthModels.TokenResponse": {
+        "System.String Domain.AuthModels.TokenResponse::get_Id()": {
+          "Lines": {
+            "19": 1
+          },
+          "Branches": []
+        },
+        "System.String Domain.AuthModels.TokenResponse::get_FullName()": {
+          "Lines": {
+            "20": 1
+          },
+          "Branches": []
+        },
+        "System.String Domain.AuthModels.TokenResponse::get_EmailAddress()": {
+          "Lines": {
+            "21": 1
+          },
+          "Branches": []
+        },
+        "System.String Domain.AuthModels.TokenResponse::get_Token()": {
+          "Lines": {
+            "22": 1
+          },
+          "Branches": []
+        },
+        "System.String Domain.AuthModels.TokenResponse::get_Role()": {
+          "Lines": {
+            "23": 1
+          },
+          "Branches": []
+        },
+        "System.Void Domain.AuthModels.TokenResponse::.ctor(Domain.Entities.ApplicationUser,System.String,System.String)": {
+          "Lines": {
+            "7": 1,
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "Application.dll": {
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/ApplicationDI.cs": {
+      "Application.ApplicationDI": {
+        "System.Void Application.ApplicationDI::AddApplication(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Responses/AuthenticationResponse.cs": {
+      "Application.Features.Responses.AuthenticationResponse": {
+        "Domain.AuthModels.TokenResponse Application.Features.Responses.AuthenticationResponse::get_Resource()": {
+          "Lines": {
+            "7": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Responses/RegistrationResponse.cs": {
+      "Application.Features.Responses.RegistrationResponse": {
+        "Domain.AuthModels.RegisterResponse Application.Features.Responses.RegistrationResponse::get_Resource()": {
+          "Lines": {
+            "7": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Queries/GetAdminsQueryHandler.cs": {
+      "Application.Features.Queries.GetAdminsQueryHandler": {
+        "System.Void Application.Features.Queries.GetAdminsQueryHandler::.ctor(Application.Interfaces.ITokenRepository)": {
+          "Lines": {
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1
+          },
+          "Branches": []
+        }
+      },
+      "Application.Features.Queries.GetAdminsQueryHandler/<Handle>d__2": {
+        "System.Void Application.Features.Queries.GetAdminsQueryHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "16": 1,
+            "17": 1,
+            "18": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Queries/GetAuthorByIdQuery.cs": {
+      "Application.Features.Queries.GetAuthorByIdQuery": {
+        "System.Guid Application.Features.Queries.GetAuthorByIdQuery::get_Id()": {
+          "Lines": {
+            "8": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Queries/GetAuthorByIdQueryHandler.cs": {
+      "Application.Features.Queries.GetAuthorByIdQueryHandler": {
+        "System.Void Application.Features.Queries.GetAuthorByIdQueryHandler::.ctor(Application.Interfaces.IAuthorRepository)": {
+          "Lines": {
+            "11": 2,
+            "12": 2,
+            "13": 2,
+            "14": 2
+          },
+          "Branches": []
+        }
+      },
+      "Application.Features.Queries.GetAuthorByIdQueryHandler/<Handle>d__2": {
+        "System.Void Application.Features.Queries.GetAuthorByIdQueryHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "17": 2,
+            "18": 2,
+            "19": 2,
+            "20": 1,
+            "21": 1,
+            "23": 1,
+            "24": 1
+          },
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 169,
+              "EndOffset": 171,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 19,
+              "Offset": 169,
+              "EndOffset": 183,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Queries/GetAuthorsQueryHandler.cs": {
+      "Application.Features.Queries.GetAuthorsQueryHandler": {
+        "System.Void Application.Features.Queries.GetAuthorsQueryHandler::.ctor(Application.Interfaces.IAuthorRepository)": {
+          "Lines": {
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1
+          },
+          "Branches": []
+        }
+      },
+      "Application.Features.Queries.GetAuthorsQueryHandler/<Handle>d__2": {
+        "System.Void Application.Features.Queries.GetAuthorsQueryHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "16": 1,
+            "17": 1,
+            "18": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Queries/GetBookByIdQuery.cs": {
+      "Application.Features.Queries.GetBookByIdQuery": {
+        "System.Guid Application.Features.Queries.GetBookByIdQuery::get_Id()": {
+          "Lines": {
+            "8": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Queries/GetBookByIdQueryHandler.cs": {
+      "Application.Features.Queries.GetBookByIdQueryHandler": {
+        "System.Void Application.Features.Queries.GetBookByIdQueryHandler::.ctor(Application.Interfaces.IBookRepository)": {
+          "Lines": {
+            "11": 2,
+            "12": 2,
+            "13": 2,
+            "14": 2
+          },
+          "Branches": []
+        }
+      },
+      "Application.Features.Queries.GetBookByIdQueryHandler/<Handle>d__2": {
+        "System.Void Application.Features.Queries.GetBookByIdQueryHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "17": 2,
+            "18": 2,
+            "19": 2,
+            "20": 1,
+            "21": 1,
+            "23": 1,
+            "24": 1
+          },
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 169,
+              "EndOffset": 171,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 19,
+              "Offset": 169,
+              "EndOffset": 183,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Queries/GetBooksQueryHandler.cs": {
+      "Application.Features.Queries.GetBooksQueryHandler": {
+        "System.Void Application.Features.Queries.GetBooksQueryHandler::.ctor(Application.Interfaces.IBookRepository)": {
+          "Lines": {
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1
+          },
+          "Branches": []
+        }
+      },
+      "Application.Features.Queries.GetBooksQueryHandler/<Handle>d__2": {
+        "System.Void Application.Features.Queries.GetBooksQueryHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "16": 1,
+            "17": 1,
+            "18": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Queries/GetGenreByIdQuery.cs": {
+      "Application.Features.Queries.GetGenreByIdQuery": {
+        "System.Guid Application.Features.Queries.GetGenreByIdQuery::get_Id()": {
+          "Lines": {
+            "8": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Queries/GetGenreByIdQueryHandler.cs": {
+      "Application.Features.Queries.GetGenreByIdQueryHandler": {
+        "System.Void Application.Features.Queries.GetGenreByIdQueryHandler::.ctor(Application.Interfaces.IGenreRepository)": {
+          "Lines": {
+            "11": 2,
+            "12": 2,
+            "13": 2,
+            "14": 2
+          },
+          "Branches": []
+        }
+      },
+      "Application.Features.Queries.GetGenreByIdQueryHandler/<Handle>d__2": {
+        "System.Void Application.Features.Queries.GetGenreByIdQueryHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "16": 2,
+            "17": 2,
+            "18": 2,
+            "19": 1,
+            "20": 1,
+            "22": 1,
+            "23": 1
+          },
+          "Branches": [
+            {
+              "Line": 18,
+              "Offset": 169,
+              "EndOffset": 171,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 18,
+              "Offset": 169,
+              "EndOffset": 183,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Queries/GetGenresQueryHandler.cs": {
+      "Application.Features.Queries.GetGenresQueryHandler": {
+        "System.Void Application.Features.Queries.GetGenresQueryHandler::.ctor(Application.Interfaces.IGenreRepository)": {
+          "Lines": {
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "13": 1
+          },
+          "Branches": []
+        }
+      },
+      "Application.Features.Queries.GetGenresQueryHandler/<Handle>d__2": {
+        "System.Void Application.Features.Queries.GetGenresQueryHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "15": 1,
+            "16": 1,
+            "17": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Queries/GetMembersQueryHandler.cs": {
+      "Application.Features.Queries.GetMembersQueryHandler": {
+        "System.Void Application.Features.Queries.GetMembersQueryHandler::.ctor(Application.Interfaces.ITokenRepository)": {
+          "Lines": {
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1
+          },
+          "Branches": []
+        }
+      },
+      "Application.Features.Queries.GetMembersQueryHandler/<Handle>d__2": {
+        "System.Void Application.Features.Queries.GetMembersQueryHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "16": 1,
+            "17": 1,
+            "18": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Commands/AuthenticateCommandHandler.cs": {
+      "Application.Features.Commands.AuthenticateCommandHandler": {
+        "System.Void Application.Features.Commands.AuthenticateCommandHandler::.ctor(Application.Interfaces.ITokenRepository,Microsoft.AspNetCore.Http.IHttpContextAccessor)": {
+          "Lines": {
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1,
+            "18": 1
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 11,
+              "EndOffset": 13,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 11,
+              "EndOffset": 25,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 17,
+              "Offset": 32,
+              "EndOffset": 34,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 17,
+              "Offset": 32,
+              "EndOffset": 45,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "Application.Features.Commands.AuthenticateCommandHandler/<Handle>d__3": {
+        "System.Void Application.Features.Commands.AuthenticateCommandHandler/<Handle>d__3::MoveNext()": {
+          "Lines": {
+            "20": 1,
+            "21": 1,
+            "23": 1,
+            "25": 1,
+            "26": 1,
+            "27": 1,
+            "28": 1
+          },
+          "Branches": [
+            {
+              "Line": 26,
+              "Offset": 221,
+              "EndOffset": 223,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 221,
+              "EndOffset": 230,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Commands/CreateAuthorCommand.cs": {
+      "Application.Features.Commands.CreateAuthorCommand": {
+        "System.String Application.Features.Commands.CreateAuthorCommand::get_FirstName()": {
+          "Lines": {
+            "7": 1
+          },
+          "Branches": []
+        },
+        "System.String Application.Features.Commands.CreateAuthorCommand::get_LastName()": {
+          "Lines": {
+            "8": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Commands/CreateAuthorCommandHandler.cs": {
+      "Application.Features.Commands.CreateAuthorCommandHandler": {
+        "System.Void Application.Features.Commands.CreateAuthorCommandHandler::.ctor(Application.Interfaces.IAuthorRepository)": {
+          "Lines": {
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1
+          },
+          "Branches": []
+        }
+      },
+      "Application.Features.Commands.CreateAuthorCommandHandler/<Handle>d__2": {
+        "System.Void Application.Features.Commands.CreateAuthorCommandHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Commands/CreateBookCommand.cs": {
+      "Application.Features.Commands.CreateBookCommand": {
+        "System.String Application.Features.Commands.CreateBookCommand::get_Title()": {
+          "Lines": {
+            "7": 1
+          },
+          "Branches": []
+        },
+        "System.Decimal Application.Features.Commands.CreateBookCommand::get_Rating()": {
+          "Lines": {
+            "8": 1
+          },
+          "Branches": []
+        },
+        "System.String Application.Features.Commands.CreateBookCommand::get_Description()": {
+          "Lines": {
+            "9": 1
+          },
+          "Branches": []
+        },
+        "System.DateTime Application.Features.Commands.CreateBookCommand::get_PublicationDate()": {
+          "Lines": {
+            "10": 1
+          },
+          "Branches": []
+        },
+        "System.Uri Application.Features.Commands.CreateBookCommand::get_ImageUri()": {
+          "Lines": {
+            "11": 1
+          },
+          "Branches": []
+        },
+        "System.Uri Application.Features.Commands.CreateBookCommand::get_DownloadUri()": {
+          "Lines": {
+            "12": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Commands/CreateBookCommandHandler.cs": {
+      "Application.Features.Commands.CreateBookCommandHandler": {
+        "System.Void Application.Features.Commands.CreateBookCommandHandler::.ctor(Application.Interfaces.IBookRepository)": {
+          "Lines": {
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1
+          },
+          "Branches": []
+        }
+      },
+      "Application.Features.Commands.CreateBookCommandHandler/<Handle>d__2": {
+        "System.Void Application.Features.Commands.CreateBookCommandHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "28": 1,
+            "29": 1,
+            "30": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Commands/CreateGenreCommand.cs": {
+      "Application.Features.Commands.CreateGenreCommand": {
+        "System.String Application.Features.Commands.CreateGenreCommand::get_Name()": {
+          "Lines": {
+            "7": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Commands/CreateGenreCommandHandler.cs": {
+      "Application.Features.Commands.CreateGenreCommandHandler": {
+        "System.Void Application.Features.Commands.CreateGenreCommandHandler::.ctor(Application.Interfaces.IGenreRepository)": {
+          "Lines": {
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1
+          },
+          "Branches": []
+        }
+      },
+      "Application.Features.Commands.CreateGenreCommandHandler/<Handle>d__2": {
+        "System.Void Application.Features.Commands.CreateGenreCommandHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Commands/DeleteAuthorCommand.cs": {
+      "Application.Features.Commands.DeleteAuthorCommand": {
+        "System.Guid Application.Features.Commands.DeleteAuthorCommand::get_Id()": {
+          "Lines": {
+            "7": 5
+          },
+          "Branches": []
+        },
+        "System.Void Application.Features.Commands.DeleteAuthorCommand::.ctor(System.Guid)": {
+          "Lines": {
+            "8": 3,
+            "9": 3,
+            "10": 3,
+            "11": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Commands/DeleteAuthorCommandHandler.cs": {
+      "Application.Features.Commands.DeleteAuthorCommandHandler": {
+        "System.Void Application.Features.Commands.DeleteAuthorCommandHandler::.ctor(Application.Interfaces.IAuthorRepository)": {
+          "Lines": {
+            "11": 2,
+            "12": 2,
+            "13": 2,
+            "14": 2
+          },
+          "Branches": []
+        }
+      },
+      "Application.Features.Commands.DeleteAuthorCommandHandler/<Handle>d__2": {
+        "System.Void Application.Features.Commands.DeleteAuthorCommandHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "17": 2,
+            "18": 2,
+            "19": 2,
+            "20": 1,
+            "21": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1
+          },
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 67,
+              "EndOffset": 69,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 19,
+              "Offset": 67,
+              "EndOffset": 81,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Commands/DeleteBookCommand.cs": {
+      "Application.Features.Commands.DeleteBookCommand": {
+        "System.Guid Application.Features.Commands.DeleteBookCommand::get_Id()": {
+          "Lines": {
+            "7": 5
+          },
+          "Branches": []
+        },
+        "System.Void Application.Features.Commands.DeleteBookCommand::.ctor(System.Guid)": {
+          "Lines": {
+            "8": 3,
+            "9": 3,
+            "10": 3,
+            "11": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Commands/DeleteBookCommandHandler.cs": {
+      "Application.Features.Commands.DeleteBookCommandHandler": {
+        "System.Void Application.Features.Commands.DeleteBookCommandHandler::.ctor(Application.Interfaces.IBookRepository)": {
+          "Lines": {
+            "10": 2,
+            "11": 2,
+            "12": 2,
+            "13": 2
+          },
+          "Branches": []
+        }
+      },
+      "Application.Features.Commands.DeleteBookCommandHandler/<Handle>d__2": {
+        "System.Void Application.Features.Commands.DeleteBookCommandHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "15": 2,
+            "16": 2,
+            "17": 2,
+            "18": 1,
+            "19": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 67,
+              "EndOffset": 69,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 17,
+              "Offset": 67,
+              "EndOffset": 81,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Commands/DeleteGenreCommand.cs": {
+      "Application.Features.Commands.DeleteGenreCommand": {
+        "System.Guid Application.Features.Commands.DeleteGenreCommand::get_Id()": {
+          "Lines": {
+            "7": 5
+          },
+          "Branches": []
+        },
+        "System.Void Application.Features.Commands.DeleteGenreCommand::.ctor(System.Guid)": {
+          "Lines": {
+            "8": 3,
+            "9": 3,
+            "10": 3,
+            "11": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Commands/DeleteGenreCommandHandler.cs": {
+      "Application.Features.Commands.DeleteGenreCommandHandler": {
+        "System.Void Application.Features.Commands.DeleteGenreCommandHandler::.ctor(Application.Interfaces.IGenreRepository)": {
+          "Lines": {
+            "10": 2,
+            "11": 2,
+            "12": 2,
+            "13": 2
+          },
+          "Branches": []
+        }
+      },
+      "Application.Features.Commands.DeleteGenreCommandHandler/<Handle>d__2": {
+        "System.Void Application.Features.Commands.DeleteGenreCommandHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "16": 2,
+            "17": 2,
+            "18": 2,
+            "19": 1,
+            "20": 1,
+            "22": 1,
+            "23": 1,
+            "24": 1
+          },
+          "Branches": [
+            {
+              "Line": 18,
+              "Offset": 67,
+              "EndOffset": 69,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 18,
+              "Offset": 67,
+              "EndOffset": 81,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Commands/RegisterMemberCommandHandler.cs": {
+      "Application.Features.Commands.RegisterMemberCommandHandler": {
+        "System.Void Application.Features.Commands.RegisterMemberCommandHandler::.ctor(Application.Interfaces.ITokenRepository,Microsoft.AspNetCore.Http.IHttpContextAccessor)": {
+          "Lines": {
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1,
+            "18": 1
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 11,
+              "EndOffset": 13,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 11,
+              "EndOffset": 25,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 17,
+              "Offset": 32,
+              "EndOffset": 34,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 17,
+              "Offset": 32,
+              "EndOffset": 45,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "Application.Features.Commands.RegisterMemberCommandHandler/<Handle>d__3": {
+        "System.Void Application.Features.Commands.RegisterMemberCommandHandler/<Handle>d__3::MoveNext()": {
+          "Lines": {
+            "20": 1,
+            "21": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1
+          },
+          "Branches": [
+            {
+              "Line": 24,
+              "Offset": 175,
+              "EndOffset": 177,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 175,
+              "EndOffset": 184,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Commands/UpdateAuthorCommand.cs": {
+      "Application.Features.Commands.UpdateAuthorCommand": {
+        "System.Guid Application.Features.Commands.UpdateAuthorCommand::get_Id()": {
+          "Lines": {
+            "7": 5
+          },
+          "Branches": []
+        },
+        "System.String Application.Features.Commands.UpdateAuthorCommand::get_FirstName()": {
+          "Lines": {
+            "8": 1
+          },
+          "Branches": []
+        },
+        "System.String Application.Features.Commands.UpdateAuthorCommand::get_LastName()": {
+          "Lines": {
+            "9": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Commands/UpdateAuthorCommandHandler.cs": {
+      "Application.Features.Commands.UpdateAuthorCommandHandler": {
+        "System.Void Application.Features.Commands.UpdateAuthorCommandHandler::.ctor(Application.Interfaces.IAuthorRepository)": {
+          "Lines": {
+            "10": 2,
+            "11": 2,
+            "12": 2,
+            "13": 2
+          },
+          "Branches": []
+        }
+      },
+      "Application.Features.Commands.UpdateAuthorCommandHandler/<Handle>d__2": {
+        "System.Void Application.Features.Commands.UpdateAuthorCommandHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "15": 2,
+            "16": 2,
+            "17": 2,
+            "18": 1,
+            "19": 1,
+            "21": 1,
+            "22": 1,
+            "24": 1,
+            "26": 1,
+            "27": 1
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 62,
+              "EndOffset": 64,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 17,
+              "Offset": 62,
+              "EndOffset": 87,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 17,
+              "Offset": 90,
+              "EndOffset": 92,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 17,
+              "Offset": 90,
+              "EndOffset": 104,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Commands/UpdateBookCommand.cs": {
+      "Application.Features.Commands.UpdateBookCommand": {
+        "System.Guid Application.Features.Commands.UpdateBookCommand::get_Id()": {
+          "Lines": {
+            "7": 5
+          },
+          "Branches": []
+        },
+        "System.String Application.Features.Commands.UpdateBookCommand::get_Title()": {
+          "Lines": {
+            "8": 1
+          },
+          "Branches": []
+        },
+        "System.Decimal Application.Features.Commands.UpdateBookCommand::get_Rating()": {
+          "Lines": {
+            "9": 1
+          },
+          "Branches": []
+        },
+        "System.String Application.Features.Commands.UpdateBookCommand::get_Description()": {
+          "Lines": {
+            "10": 1
+          },
+          "Branches": []
+        },
+        "System.DateTime Application.Features.Commands.UpdateBookCommand::get_PublicationDate()": {
+          "Lines": {
+            "11": 1
+          },
+          "Branches": []
+        },
+        "System.Uri Application.Features.Commands.UpdateBookCommand::get_ImageUri()": {
+          "Lines": {
+            "12": 1
+          },
+          "Branches": []
+        },
+        "System.Uri Application.Features.Commands.UpdateBookCommand::get_DownloadUri()": {
+          "Lines": {
+            "13": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Commands/UpdateBookCommandHandler.cs": {
+      "Application.Features.Commands.UpdateBookCommandHandler": {
+        "System.Void Application.Features.Commands.UpdateBookCommandHandler::.ctor(Application.Interfaces.IBookRepository)": {
+          "Lines": {
+            "10": 2,
+            "11": 2,
+            "12": 2,
+            "13": 2
+          },
+          "Branches": []
+        }
+      },
+      "Application.Features.Commands.UpdateBookCommandHandler/<Handle>d__2": {
+        "System.Void Application.Features.Commands.UpdateBookCommandHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "15": 2,
+            "16": 2,
+            "17": 2,
+            "18": 1,
+            "19": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "28": 1,
+            "30": 1,
+            "31": 1
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 62,
+              "EndOffset": 64,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 17,
+              "Offset": 62,
+              "EndOffset": 87,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 17,
+              "Offset": 90,
+              "EndOffset": 92,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 17,
+              "Offset": 90,
+              "EndOffset": 104,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Commands/UpdateGenreCommand.cs": {
+      "Application.Features.Commands.UpdateGenreCommand": {
+        "System.Guid Application.Features.Commands.UpdateGenreCommand::get_Id()": {
+          "Lines": {
+            "7": 5
+          },
+          "Branches": []
+        },
+        "System.String Application.Features.Commands.UpdateGenreCommand::get_Name()": {
+          "Lines": {
+            "8": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Features/Commands/UpdateGenreCommandHandler.cs": {
+      "Application.Features.Commands.UpdateGenreCommandHandler": {
+        "System.Void Application.Features.Commands.UpdateGenreCommandHandler::.ctor(Application.Interfaces.IGenreRepository)": {
+          "Lines": {
+            "10": 2,
+            "11": 2,
+            "12": 2,
+            "13": 2
+          },
+          "Branches": []
+        }
+      },
+      "Application.Features.Commands.UpdateGenreCommandHandler/<Handle>d__2": {
+        "System.Void Application.Features.Commands.UpdateGenreCommandHandler/<Handle>d__2::MoveNext()": {
+          "Lines": {
+            "15": 2,
+            "16": 2,
+            "17": 2,
+            "18": 1,
+            "19": 1,
+            "21": 1,
+            "23": 1,
+            "25": 1,
+            "26": 1
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 62,
+              "EndOffset": 64,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 17,
+              "Offset": 62,
+              "EndOffset": 87,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 17,
+              "Offset": 90,
+              "EndOffset": 92,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 17,
+              "Offset": 90,
+              "EndOffset": 104,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    }
+  }
+}

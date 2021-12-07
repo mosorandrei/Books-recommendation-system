@@ -20,14 +20,18 @@ namespace Application.Interfaces
         /// <summary>
         ///     Get all Members from Database
         /// </summary>
-        /// <param name="request"></param>
         /// <returns></returns>
-        Task<IEnumerable<ApplicationUserDTO>> GetAllMembersAsync();
+        Task<IEnumerable<ApplicationUserDto>> GetAllMembersAsync();
         /// <summary>
         ///     Get all Admins from Database
         /// </summary>
-        /// <param name="request"></param>
         /// <returns></returns>
-        Task<IEnumerable<ApplicationUserDTO>> GetAllAdminsAsync();
+        Task<IEnumerable<ApplicationUserDto>> GetAllAdminsAsync();
+        /// <summary>
+        ///     Refresh a token based on User Id
+        /// </summary>
+        /// <param name="UserId"></param>
+        /// <returns></returns>
+        Task<RefreshTokenDto> RefreshToken(string Email);
     }
 }

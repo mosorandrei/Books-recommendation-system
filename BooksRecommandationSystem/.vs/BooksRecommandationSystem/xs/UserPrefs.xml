@@ -1,46 +1,87 @@
 ﻿<Properties StartupConfiguration="{6DAD25BA-BC19-4B7B-B9B3-FC3E0FD120E3}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Persistence/Context/AuthorContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebAPI/NamespaceConvention.cs">
     <Files>
-      <File FileName="Persistence/Context/AuthorContext.cs" Line="18" Column="10" />
-      <File FileName="Persistence/Context/BookContext.cs" Line="3" Column="1" />
-      <File FileName="Persistence/Context/GenreContext.cs" Line="3" Column="1" />
-      <File FileName="Persistence/Context/UserContext.cs" Line="22" Column="12" />
-      <File FileName="WebAPI/Controllers/v1/AuthorsController.cs" Line="1" Column="1" />
-      <File FileName="Persistence/v1/AuthorRepository.cs" Line="1" Column="1" />
+      <File FileName="Infrastructure.Test/Service/QueryHandlerTests/GetAdminsQueryHandlerTests.cs" Line="23" Column="35" />
+      <File FileName="Infrastructure.Test/Service/QueryHandlerTests/GetAuthorByIdQueryHandlerTests.cs" />
+      <File FileName="Infrastructure.Test/Service/QueryHandlerTests/GetAuthorsQueryHandlerTests.cs" />
+      <File FileName="Infrastructure.Test/Service/QueryHandlerTests/GetBookByIdQueryHandlerTests.cs" />
+      <File FileName="Infrastructure.Test/Service/QueryHandlerTests/GetBooksQueryHandlerTests.cs" />
+      <File FileName="Infrastructure.Test/Service/QueryHandlerTests/GetGenreByIdQueryHandlerTests.cs" />
+      <File FileName="Infrastructure.Test/Service/QueryHandlerTests/GetGenresQueryHandlerTests.cs" />
+      <File FileName="Infrastructure.Test/Service/QueryHandlerTests/GetMembersQueryHandlerTests.cs" />
+      <File FileName="Infrastructure.Test/Service/CommandHandlerTests/UpdateAuthorCommandHandlerTests.cs" />
+      <File FileName="Infrastructure.Test/Service/CommandHandlerTests/UpdateBookCommandHandlerTests.cs" />
+      <File FileName="Infrastructure.Test/Data/AuthorRepositoryTest.cs" />
+      <File FileName="Persistence/v2/Repository.cs" />
+      <File FileName="Application/Features/Commands/DeleteAuthorCommandHandler.cs" />
+      <File FileName="Infrastructure.Test/Service/CommandHandlerTests/DeleteAuthorCommandHandlerTests.cs" />
+      <File FileName="Infrastructure.Test/Service/CommandHandlerTests/DeleteBookCoomandHandlerTests.cs" />
+      <File FileName="Infrastructure.Test/Service/CommandHandlerTests/UpdateGenreCommandHandlerTests.cs" />
+      <File FileName="WebAPI/Program.cs" />
+      <File FileName="WebAPI/NamespaceConvention.cs" Line="18" Column="29" />
+      <File FileName="Persistence/Migrations/Genre/20211125124336_InitialCreate.cs" />
+      <File FileName="Persistence/Migrations/Book/20211125124306_InitialCreate.cs" />
+      <File FileName="Persistence/Migrations/ApplicationUser/20211125145134_AppUserMigration.cs" />
+      <File FileName="Persistence/Migrations/20211125124235_InitialCreate.cs" />
+      <File FileName="WebAPI/Startup.cs" />
+      <File FileName="Persistence/v1/Repository.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BooksRecommandationSystem" expanded="True">
+            <Node name="00 Tests" expanded="True">
+              <Node name="Infrastructure.Test" expanded="True">
+                <Node name="API" expanded="True">
+                  <Node name="v1" expanded="True" />
+                  <Node name="v2" expanded="True" />
+                </Node>
+                <Node name="Data" expanded="True" />
+                <Node name="Service" expanded="True">
+                  <Node name="CommandHandlerTests" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="Core" expanded="True">
+              <Node name="Application" expanded="True">
+                <Node name="Features" expanded="True">
+                  <Node name="Commands" expanded="True" />
+                  <Node name="Responses" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Domain" expanded="True">
+                <Node name="AuthModels" expanded="True" />
+              </Node>
+            </Node>
             <Node name="Infrastructure" expanded="True">
               <Node name="Persistence" expanded="True">
                 <Node name="Dependencies" expanded="True" />
                 <Node name="Context" expanded="True" />
+                <Node name="Extensions" expanded="True" />
                 <Node name="Migrations" expanded="True">
-                  <Node name="Author" expanded="True" />
+                  <Node name="ApplicationUser" expanded="True" />
+                  <Node name="Book" expanded="True" />
                   <Node name="Genre" expanded="True" />
-                  <Node name="User" expanded="True" />
                 </Node>
+                <Node name="Seed" expanded="True" />
                 <Node name="v1" expanded="True" />
+                <Node name="v2" expanded="True" />
               </Node>
             </Node>
             <Node name="Presentation" expanded="True">
               <Node name="WebAPI" expanded="True">
+                <Node name="Dependencies" expanded="True">
+                  <Node name="PackageDependencies" expanded="True" />
+                </Node>
                 <Node name="Controllers" expanded="True">
                   <Node name="v1" expanded="True" />
+                  <Node name="v2" expanded="True" />
                 </Node>
                 <Node name="Properties" expanded="True" />
+                <Node name="NamespaceConvention.cs" selected="True" />
               </Node>
             </Node>
           </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="BooksRecommandationSystem" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
