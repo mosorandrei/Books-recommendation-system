@@ -5,12 +5,13 @@
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\adria\.nuget\packages\</NuGetPackageFolders>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\ROG\.nuget\packages\;C:\Microsoft\Xamarin\NuGet\</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
     <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.0.0</NuGetToolVersion>
   </PropertyGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <SourceRoot Include="C:\Users\adria\.nuget\packages\" />
+    <SourceRoot Include="C:\Users\ROG\.nuget\packages\" />
+    <SourceRoot Include="C:\Microsoft\Xamarin\NuGet\" />
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.netcore.analyzers\3.3.2\build\Microsoft.NetCore.Analyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.netcore.analyzers\3.3.2\build\Microsoft.NetCore.Analyzers.props')" />
@@ -19,9 +20,9 @@
     <Import Project="$(NuGetPackageRoot)entityframework\6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.props" Condition="Exists('$(NuGetPackageRoot)entityframework\6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgMicrosoft_NetCore_Analyzers Condition=" '$(PkgMicrosoft_NetCore_Analyzers)' == '' ">C:\Users\adria\.nuget\packages\microsoft.netcore.analyzers\3.3.2</PkgMicrosoft_NetCore_Analyzers>
-    <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\adria\.nuget\packages\microsoft.entityframeworkcore.tools\6.0.0</PkgMicrosoft_EntityFrameworkCore_Tools>
-    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\adria\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.3</PkgMicrosoft_CodeAnalysis_Analyzers>
-    <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\adria\.nuget\packages\entityframework\6.4.4</PkgEntityFramework>
+    <PkgMicrosoft_NetCore_Analyzers Condition=" '$(PkgMicrosoft_NetCore_Analyzers)' == '' ">C:\Users\ROG\.nuget\packages\microsoft.netcore.analyzers\3.3.2</PkgMicrosoft_NetCore_Analyzers>
+    <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\ROG\.nuget\packages\microsoft.entityframeworkcore.tools\6.0.0</PkgMicrosoft_EntityFrameworkCore_Tools>
+    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\ROG\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.3</PkgMicrosoft_CodeAnalysis_Analyzers>
+    <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\ROG\.nuget\packages\entityframework\6.4.4</PkgEntityFramework>
   </PropertyGroup>
 </Project>

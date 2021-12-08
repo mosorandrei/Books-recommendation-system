@@ -31,8 +31,11 @@ namespace Infrastructure.Test.API.v2
         [Fact]
         public async Task GivenTokensControllerWhenAuthenticateAsyncisCalledThenAuthenticateTheUser()
         {
-            await controller.AuthenticateAsync(AuthCommand);
-            A.CallTo(() => mediator.Send(A<AuthenticateCommand>._, default)).MustHaveHappenedOnceExactly();
+            if (AuthCommand is not null)
+            {
+                await controller.AuthenticateAsync(AuthCommand);
+                A.CallTo(() => mediator.Send(A<AuthenticateCommand>._, default)).MustHaveHappenedOnceExactly();
+            }
         }
 
         [Fact]

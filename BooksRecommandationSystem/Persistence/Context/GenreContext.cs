@@ -18,7 +18,7 @@ namespace Persistence.Context
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=MyGenres.db");
+           optionsBuilder.UseSqlite("Data Source=MyGenres.db");
         }
     }
 }
