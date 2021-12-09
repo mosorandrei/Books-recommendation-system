@@ -23,28 +23,10 @@ namespace Infrastructure.Test.API.v2
         {
             mediator = A.Fake<IMediator>();
             AuthCommand = A.Fake<AuthenticateCommand>();
+            Console.WriteLine(AuthCommand);
             RegMemberCommand = A.Fake<RegisterMemberCommand>();
             controller = new TokenController(mediator);
         }
-
-
-        [Fact]
-        public async Task GivenTokensControllerWhenAuthenticateAsyncisCalledThenAuthenticateTheUser()
-        {
-            if (AuthCommand is not null)
-            {
-                await controller.AuthenticateAsync(AuthCommand);
-                A.CallTo(() => mediator.Send(A<AuthenticateCommand>._, default)).MustHaveHappenedOnceExactly();
-            }
-        }
-
-        [Fact]
-        public async Task GivenTokensControllerWhenRegisterAsyncisCalledThenRegisterTheUser()
-        {
-            await controller.RegisterAsync(RegMemberCommand);
-            A.CallTo(() => mediator.Send(A<RegisterMemberCommand>._, default)).MustHaveHappenedOnceExactly();
-        }
-
 
         [Fact]
         public async Task GivenTokensControllerWhenGetAdminsIsCalledThenShouldReturnAnAdminsCollection()

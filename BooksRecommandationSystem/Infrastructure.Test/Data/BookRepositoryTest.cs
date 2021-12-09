@@ -12,7 +12,6 @@ namespace Infrastructure.Test.Data
         private readonly Repository<Book> repository;
         private readonly Book newBook;
         private readonly Book copyBook;
-        private readonly Book nullIdBook;
 
         public BookRepositoryTest()
         {
@@ -100,7 +99,7 @@ namespace Infrastructure.Test.Data
         [Fact]
         public void GivenNewBookWhenGuidIsEmptyThenShouldThrowException()
         {
-            _ = repository.Invoking(r => r.AddAsync(nullIdBook)).Should().ThrowAsync<Exception>();
+            _ = repository.Invoking(r => r.AddAsync(null)).Should().ThrowAsync<Exception>();
         }
     }
 }

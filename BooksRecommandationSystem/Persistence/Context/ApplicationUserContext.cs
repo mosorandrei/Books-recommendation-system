@@ -22,7 +22,7 @@ namespace Persistence.Context
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-           optionsBuilder.UseSqlite("Data Source=MyApplicationUsers.db");
+            optionsBuilder.UseSqlite("Data Source=MyApplicationUsers.db");
         }
     }
 }

@@ -1,39 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Infrastructure.Test\\Infrastructure.Test.csproj": {}
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/Infrastructure.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Application\\Application.csproj": {
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Application\\Application.csproj",
+        "projectUniqueName": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\ROG\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Application\\obj\\",
+        "projectPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Application.csproj",
+        "packagesPath": "/Users/alex-ama/.nuget/packages/",
+        "outputPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ROG\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/alex-ama/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj"
+              "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Domain.csproj": {
+                "projectPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Domain.csproj"
               }
             }
           }
@@ -88,32 +82,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-rc.1.21463.6/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj": {
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj",
+        "projectUniqueName": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\ROG\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\obj\\",
+        "projectPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Domain.csproj",
+        "packagesPath": "/Users/alex-ama/.nuget/packages/",
+        "outputPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ROG\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/alex-ama/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -164,43 +152,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-rc.1.21463.6/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Infrastructure.Test\\Infrastructure.Test.csproj": {
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/Infrastructure.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Infrastructure.Test\\Infrastructure.Test.csproj",
+        "projectUniqueName": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/Infrastructure.Test.csproj",
         "projectName": "Infrastructure.Test",
-        "projectPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Infrastructure.Test\\Infrastructure.Test.csproj",
-        "packagesPath": "C:\\Users\\ROG\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Infrastructure.Test\\obj\\",
+        "projectPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/Infrastructure.Test.csproj",
+        "packagesPath": "/Users/alex-ama/.nuget/packages/",
+        "outputPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ROG\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/alex-ama/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Persistence\\Persistence.csproj": {
-                "projectPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Persistence\\Persistence.csproj"
+              "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Persistence.csproj": {
+                "projectPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Persistence.csproj"
               },
-              "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\WebAPI\\WebAPI.csproj": {
-                "projectPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\WebAPI\\WebAPI.csproj"
+              "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/WebAPI.csproj": {
+                "projectPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/WebAPI.csproj"
               }
             }
           }
@@ -259,40 +241,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-rc.1.21463.6/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Persistence\\Persistence.csproj": {
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\ROG\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Persistence\\obj\\",
+        "projectPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Persistence.csproj",
+        "packagesPath": "/Users/alex-ama/.nuget/packages/",
+        "outputPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ROG\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/alex-ama/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Application\\Application.csproj"
+              "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Application.csproj": {
+                "projectPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Application.csproj"
               }
             }
           }
@@ -311,11 +287,11 @@
               "target": "Package",
               "version": "[6.4.4, )"
             },
-            "Microsoft.CodeAnalysis.Analyzers": {
+            "Microsoft.CodeAnalysis.NetAnalyzers": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.3.3, )"
+              "version": "[6.0.0, )"
             },
             "Microsoft.Data.Sqlite.Core": {
               "target": "Package",
@@ -353,12 +329,6 @@
               "target": "Package",
               "version": "[6.0.0, )"
             },
-            "Microsoft.NetCore.Analyzers": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.3.2, )"
-            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.14.1, )"
@@ -379,43 +349,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-rc.1.21463.6/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\WebAPI\\WebAPI.csproj": {
+    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\WebAPI\\WebAPI.csproj",
-        "packagesPath": "C:\\Users\\ROG\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\WebAPI\\obj\\",
+        "projectPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/WebAPI.csproj",
+        "packagesPath": "/Users/alex-ama/.nuget/packages/",
+        "outputPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ROG\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/alex-ama/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Application\\Application.csproj"
+              "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Application.csproj": {
+                "projectPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Application.csproj"
               },
-              "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Persistence\\Persistence.csproj": {
-                "projectPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Persistence\\Persistence.csproj"
+              "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Persistence.csproj": {
+                "projectPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Persistence.csproj"
               }
             }
           }
@@ -433,10 +397,6 @@
             "EntityFramework": {
               "target": "Package",
               "version": "[6.4.4, )"
-            },
-            "Microsoft.AspNet.WebApi.Cors": {
-              "target": "Package",
-              "version": "[5.2.7, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -521,7 +481,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-rc.1.21463.6/RuntimeIdentifierGraph.json"
         }
       }
     }

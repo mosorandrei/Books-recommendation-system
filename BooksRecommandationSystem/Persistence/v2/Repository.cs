@@ -23,7 +23,7 @@ namespace Persistence.v2
             return entity;
         }
 
-        public async Task<TEntity> DeleteAsync(TEntity entity)
+        public async Task<TEntity> DeleteAsync(TEntity? entity)
         {
             if (entity == null)
             {
@@ -50,7 +50,7 @@ namespace Persistence.v2
             return await context.FindAsync<TEntity>(id);
         }
 
-        public async Task<TEntity> UpdateAsync(TEntity entity)
+        public async Task<TEntity> UpdateAsync(TEntity? entity)
         {
             if (entity == null)
             {
