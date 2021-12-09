@@ -1,0 +1,26 @@
+@import "/src/utils/_colors.scss";
+
+.card {
+  position: relative;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 300px;
+  height: 250px;
+  background: $color-white;
+}
+
+.email {
+  padding-top: 25px;
+  padding-bottom: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: $color-blue;
+}
+
+.double-button {
+  padding-top: 20px;
+  max-width: 230px;
+}
