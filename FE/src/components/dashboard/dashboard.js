@@ -90,7 +90,7 @@ function Dashboard({
 
           <div className="lhp-bottom">
             {user.isAdmin ? switchButton : undefined}
-            <a onClick={() => handleLogoutButton}>Sign out</a>
+            <a onClick={handleLogoutButton}>Sign out</a>
           </div>
         </div>
         <div className="rhp">{children}</div>

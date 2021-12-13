@@ -25,7 +25,7 @@ const Modal = forwardRef(({ title, children }, ref) => {
     if (display) {
         return createPortal((
             <div className='modal-wrapper'>
-                <div className='modal-background' onClick={closeModal} />
+                <div className='modal-background' onClick={() => closeModal()} />
                 <div className="modal-container">
                     {title && <h2 className='modal-title'>{title}</h2>}
                     {children}

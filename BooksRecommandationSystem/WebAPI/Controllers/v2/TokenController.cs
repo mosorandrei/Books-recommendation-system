@@ -37,7 +37,7 @@ namespace WebAPI.Controllers.v2
         {
             Console.WriteLine(command);
             var response = await mediator.Send(command);
-            return response.Resource is not null ? response.Resource : throw new ArgumentNullException(nameof(command));
+            return response.Resource ?? throw new ArgumentNullException(nameof(command));
         }
 
         /*
@@ -110,8 +110,12 @@ namespace WebAPI.Controllers.v2
         public async Task<IActionResult> RefreshTokenAsync()
         {
             string? email = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Name)?.Value;
-            if(email == null)
-                throw new ArgumentNullException("Email is null for the provided token!");
+
+            if (email is null)
+            {
+                throw new ArgumentNullException(email);
+            }
+
             return Ok(await mediator.Send(new RefreshTokenQuery(email)));
         }
 

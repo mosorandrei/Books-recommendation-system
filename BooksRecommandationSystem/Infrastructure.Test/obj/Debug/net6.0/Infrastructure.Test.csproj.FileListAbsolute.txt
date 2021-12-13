@@ -593,8 +593,12 @@ C:/Users/adria/Desktop/Books-recommendation-system/BooksRecommandationSystem/Inf
 C:/Users/adria/Desktop/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/AutoMapper.dll
 C:/Users/adria/Desktop/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/FluentValidation.dll
 C:/Users/adria/Desktop/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/AutoMapper.dll
+/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/FluentValidation.dll
+/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/CoverletSourceRootsMapping
-C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/obj/Debug/net6.0/Infrastructure.Test.csproj.AssemblyReference.cache
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/obj/Debug/net6.0/Infrastructure.Test.GeneratedMSBuildEditorConfig.editorconfig
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/obj/Debug/net6.0/Infrastructure.Test.AssemblyInfoInputs.cache
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/obj/Debug/net6.0/Infrastructure.Test.AssemblyInfo.cs
@@ -627,6 +631,10 @@ C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSys
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/FluentValidation.dll
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/MediatR.dll
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/System.Web.Cors.dll
+C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/System.Net.Http.Formatting.dll
+C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/System.Web.Http.dll
+C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/System.Web.Http.Cors.dll
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/Microsoft.AspNetCore.Mvc.Versioning.dll
@@ -658,6 +666,7 @@ C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSys
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/Microsoft.VisualStudio.TestPlatform.Common.dll
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/Microsoft.Win32.SystemEvents.dll
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/Newtonsoft.Json.dll
+C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/Newtonsoft.Json.Bson.dll
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/NuGet.Frameworks.dll
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/SQLitePCLRaw.batteries_v2.dll
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/SQLitePCLRaw.core.dll
@@ -785,8 +794,4 @@ C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSys
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/Domain.pdb
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/obj/Debug/net6.0/Infrastructure.Test.csproj.CopyComplete
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/obj/Debug/net6.0/Infrastructure.Test.genruntimeconfig.cache
-/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/AutoMapper.dll
-/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/FluentValidation.dll
-/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
-/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/bin/Debug/net6.0/Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
+C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/obj/Debug/net6.0/Infrastructure.Test.csproj.AssemblyReference.cache
