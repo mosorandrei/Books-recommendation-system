@@ -17,7 +17,7 @@ button {
     color: $color-white;
 
     &.purple {
-      background-color: $color-purple-100;
+      background-color: $color-purple-200;
     }
 
     &.green {
@@ -28,8 +28,8 @@ button {
   &.outlined {
     background-color: $color-white;
     &.purple {
-      color: $color-purple-100;
-      border: 1px solid $color-purple-100;
+      color: $color-purple-200;
+      border: 1px solid $color-purple-200;
     }
 
     &.red {

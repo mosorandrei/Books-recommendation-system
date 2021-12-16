@@ -1,19 +1,20 @@
 @import "/src/utils/_colors.scss";
 
-.cards {
+.books {
   padding: 30px;
   margin-bottom: 40px;
 
   .top {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 20px;
   }
-  h2 {
-    font-weight: 400;
-    font-size: 20px;
-    color: $color-gray-600;
 
-    margin-bottom: 28px;
+  h2 {
+    font-weight: 500;
+    font-size: 30px;
+    color: $color-gray-600;
+    margin-bottom: 30px;
   }
 
   .row {
@@ -37,13 +38,21 @@
       width: 100%;
       display: flex;
       justify-content: space-between;
+      align-content: center;
+      padding-top: 0px;
     }
 
-    .final-card {
-      width: 100%;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      text-align: center;
+    .options {
+      display: flex;
+      padding: 0px 20px 0px 20px;
+      justify-content: space-between;
+      height: 100%;
+      .heart {
+        padding-top: 5px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+      }
     }
   }
 }

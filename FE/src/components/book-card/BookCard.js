@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import placeholderBookCover from "../../assets/placeholderBookCover.png";
 
 import "./book-card.scss";
 
@@ -11,14 +12,14 @@ function BookCard({
   downloadUri,
   children,
 }) {
-  console.log(title);
   return (
-    <div className={"card"}>
-      <div>{title}</div>
-      <div>{rating}</div>
-      <div>{description}</div>
-      <div>{imageUri}</div>
-      <div>{downloadUri}</div>
+    <div className="book">
+      <img className="bookCover" src={imageUri || placeholderBookCover} />
+      <div className="info">
+        <div className="bookTitle">{title}</div>
+        <div className="author">{"Author"}</div>
+        <div className="bookDescription">{description}</div>
+      </div>
 
       {children}
     </div>

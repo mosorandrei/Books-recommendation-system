@@ -67,3 +67,37 @@ export function getAllBooks(accessToken) {
     requestOptionsToken("GET", undefined, accessToken)
   ).then((r) => validateResponse(r));
 }
+
+export function deleteBook(bookId, accessToken) {
+  return fetch(
+    `${API_HOST_WITHOUT_TOKEN}/Books?id=${bookId}`,
+    requestOptionsToken("DELETE", undefined, accessToken)
+  ).then((r) => validateResponse(r));
+}
+
+export function addBook(bookFields, accessToken) {
+  return fetch(
+    `${API_HOST_WITHOUT_TOKEN}/Books`,
+    requestOptionsToken(
+      "POST",
+      {
+        title: bookFields.title,
+        rating: bookFields.rating,
+        downloadUri: bookFields.downloadLink,
+        description: bookFields.description,
+      },
+      accessToken
+    )
+  ).then((r) => validateResponse(r));
+}
+
+export function editBook(bookFields, bookId, accessToken) {
+  return fetch(
+    `${API_HOST_WITHOUT_TOKEN}/Books?id=${bookId}`,
+    requestOptionsToken(
+      "PUT",
+      { id: bookId, title: bookFields.title },
+      accessToken
+    )
+  ).then((r) => validateResponse(r));
+}

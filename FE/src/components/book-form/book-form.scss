@@ -1,0 +1,37 @@
+@import "/src/utils/_colors.scss";
+
+.book-form {
+  width: 100%;
+
+  .form-input-split,
+  .form-button-split {
+    display: flex;
+    justify-content: space-between;
+
+    > :not(:first-child) {
+      margin-left: 30px;
+    }
+
+    &.right {
+      justify-content: flex-end;
+    }
+
+    &.left {
+      justify-content: flex-start;
+    }
+  }
+
+  .form-button-split {
+    .error-message {
+      font-size: 14px;
+      color: $color-red;
+    }
+    > :not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+
+  > :not(:first-child) {
+    margin-top: 32px;
+  }
+}
