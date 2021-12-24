@@ -26,7 +26,7 @@ function Users() {
   const handleUnblockUser = () => {};
 
   return (
-    <div className="cards">
+    <div className="books">
       <h2>All users</h2>
       <div className="row">
         {users.map((user) => (
