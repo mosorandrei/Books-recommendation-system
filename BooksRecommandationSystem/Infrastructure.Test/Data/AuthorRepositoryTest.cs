@@ -7,7 +7,7 @@ using Xunit;
 
 namespace Infrastructure.Test.Data
 {
-    public class AuthorRepositoryTest : AuthorDatabaseBaseTest
+    public class AuthorRepositoryTest : DatabaseBaseTest
     {
         private readonly Repository<Author> repository;
         private readonly Author newAuthor;

@@ -6,7 +6,7 @@ namespace Persistence.v1
 {
     public class BookRepository : Repository<Book>, IBookRepository
     {
-        public BookRepository(BookContext context) : base(context)
+        public BookRepository(DatabaseContext context) : base(context)
         {
         }
     }

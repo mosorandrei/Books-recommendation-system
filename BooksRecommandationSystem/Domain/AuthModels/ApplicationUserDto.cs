@@ -5,6 +5,10 @@ namespace Domain.AuthModels
 {
     public class ApplicationUserDto
     {
+        [Required(ErrorMessage = "ID is required!")]
+        [JsonProperty("id")]
+        public string? Id { get; set; }
+
         [Required(ErrorMessage = "Username is required!")]
         [JsonProperty("username")]
         public string? Username { get; set; }

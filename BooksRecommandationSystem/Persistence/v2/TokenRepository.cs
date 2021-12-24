@@ -77,12 +77,12 @@ namespace Persistence.v2
                 };
                 var result = await _userManager.CreateAsync(user, request.Password);
                 if (!result.Succeeded)
-                    return new RegisterResponse { Status = "Error", Message = "User creation failed!" };
+                    return new RegisterResponse { Id = "INVALID_USER_ID", Status = "Error", Message = "User creation failed!" };
                 await _userManager.AddToRoleAsync(user, ApplicationIdentityConstants.Roles.Member);
-                return new RegisterResponse { Status = "Succes", Message = "User created successfully!" };
+                return new RegisterResponse { Id = user.Id, Status = "Succes", Message = "User created successfully!" };
             }
 
-            return new RegisterResponse { Status = "Error", Message = "User already exists!" };
+            return new RegisterResponse { Id = "INVALID_USER_ID", Status = "Error", Message = "User already exists!" };
         }
 
         public async Task<IEnumerable<ApplicationUserDto>> GetAllMembersAsync()
@@ -90,6 +90,7 @@ namespace Persistence.v2
             List<ApplicationUser> members = new(await _userManager.GetUsersInRoleAsync(ApplicationIdentityConstants.Roles.Member));
             return members.Select(member => new ApplicationUserDto()
             {
+                Id = member.Id,
                 Username = member.UserName,
                 Email = member.Email,
                 FirstName = member.FirstName,
@@ -102,6 +103,7 @@ namespace Persistence.v2
             List<ApplicationUser> admins = new(await _userManager.GetUsersInRoleAsync(ApplicationIdentityConstants.Roles.Administrator));
             return admins.Select(member => new ApplicationUserDto()
             {
+                Id = member.Id,
                 Username = member.UserName,
                 Email = member.Email,
                 FirstName = member.FirstName,

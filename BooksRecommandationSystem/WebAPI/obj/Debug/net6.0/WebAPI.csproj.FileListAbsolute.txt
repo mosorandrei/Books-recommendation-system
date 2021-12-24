@@ -660,3 +660,4 @@ C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\Web
 C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\WebAPI\obj\Debug\net6.0\WebAPI.csproj.CopyComplete
 C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\WebAPI\obj\Debug\net6.0\WebAPI.genruntimeconfig.cache
 C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\WebAPI\obj\Debug\net6.0\WebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\WebAPI\obj\Debug\net6.0\WebAPI.csproj.AssemblyReference.cache

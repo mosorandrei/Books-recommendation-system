@@ -12,11 +12,15 @@ namespace Infrastructure.Test.Service
     {
         private readonly CreateBookCommandHandler handler;
         private readonly IBookRepository repository;
+        private readonly ITokenRepository userRepository;
+        private readonly IReadingStatusRepository statusRepository;
 
         public CreateBookCommandHandlerTests()
         {
             this.repository = A.Fake<IBookRepository>();
-            this.handler = new CreateBookCommandHandler(this.repository);
+            this.userRepository = A.Fake<ITokenRepository>();
+            this.statusRepository = A.Fake<IReadingStatusRepository>();
+            this.handler = new CreateBookCommandHandler(this.repository, statusRepository, userRepository);
         }
 
         [Fact]

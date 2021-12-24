@@ -7,7 +7,7 @@ using Xunit;
 
 namespace Infrastructure.Test.Data
 {
-    public class BookRepositoryTest : BookDatabaseBaseTest
+    public class BookRepositoryTest : DatabaseBaseTest
     {
         private readonly Repository<Book> repository;
         private readonly Book newBook;

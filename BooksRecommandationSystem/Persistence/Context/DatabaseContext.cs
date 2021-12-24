@@ -4,17 +4,21 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Persistence.Context
 {
-    public partial class ApplicationUserContext : IdentityDbContext<ApplicationUser>
+    public partial class DatabaseContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationUserContext()
+        public DatabaseContext()
         {
         }
 
-        public ApplicationUserContext(DbContextOptions<ApplicationUserContext> options) : base(options)
+        public DatabaseContext(DbContextOptions options) : base(options)
         {
         }
 
         public override DbSet<ApplicationUser>? Users { get; set; }
+        public DbSet<Book>? Books { get; set; }
+        public DbSet<Author>? Authors { get; set; }
+        public DbSet<Genre>? Genres { get; set; }
+        public DbSet<ReadingStatus>? ReadingStatuses { get; set; }
 
         public async Task<int> SaveChangesAsync()
         {
@@ -22,7 +26,7 @@ namespace Persistence.Context
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=MyApplicationUsers.db");
+            optionsBuilder.UseSqlite("Data Source=MyDatabase.db");
         }
     }
 }

@@ -88,3 +88,4 @@ C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\App
 C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\Application\obj\Debug\net6.0\Application.dll
 C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\Application\obj\Debug\net6.0\ref\Application.dll
 C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\Application\obj\Debug\net6.0\Application.pdb
+C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache

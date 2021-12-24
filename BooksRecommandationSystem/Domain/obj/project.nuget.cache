@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3QMO7gLIVkQ0BsLvMsbsnhKGMve8uaEr80v9sQ65rDi+3YVCHeKk0b60quDfGMxW5WBDuvt5UDPqMxWQxHa9dg==",
+  "dgSpecHash": "mKGXyJ28WVRnOxZSood6O6UEQ3YT56NjiKBKSBotoWd6/TcJruQGsJCgCBYvyVvLkfMCAa29V0VQPkmg/trVlg==",
   "success": true,
   "projectFilePath": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj",
   "expectedPackageFiles": [

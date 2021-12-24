@@ -10,7 +10,7 @@ using System.Security.Claims;
 namespace WebAPI.Controllers.v2
 {
     [ApiVersion("2.0")]
-    [Route("api/v{version:apiVersion}/[controller]")]
+    [Route("api/v{version:apiVersion}")]
     [EnableCors("FEPolicy")]
     public class TokenController : BaseController
     {
