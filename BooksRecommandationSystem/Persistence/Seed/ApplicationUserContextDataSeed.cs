@@ -24,6 +24,7 @@ namespace Persistence.Seed
             {
                 UserName = adminUserName,
                 Email = adminUserName,
+                ImageUri = new Uri("https://media.news9live.com/h-upload/2021/10/01/30834-newproject3.jpg"),
                 IsEnabled = true,
                 EmailConfirmed = true,
                 FirstName = "Test",

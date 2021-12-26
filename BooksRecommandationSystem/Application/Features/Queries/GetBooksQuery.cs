@@ -1,9 +1,9 @@
-﻿using Domain.Entities;
+﻿using Domain.AuthModels;
 using MediatR;
 
 namespace Application.Features.Queries
 {
-    public class GetBooksQuery : IRequest<IEnumerable<Book>>
+    public class GetBooksQuery : IRequest<IEnumerable<BookDtoFE>>
     {
     }
 }

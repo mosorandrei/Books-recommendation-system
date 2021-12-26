@@ -22,6 +22,7 @@ namespace Application.Features.Commands
             book.Description = request.Description;
             book.Title = request.Title;
             book.PublicationDate = request.PublicationDate;
+            book.UploadDate = request.UploadDate;
             book.ImageUri = request.ImageUri;
             book.DownloadUri = request.DownloadUri;
 

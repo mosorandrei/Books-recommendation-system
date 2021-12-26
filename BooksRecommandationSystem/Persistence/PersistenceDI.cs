@@ -18,6 +18,8 @@ namespace Persistence
             services.AddTransient<IAuthorRepository, AuthorRepository>();
             services.AddTransient<ITokenRepository, TokenRepository>();
             services.AddTransient<IReadingStatusRepository, ReadingStatusRepository>();
+            services.AddTransient<IBookGenreAssociationRepository, BookGenreAssociationRepository>();
+            services.AddTransient<IBookAuthorAssociationRepository, BookAuthorAssociationRepository>();
         }
     }
 }

@@ -84,12 +84,17 @@ namespace WebAPI.Controllers.v2
         [Authorize]
         [HttpGet("GetUser")]
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
-        public IActionResult GetUser()
+        public async Task<IActionResult> GetUser()
         {
+            var UserIdTemp = User.Claims.FirstOrDefault(x => x.Type == "UserId")?.Value;
             var currentUser = new ApplicationUserDtoFE
             {
-                UserId = User.Claims.FirstOrDefault(x => x.Type == "UserId")?.Value,
+                UserId = UserIdTemp,
                 FullName = User.Claims.FirstOrDefault(x => x.Type == "FullName")?.Value,
+                ImageUri = await mediator.Send(new GetUserImageUriQuery()
+                {
+                    UserId = UserIdTemp
+                }),
                 Email = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Name)?.Value,
                 IsAdmin = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Role)?.Value == "Administrator" ? 1 : 0
             };

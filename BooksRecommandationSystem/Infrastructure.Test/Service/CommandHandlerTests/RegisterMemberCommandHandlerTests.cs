@@ -1,10 +1,10 @@
 ﻿
 
-using System.Threading.Tasks;
 using Application.Features.Commands;
 using Application.Interfaces;
 using FakeItEasy;
 using Microsoft.AspNetCore.Http;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Infrastructure.Test.Service

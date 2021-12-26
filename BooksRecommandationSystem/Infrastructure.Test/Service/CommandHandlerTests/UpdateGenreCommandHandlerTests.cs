@@ -22,7 +22,7 @@ namespace Infrastructure.Test.Service
 
         [Fact]
         public async Task GivenUpdateGenreCommandWhenHandleIsCalledThenShouldUpdateGenre()
-        { 
+        {
             Genre genre = new()
             {
                 Id = new Guid("25bb7416-4cbb-4b46-931b-604199ae6cba")

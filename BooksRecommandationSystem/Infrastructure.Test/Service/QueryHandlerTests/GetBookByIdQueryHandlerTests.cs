@@ -13,11 +13,19 @@ namespace Infrastructure.Test.Service.QueryHandlerTests
     {
         private readonly GetBookByIdQueryHandler handler;
         private readonly IBookRepository repository;
+        private readonly IBookAuthorAssociationRepository authorAssociationRepository;
+        private readonly IAuthorRepository authorRepository;
+        private readonly IBookGenreAssociationRepository genreAssociationRepository;
+        private readonly IGenreRepository genreRepository;
 
         public GetBookByIdQueryHandlerTests()
         {
-            this.repository = A.Fake<IBookRepository>();
-            this.handler = new GetBookByIdQueryHandler(this.repository);
+            repository = A.Fake<IBookRepository>();
+            authorAssociationRepository = A.Fake<IBookAuthorAssociationRepository>();
+            authorRepository = A.Fake<IAuthorRepository>();
+            genreAssociationRepository = A.Fake<IBookGenreAssociationRepository>();
+            genreRepository = A.Fake<IGenreRepository>();
+            handler = new GetBookByIdQueryHandler(repository,authorAssociationRepository,genreAssociationRepository,authorRepository,genreRepository);
         }
 
         [Fact]

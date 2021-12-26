@@ -27,6 +27,7 @@ namespace Application.Features.Commands
                 Rating = request.Rating,
                 Description = request.Description,
                 PublicationDate = request.PublicationDate,
+                UploadDate = request.UploadDate,
                 ImageUri = request.ImageUri,
                 DownloadUri = request.DownloadUri
             };

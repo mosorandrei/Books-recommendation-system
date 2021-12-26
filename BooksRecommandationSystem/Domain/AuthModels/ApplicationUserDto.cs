@@ -17,6 +17,10 @@ namespace Domain.AuthModels
         [JsonProperty("email")]
         public string? Email { get; set; }
 
+        [Required(ErrorMessage = "ImageUri is required!")]
+        [JsonProperty("ImageUri")]
+        public Uri? ImageUri { get; set; }
+
         [Required(ErrorMessage = "First Name is required!")]
         [JsonProperty("firstname")]
         public string? FirstName { get; set; }

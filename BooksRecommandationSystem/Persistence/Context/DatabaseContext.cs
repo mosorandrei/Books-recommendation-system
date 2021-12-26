@@ -19,6 +19,8 @@ namespace Persistence.Context
         public DbSet<Author>? Authors { get; set; }
         public DbSet<Genre>? Genres { get; set; }
         public DbSet<ReadingStatus>? ReadingStatuses { get; set; }
+        public DbSet<BookGenreAssociation>? BookGenreAssociations { get; set; }
+        public DbSet<BookAuthorAssociation>? BookAuthorAssociations { get; set; }
 
         public async Task<int> SaveChangesAsync()
         {

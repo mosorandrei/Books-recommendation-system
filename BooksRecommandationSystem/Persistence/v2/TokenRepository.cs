@@ -93,6 +93,7 @@ namespace Persistence.v2
                 Id = member.Id,
                 Username = member.UserName,
                 Email = member.Email,
+                ImageUri = member.ImageUri,
                 FirstName = member.FirstName,
                 LastName = member.LastName
             });
@@ -106,6 +107,7 @@ namespace Persistence.v2
                 Id = member.Id,
                 Username = member.UserName,
                 Email = member.Email,
+                ImageUri = member.ImageUri,
                 FirstName = member.FirstName,
                 LastName = member.LastName
             });

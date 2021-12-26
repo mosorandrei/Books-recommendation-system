@@ -30,6 +30,7 @@ namespace Persistence.Migrations
                     Id = table.Column<string>(type: "TEXT", nullable: false),
                     FirstName = table.Column<string>(type: "TEXT", nullable: true),
                     LastName = table.Column<string>(type: "TEXT", nullable: true),
+                    ImageUri = table.Column<string>(type: "TEXT", nullable: true),
                     IsEnabled = table.Column<bool>(type: "INTEGER", nullable: false),
                     UserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
@@ -73,6 +74,7 @@ namespace Persistence.Migrations
                     Rating = table.Column<decimal>(type: "TEXT", nullable: false),
                     Description = table.Column<string>(type: "TEXT", nullable: true),
                     PublicationDate = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    UploadDate = table.Column<DateTime>(type: "TEXT", nullable: false),
                     ImageUri = table.Column<string>(type: "TEXT", nullable: true),
                     DownloadUri = table.Column<string>(type: "TEXT", nullable: true)
                 },
@@ -200,6 +202,31 @@ namespace Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "BookAuthorAssociations",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    BookId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    AuthorId = table.Column<Guid>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BookAuthorAssociations", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_BookAuthorAssociations_Authors_AuthorId",
+                        column: x => x.AuthorId,
+                        principalTable: "Authors",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BookAuthorAssociations_Books_BookId",
+                        column: x => x.BookId,
+                        principalTable: "Books",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ReadingStatuses",
                 columns: table => new
                 {
@@ -221,6 +248,31 @@ namespace Persistence.Migrations
                         name: "FK_ReadingStatuses_Books_BookId",
                         column: x => x.BookId,
                         principalTable: "Books",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "BookGenreAssociations",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    BookId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    GenreId = table.Column<Guid>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BookGenreAssociations", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_BookGenreAssociations_Books_BookId",
+                        column: x => x.BookId,
+                        principalTable: "Books",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BookGenreAssociations_Genres_GenreId",
+                        column: x => x.GenreId,
+                        principalTable: "Genres",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -263,6 +315,26 @@ namespace Persistence.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_BookAuthorAssociations_AuthorId",
+                table: "BookAuthorAssociations",
+                column: "AuthorId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BookAuthorAssociations_BookId",
+                table: "BookAuthorAssociations",
+                column: "BookId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BookGenreAssociations_BookId",
+                table: "BookGenreAssociations",
+                column: "BookId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BookGenreAssociations_GenreId",
+                table: "BookGenreAssociations",
+                column: "GenreId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_ReadingStatuses_ApplicationUserId",
                 table: "ReadingStatuses",
                 column: "ApplicationUserId");
@@ -291,16 +363,22 @@ namespace Persistence.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Authors");
+                name: "BookAuthorAssociations");
 
             migrationBuilder.DropTable(
-                name: "Genres");
+                name: "BookGenreAssociations");
 
             migrationBuilder.DropTable(
                 name: "ReadingStatuses");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
+
+            migrationBuilder.DropTable(
+                name: "Authors");
+
+            migrationBuilder.DropTable(
+                name: "Genres");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

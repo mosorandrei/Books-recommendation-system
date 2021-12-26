@@ -9,6 +9,7 @@ namespace Application.Features.Commands
         public decimal Rating { get; set; }
         public string? Description { get; set; }
         public DateTime PublicationDate { get; set; }
+        public DateTime UploadDate { get; set; }
         public Uri? ImageUri { get; set; }
         public Uri? DownloadUri { get; set; }
     }
