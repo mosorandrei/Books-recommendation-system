@@ -11,7 +11,7 @@ using Persistence.Context;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20211224152344_v2")]
+    [Migration("20211226115358_v2")]
     partial class v2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -163,6 +163,9 @@ namespace Persistence.Migrations
 
                     b.Property<Guid>("BookId")
                         .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsFavourited")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("Status")
                         .HasColumnType("INTEGER");

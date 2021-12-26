@@ -13,5 +13,6 @@ namespace Domain.Entities
         [ForeignKey("BookId")]
         public virtual Book? Book { get; set; }
         public ReadingStatusEnum Status { get; set; }
+        public bool IsFavourited { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uPn1Kd68DeRPdxZCNojtYh11qpgDIA9Enl+P17q4tHG5DU8hO05jfQyQu02kcQMROxOqVGyTrgOn5w2/N3pxqw==",
+  "dgSpecHash": "RQpVjc2upxnwIOZ+lVkpsFUp+RcS7hxGWSuNT95SuWeRlyRzLJHAens2k+LdgMrNEZ+Ompo5ZNiTn1KabyzlAA==",
   "success": true,
   "projectFilePath": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
@@ -179,7 +179,9 @@
     "C:\\Users\\adria\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\adria\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\adria\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\adria\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",
+    "C:\\Users\\adria\\.nuget\\packages\\xunit.extensibility.core\\2.4.1\\xunit.extensibility.core.2.4.1.nupkg.sha512"
   ],
   "logs": []
 }

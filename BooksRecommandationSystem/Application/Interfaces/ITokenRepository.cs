@@ -1,4 +1,5 @@
 ﻿using Domain.AuthModels;
+using Domain.Entities;
 
 namespace Application.Interfaces
 {
@@ -33,5 +34,11 @@ namespace Application.Interfaces
         /// <param name="UserId"></param>
         /// <returns></returns>
         Task<RefreshTokenDto> RefreshToken(string Email);
+        /// <summary>
+        ///     Get a User by Id
+        /// </summary>
+        /// <param name="UserId"></param>
+        /// <returns></returns>
+        Task<ApplicationUser> GetUserById(string UserId);
     }
 }

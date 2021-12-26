@@ -35,7 +35,6 @@ namespace WebAPI.Controllers.v2
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Post))]
         public async Task<TokenResponse> AuthenticateAsync([FromBody] AuthenticateCommand command)
         {
-            Console.WriteLine(command);
             var response = await mediator.Send(command);
             return response.Resource ?? throw new ArgumentNullException(nameof(command));
         }
@@ -67,7 +66,7 @@ namespace WebAPI.Controllers.v2
         /// </summary>
         */
 
-        [AllowAnonymous]
+        [Authorize(Roles = "Administrator")]
         [HttpGet("GetAllMembers")]
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
         public async Task<IActionResult> GetMembers()
@@ -126,7 +125,7 @@ namespace WebAPI.Controllers.v2
         /// </summary>
         */
 
-        [AllowAnonymous]
+        [Authorize(Roles = "Administrator")]
         [HttpGet("GetAllAdmins")]
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
         public async Task<IActionResult> GetAdmins()

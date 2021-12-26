@@ -162,6 +162,9 @@ namespace Persistence.Migrations
                     b.Property<Guid>("BookId")
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("IsFavourited")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("Status")
                         .HasColumnType("INTEGER");
 

@@ -146,6 +146,11 @@ namespace Persistence.v2
             return signInResult.Succeeded;
         }
 
+        public async Task<ApplicationUser> GetUserById(string UserId)
+        {
+            return await _userManager.FindByIdAsync(UserId);
+        }
+
         private async Task<ApplicationUser> GetUserByEmail(string email)
         {
             return await _userManager.FindByEmailAsync(email);

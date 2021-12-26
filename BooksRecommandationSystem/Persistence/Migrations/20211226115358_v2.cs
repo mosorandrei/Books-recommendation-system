@@ -206,7 +206,8 @@ namespace Persistence.Migrations
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
                     ApplicationUserId = table.Column<string>(type: "TEXT", nullable: true),
                     BookId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    Status = table.Column<int>(type: "INTEGER", nullable: false)
+                    Status = table.Column<int>(type: "INTEGER", nullable: false),
+                    IsFavourited = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
