@@ -6,5 +6,6 @@ namespace Application.Features.Commands
     {
         public Guid BookId { get; set; }
         public Guid AuthorId { get; set; }
+
     }
 }

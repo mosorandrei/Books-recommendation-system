@@ -3,8 +3,9 @@
     "",
     "\\BooksRecommandationSystem",
     "\\BooksRecommandationSystem\\Persistence",
-    "\\BooksRecommandationSystem\\Persistence\\Seed"
+    "\\BooksRecommandationSystem\\Persistence\\Seed",
+    "\\BooksRecommandationSystem\\WebAPI"
   ],
-  "SelectedNode": "\\BooksRecommandationSystem\\Persistence\\Seed\\ApplicationUserContextDataSeed.cs",
+  "SelectedNode": "\\BooksRecommandationSystem\\BooksRecommandationSystem.sln",
   "PreviewInSolutionExplorer": false
 }
