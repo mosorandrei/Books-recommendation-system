@@ -9,11 +9,9 @@ namespace Persistence.Context
         public DatabaseContext()
         {
         }
-
         public DatabaseContext(DbContextOptions options) : base(options)
         {
         }
-
         public override DbSet<ApplicationUser>? Users { get; set; }
         public DbSet<Book>? Books { get; set; }
         public DbSet<Author>? Authors { get; set; }

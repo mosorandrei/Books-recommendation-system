@@ -23,16 +23,6 @@ namespace WebAPI.Controllers.v2
             return Ok(await mediator.Send(new GetBooksQuery()));
         }
 
-        /*[Authorize(Roles = "Member,Administrator")]
-        [HttpGet]
-        public async Task<IActionResult> Get(Guid BookId)
-        {
-            return Ok(await mediator.Send(new GetBookByIdQuery()
-            {
-                Id = BookId
-            }));
-        }*/
-
         [Authorize(Roles = "Administrator")]
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateBookCommand command)

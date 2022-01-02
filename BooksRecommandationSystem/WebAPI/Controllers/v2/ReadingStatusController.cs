@@ -18,6 +18,17 @@ namespace WebAPI.Controllers.v2
         {
         }
 
+        [Authorize(Roles = "Member,Administrator")]
+        [HttpGet("GetBookById")]
+        [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
+        public async Task<IActionResult> GetBookById(Guid BookId)
+        {
+            return Ok(await mediator.Send(new GetBookByIdQuery()
+            {
+                Id = BookId
+            }));
+        }
+
         [Authorize(Roles = "Administrator")]
         [HttpGet("GetAllStatuses")]
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]

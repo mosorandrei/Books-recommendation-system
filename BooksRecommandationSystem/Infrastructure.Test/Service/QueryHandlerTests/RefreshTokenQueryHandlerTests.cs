@@ -1,8 +1,6 @@
 ﻿using Application.Features.Queries;
 using Application.Interfaces;
 using FakeItEasy;
-using FluentAssertions;
-using System;
 using System.Threading.Tasks;
 using Xunit;
 

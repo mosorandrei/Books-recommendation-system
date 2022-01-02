@@ -1,6 +1,5 @@
 ﻿using Application.Features.Commands;
 using Application.Interfaces;
-using Domain.AuthModels;
 using FakeItEasy;
 using Microsoft.AspNetCore.Http;
 using Xunit;
@@ -28,7 +27,7 @@ namespace Infrastructure.Test.Service
             command.Password = "parola";
             string ipAddress = httpContextAccessor.HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString();
             ipAddress = "not null";
-            await handler.Handle(command,default);
+            await handler.Handle(command, default);
             A.CallTo(() => repository.Authenticate(command, ipAddress)).MustHaveHappenedOnceExactly();
         }
     }
