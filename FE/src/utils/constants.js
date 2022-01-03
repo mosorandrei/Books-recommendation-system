@@ -12,7 +12,4 @@ export const AUTH_ACTIONS = {
   UPDATE_USER_TYPE: "UPDATE_USER_TYPE",
 };
 
-export const API_HOST = "https://localhost:7187/api/v2/Token";
-export const API_HOST_WITHOUT_TOKEN = "https://localhost:7187/api/v2";
-
-export const EXPIRE_TOKEN_TIME = 3600;
+export const API_HOST = "https://localhost:7187/api/v2";
