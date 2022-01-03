@@ -24,5 +24,15 @@ namespace Domain.AuthModels
         [Required(ErrorMessage = "isAdmin is required!")]
         [JsonProperty("isAdmin")]
         public int IsAdmin { get; set; }
+
+        [Required(ErrorMessage = "isBlocked is required!")]
+        [JsonProperty("isBlocked")]
+        public int IsBlocked { get; set; }
+        [Required(ErrorMessage = "NumberOfReadings is required!")]
+        [JsonProperty("NumberOfReadings")]
+        public int NumberOfReadings { get; set; }
+        [Required(ErrorMessage = "NumberOfReads is required!")]
+        [JsonProperty("NumberOfReads")]
+        public int NumberOfReads { get; set; }
     }
 }

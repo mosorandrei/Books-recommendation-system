@@ -42,6 +42,9 @@ namespace Persistence.Migrations
                     b.Property<string>("ImageUri")
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("IsBlocked")
+                        .HasColumnType("INTEGER");
+
                     b.Property<bool>("IsEnabled")
                         .HasColumnType("INTEGER");
 
@@ -124,6 +127,9 @@ namespace Persistence.Migrations
 
                     b.Property<string>("ImageUri")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("NumberOfReviews")
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("PublicationDate")
                         .HasColumnType("TEXT");
@@ -214,6 +220,9 @@ namespace Persistence.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("UserScore")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");

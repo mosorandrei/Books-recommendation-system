@@ -13,18 +13,26 @@ namespace Infrastructure.Test.Service.QueryHandlerTests
         private readonly GetMyToReadsQueryHandler handler;
         private readonly IReadingStatusRepository repository;
         private readonly IBookRepository bookRepository;
+        private readonly IBookAuthorAssociationRepository authorAssociationRepository;
+        private readonly IAuthorRepository authorRepository;
+        private readonly IBookGenreAssociationRepository genreAssociationRepository;
+        private readonly IGenreRepository genreRepository;
 
         public GetMyToReadsQueryHandlerTests()
         {
             repository = A.Fake<IReadingStatusRepository>();
             bookRepository = A.Fake<IBookRepository>();
-            handler = new GetMyToReadsQueryHandler(repository, bookRepository);
+            authorAssociationRepository = A.Fake<IBookAuthorAssociationRepository>();
+            authorRepository = A.Fake<IAuthorRepository>();
+            genreAssociationRepository = A.Fake<IBookGenreAssociationRepository>();
+            genreRepository = A.Fake<IGenreRepository>();
+            handler = new GetMyToReadsQueryHandler(repository, bookRepository, authorAssociationRepository, authorRepository, genreAssociationRepository, genreRepository);
         }
 
         [Fact]
         public async Task GivenGetMyToReadsQueryWhenHandleIsCalledThenGetMyToReadsIsCalled()
         {
-            GetMyToReadsQuery query = new GetMyToReadsQuery();
+            GetMyToReadsQuery query = new();
             query.UserId = "ID";
             await handler.Handle(query, default);
             A.CallTo(() => repository.GetMyToReads(A<string>._)).MustHaveHappenedOnceExactly();
@@ -34,7 +42,7 @@ namespace Infrastructure.Test.Service.QueryHandlerTests
         [Fact]
         public void GivenGetMyToReadsQueryWhenHandleIsCalledAndUserIdIsNullThenShouldThrowException()
         {
-            GetMyToReadsQuery query = new GetMyToReadsQuery();
+            GetMyToReadsQuery query = new();
             query.UserId = null;
             Func<Task> action = async () => await handler.Handle(query, default);
 

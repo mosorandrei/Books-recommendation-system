@@ -32,6 +32,7 @@ namespace Application.Features.Queries
                     BookId = book.Id,
                     Title = book.Title,
                     Rating = book.Rating,
+                    NumberOfReviews = book.NumberOfReviews,
                     Description = book.Description,
                     DownloadUri = book.DownloadUri,
                     PublicationDate = book.PublicationDate,

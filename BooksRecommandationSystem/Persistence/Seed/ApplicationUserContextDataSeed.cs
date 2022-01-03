@@ -28,7 +28,8 @@ namespace Persistence.Seed
                 IsEnabled = true,
                 EmailConfirmed = true,
                 FirstName = "Test",
-                LastName = "Admin"
+                LastName = "Admin",
+                IsBlocked = 0
             };
 
             // Add new user and their role

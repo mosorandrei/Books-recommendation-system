@@ -45,6 +45,7 @@ namespace Application.Features.Queries
                     BookId = fetchedBook.Id,
                     Title = fetchedBook.Title,
                     Rating = fetchedBook.Rating,
+                    NumberOfReviews = fetchedBook.NumberOfReviews,
                     Description = fetchedBook.Description,
                     DownloadUri = fetchedBook.DownloadUri,
                     PublicationDate = fetchedBook.PublicationDate,

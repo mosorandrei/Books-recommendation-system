@@ -87,6 +87,14 @@ namespace WebAPI.Controllers.v2
         public async Task<IActionResult> GetUser()
         {
             var UserIdTemp = User.Claims.FirstOrDefault(x => x.Type == "UserId")?.Value;
+            IEnumerable<BookDtoFE> userReadings = await mediator.Send(new GetMyReadingsQuery()
+            {
+                UserId = UserIdTemp
+            });
+            IEnumerable<ReadBookDtoFE> userReads = await mediator.Send(new GetMyReadsQuery()
+            {
+                UserId = UserIdTemp
+            });
             var currentUser = new ApplicationUserDtoFE
             {
                 UserId = UserIdTemp,
@@ -96,7 +104,13 @@ namespace WebAPI.Controllers.v2
                     UserId = UserIdTemp
                 }),
                 Email = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Name)?.Value,
-                IsAdmin = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Role)?.Value == "Administrator" ? 1 : 0
+                IsAdmin = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Role)?.Value == "Administrator" ? 1 : 0,
+                IsBlocked = await mediator.Send(new GetUserIsBlockedQuery()
+                {
+                    UserId = UserIdTemp
+                }),
+                NumberOfReadings = userReadings.Count(),
+                NumberOfReads = userReads.Count()
             };
             return Ok(currentUser);
         }
@@ -136,6 +150,17 @@ namespace WebAPI.Controllers.v2
         public async Task<IActionResult> GetAdmins()
         {
             return Ok(await mediator.Send(new GetAdminsQuery()));
+        }
+
+        [Authorize(Roles = "Administrator")]
+        [HttpPut("BlockUser")]
+        [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Put))]
+        public async Task<IActionResult> BlockUser(string UserId)
+        {
+            return Ok(await mediator.Send(new BlockUserCommand()
+            {
+                UserId = UserId
+            }));
         }
     }
 }

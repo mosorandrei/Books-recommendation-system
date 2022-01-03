@@ -38,6 +38,17 @@ namespace WebAPI.Controllers.v2
         }
 
         [Authorize(Roles = "Member, Administrator")]
+        [HttpGet("GetMyStatuses")]
+        [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
+        public async Task<IActionResult> GetMyStatuses()
+        {
+            return Ok(await mediator.Send(new GetUserReadingStatusesQuery()
+            {
+                UserId = User.Claims.FirstOrDefault(x => x.Type == "UserId")?.Value
+            }));
+        }
+
+        [Authorize(Roles = "Member, Administrator")]
         [HttpPost("AddToMyFavourites")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -154,6 +165,25 @@ namespace WebAPI.Controllers.v2
             {
                 UserId = User.Claims.FirstOrDefault(x => x.Type == "UserId")?.Value
             }));
+        }
+
+        [Authorize(Roles = "Member, Administrator")]
+        [HttpPut("RateBook")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Put))]
+        public async Task<StatusResponse> RateBook(Guid BookId, int Score)
+        {
+            if (Score < 1 || Score > 5)
+                throw new ArgumentOutOfRangeException(nameof(Score));
+            RateBookCommand command = new()
+            {
+                UserId = User.Claims.FirstOrDefault(x => x.Type == "UserId")?.Value,
+                BookId = BookId,
+                Score = Score
+            };
+            BookStatusChangeResponse response = await mediator.Send(command);
+            return response.Resource is not null ? response.Resource : throw new ArgumentNullException(nameof(command));
         }
     }
 }

@@ -43,7 +43,8 @@ namespace Application.Features.Commands
                 {
                     ApplicationUserId = currentUserId,
                     BookId = book.Id,
-                    Status = ReadingStatusEnum.ToBeReaded
+                    Status = ReadingStatusEnum.ToBeReaded,
+                    UserScore = 0
                 });
             }
         }

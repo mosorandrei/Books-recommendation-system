@@ -25,6 +25,7 @@ namespace Application.Features.Commands
             {
                 Title = request.Title,
                 Rating = request.Rating,
+                NumberOfReviews = 0,
                 Description = request.Description,
                 PublicationDate = request.PublicationDate,
                 UploadDate = request.UploadDate,
@@ -48,7 +49,8 @@ namespace Application.Features.Commands
                 {
                     ApplicationUserId = userDto.Id,
                     BookId = currentBookId,
-                    Status = ReadingStatusEnum.ToBeReaded
+                    Status = ReadingStatusEnum.ToBeReaded,
+                    UserScore = 0
                 });
             }
         }

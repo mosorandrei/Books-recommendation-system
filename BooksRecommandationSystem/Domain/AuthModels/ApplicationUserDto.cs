@@ -28,5 +28,8 @@ namespace Domain.AuthModels
         [Required(ErrorMessage = "Last Name is required!")]
         [JsonProperty("lastname")]
         public string? LastName { get; set; }
+        [Required(ErrorMessage = "IsBlocked is required!")]
+        [JsonProperty("isblocked")]
+        public int IsBlocked { get; set; }
     }
 }

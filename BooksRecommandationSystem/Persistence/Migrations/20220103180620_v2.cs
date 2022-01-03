@@ -32,6 +32,7 @@ namespace Persistence.Migrations
                     LastName = table.Column<string>(type: "TEXT", nullable: true),
                     ImageUri = table.Column<string>(type: "TEXT", nullable: true),
                     IsEnabled = table.Column<bool>(type: "INTEGER", nullable: false),
+                    IsBlocked = table.Column<int>(type: "INTEGER", nullable: false),
                     UserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
@@ -72,6 +73,7 @@ namespace Persistence.Migrations
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
                     Title = table.Column<string>(type: "TEXT", nullable: true),
                     Rating = table.Column<decimal>(type: "TEXT", nullable: false),
+                    NumberOfReviews = table.Column<int>(type: "INTEGER", nullable: false),
                     Description = table.Column<string>(type: "TEXT", nullable: true),
                     PublicationDate = table.Column<DateTime>(type: "TEXT", nullable: false),
                     UploadDate = table.Column<DateTime>(type: "TEXT", nullable: false),
@@ -234,7 +236,8 @@ namespace Persistence.Migrations
                     ApplicationUserId = table.Column<string>(type: "TEXT", nullable: true),
                     BookId = table.Column<Guid>(type: "TEXT", nullable: false),
                     Status = table.Column<int>(type: "INTEGER", nullable: false),
-                    IsFavourited = table.Column<bool>(type: "INTEGER", nullable: false)
+                    IsFavourited = table.Column<bool>(type: "INTEGER", nullable: false),
+                    UserScore = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {

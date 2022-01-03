@@ -11,7 +11,7 @@ using Persistence.Context;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20220102122425_v2")]
+    [Migration("20220103180620_v2")]
     partial class v2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -43,6 +43,9 @@ namespace Persistence.Migrations
 
                     b.Property<string>("ImageUri")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("IsBlocked")
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("IsEnabled")
                         .HasColumnType("INTEGER");
@@ -126,6 +129,9 @@ namespace Persistence.Migrations
 
                     b.Property<string>("ImageUri")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("NumberOfReviews")
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("PublicationDate")
                         .HasColumnType("TEXT");
@@ -216,6 +222,9 @@ namespace Persistence.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("UserScore")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");

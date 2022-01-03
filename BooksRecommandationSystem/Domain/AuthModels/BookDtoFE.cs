@@ -15,6 +15,9 @@ namespace Domain.AuthModels
         [Required(ErrorMessage = "Rating is required!")]
         [JsonProperty("Rating")]
         public decimal Rating { get; set; }
+        [Required(ErrorMessage = "NumberOfReviews is required!")]
+        [JsonProperty("NumberOfReviews")]
+        public int NumberOfReviews { get; set; }
         [Required(ErrorMessage = "Description is required!")]
         [JsonProperty("Description")]
         public string? Description { get; set; }

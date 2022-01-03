@@ -9,6 +9,7 @@ namespace Domain.Entities
         public string? LastName { get; set; }
         public Uri? ImageUri { get; set; }
         public bool IsEnabled { get; set; }
+        public int IsBlocked { get; set; } = 0;
 
         [IgnoreDataMember]
         public string FullName

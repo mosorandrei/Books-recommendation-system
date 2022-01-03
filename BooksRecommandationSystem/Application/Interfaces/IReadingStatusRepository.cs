@@ -12,5 +12,7 @@ namespace Application.Interfaces
         Task<ICollection<Guid>> GetMyReadings(string UserId);
         Task<string> FinishReading(string UserId, Guid BookId);
         Task<ICollection<Guid>> GetMyReads(string UserId);
+        Task<string> RateBook(string UserId, Guid BookId, int Score);
+        Task<int> GetUserAssignedScore(string UserId, Guid BookId);
     }
 }

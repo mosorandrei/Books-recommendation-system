@@ -153,5 +153,39 @@ namespace Persistence.v2
             }
             return BookIds;
         }
+
+        public async Task<string> RateBook(string UserId, Guid BookId, int Score)
+        {
+            IEnumerable<ReadingStatus> ReadingStatuses = await GetAllAsync();
+            foreach (ReadingStatus status in ReadingStatuses)
+            {
+                if (status.ApplicationUserId == UserId && status.BookId == BookId)
+                {
+                    if (status.UserScore != 0)
+                    {
+                        status.UserScore = Score;
+                        await UpdateAsync(status);
+                        return "Rating of chosen book has been UPDATED successfully!";
+                    }
+                    status.UserScore = Score;
+                    await UpdateAsync(status);
+                    return "Rating of chosen book has been ADDED successfully!";
+                }
+            }
+            throw new NullReferenceException("No Entry found with the specified parameters!");
+        }
+
+        public async Task<int> GetUserAssignedScore(string UserId, Guid BookId)
+        {
+            IEnumerable<ReadingStatus> ReadingStatuses = await GetAllAsync();
+            foreach (ReadingStatus status in ReadingStatuses)
+            {
+                if (status.ApplicationUserId == UserId && status.BookId == BookId)
+                {
+                    return status.UserScore;
+                }
+            }
+            throw new NullReferenceException("No Entry found with the specified parameters!");
+        }
     }
 }
