@@ -50,25 +50,9 @@ namespace Infrastructure.Test.Data
         }
 
         [Fact]
-        public async Task GivenNewGenreWhenGenreIsNotNullThenUpdateAsyncShouldReturnANewAuthor()
-        {
-            await repository.AddAsync(newGenre);
-            var result = await repository.DeleteAsync(newGenre);
-            result.Should().BeOfType<Genre>();
-        }
-
-        [Fact]
         public void GivenNewGenreWhenGenreIsNullThenUpdateAsyncShouldReturnThrowArgumentNullException()
         {
             _ = repository.Invoking(r => r.UpdateAsync(null)).Should().ThrowAsync<ArgumentNullException>();
-        }
-
-        [Fact]
-        public async Task GivenNewGenreWhenGenreIsNotNullThenDeleteAsyncShouldReturnANewAuthor()
-        {
-            await repository.AddAsync(newGenre);
-            var result = await repository.DeleteAsync(newGenre);
-            result.Should().BeOfType<Genre>();
         }
 
         [Fact]

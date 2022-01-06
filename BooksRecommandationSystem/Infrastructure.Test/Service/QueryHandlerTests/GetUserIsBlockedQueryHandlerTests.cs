@@ -21,7 +21,7 @@ namespace Infrastructure.Test.Service.QueryHandlerTests
 
         [Fact]
 
-        public async void GivenGetUserIsBlockedQueryHandlerWhenHandleIsCalledThenGetTheUserById()
+        public async Task GivenGetUserIsBlockedQueryHandlerWhenHandleIsCalledThenGetTheUserById()
         { 
             GetUserIsBlockedQuery query = new GetUserIsBlockedQuery();
             query.UserId = "user";

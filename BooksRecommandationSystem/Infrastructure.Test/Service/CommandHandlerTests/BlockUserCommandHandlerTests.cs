@@ -20,8 +20,7 @@ namespace Infrastructure.Test.Service.CommandHandlerTests
         }
 
         [Fact]
-
-        public async void GivenBlockUserCommandHandlerWhenHandleIsCalledThenBlockUserIsCalled()
+        public async Task GivenBlockUserCommandHandlerWhenHandleIsCalledThenBlockUserIsCalled()
         {   
             BlockUserCommand command = new BlockUserCommand();
             command.UserId = "user";

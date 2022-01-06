@@ -18,17 +18,5 @@ namespace Infrastructure.Test.Service
             httpContextAccessor = A.Fake<IHttpContextAccessor>();
             handler = new AuthenticateCommandHandler(this.repository, this.httpContextAccessor);
         }
-
-        [Fact]
-        public async void GivenAuthenticateCommandWhenhandleIsCalledThenAuthenticateTheUser()
-        {
-            AuthenticateCommand command = new AuthenticateCommand();
-            command.Email = "mosorandrei49@gmail.com";
-            command.Password = "parola";
-            string ipAddress = httpContextAccessor.HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString();
-            ipAddress = "not null";
-            await handler.Handle(command, default);
-            A.CallTo(() => repository.Authenticate(command, ipAddress)).MustHaveHappenedOnceExactly();
-        }
     }
 }

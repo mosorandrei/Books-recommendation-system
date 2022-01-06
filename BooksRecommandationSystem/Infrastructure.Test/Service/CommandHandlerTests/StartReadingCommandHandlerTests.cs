@@ -20,7 +20,7 @@ namespace Infrastructure.Test.Service.CommandHandlerTests
             handler = new StartReadingCommandHandler(repository);
         }
         [Fact]
-        public async void GivenStartReadingCommandWhenHandleIsCalledThenStartReadingIsCalled()
+        public async Task GivenStartReadingCommandWhenHandleIsCalledThenStartReadingIsCalled()
         {
             StartReadingCommand command = new StartReadingCommand();
             command.UserId = "ID";

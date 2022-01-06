@@ -51,26 +51,11 @@ namespace Infrastructure.Test.Data
         {
             _ = repository.Invoking(r => r.AddAsync(null)).Should().ThrowAsync<ArgumentNullException>();
         }
-        [Fact]
-        public async Task GivenNewAuthorWhenAuthorIsNotNullThenUpdateAsyncShouldReturnANewAuthor()
-        {
-            await repository.AddAsync(newAuthor);
-            var result = await repository.DeleteAsync(newAuthor);
-            result.Should().BeOfType<Author>();
-        }
 
         [Fact]
         public void GivenNewAuthorWhenAuthorIsNullThenUpdateAsyncShouldReturnThrowArgumentNullException()
         {
             _ = repository.Invoking(r => r.UpdateAsync(null)).Should().ThrowAsync<ArgumentNullException>();
-        }
-
-        [Fact]
-        public async Task GivenNewAuthorWhenAuthorIsNotNullThenDeleteAsyncShouldReturnANewAuthor()
-        {
-            await repository.AddAsync(newAuthor);
-            var result = await repository.DeleteAsync(newAuthor);
-            result.Should().BeOfType<Author>();
         }
 
         [Fact]

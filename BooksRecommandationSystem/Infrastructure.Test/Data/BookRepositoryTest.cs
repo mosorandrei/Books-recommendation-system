@@ -52,38 +52,15 @@ namespace Infrastructure.Test.Data
         }
 
         [Fact]
-        public async Task GivenNewBookWhenBookIsNotNullThenAddAsyncShouldReturnANewBook()
-        {
-            var result = await repository.AddAsync(newBook);
-            result.Should().BeOfType<Book>();
-        }
-
-        [Fact]
         public void GivenNewBookWhenBookIsNullThenAddSyncShouldReturnThrowArgumentNullException()
         {
             _ = repository.Invoking(r => r.AddAsync(null)).Should().ThrowAsync<ArgumentNullException>();
         }
 
         [Fact]
-        public async Task GivenNewBookWhenBookIsNotNullThenUpdateAsyncShouldReturnANewBook()
-        {
-            await repository.AddAsync(newBook);
-            var result = await repository.DeleteAsync(newBook);
-            result.Should().BeOfType<Book>();
-        }
-
-        [Fact]
         public void GivenNewBookWhenBookIsNullThenUpdateAsyncShouldReturnThrowArgumentNullException()
         {
             _ = repository.Invoking(r => r.UpdateAsync(null)).Should().ThrowAsync<ArgumentNullException>();
-        }
-
-        [Fact]
-        public async Task GivenNewBookWhenBookIsNotNullThenDeleteAsyncShouldReturnANewBook()
-        {
-            await repository.AddAsync(newBook);
-            var result = await repository.DeleteAsync(newBook);
-            result.Should().BeOfType<Book>();
         }
 
         [Fact]

@@ -20,7 +20,7 @@ namespace Infrastructure.Test.Service.CommandHandlerTests
             handler = new DeleteFromMyFavouritesCommandHandler(repository);
         }
         [Fact]
-        public async void GivenDeleteFromMyFavouritesCommandWhenHandleIsCalledThenShouldDeleteFromFavorites()
+        public async Task GivenDeleteFromMyFavouritesCommandWhenHandleIsCalledThenShouldDeleteFromFavorites()
         {
             DeleteFromMyFavouritesCommand command = new DeleteFromMyFavouritesCommand();
             command.UserId = "ID";

@@ -20,7 +20,7 @@ namespace Infrastructure.Test.Service.CommandHandlerTests
             handler = new AddToMyFavouritesCommandHandler(repository);
         }
         [Fact]
-        public async void GivenAddToMyFavouritesCommandWhenHandleIsCalledThenShouldAddToFavorites()
+        public async Task GivenAddToMyFavouritesCommandWhenHandleIsCalledThenShouldAddToFavorites()
         {
             AddToMyFavouritesCommand command = new AddToMyFavouritesCommand();
             command.UserId = "ID";
