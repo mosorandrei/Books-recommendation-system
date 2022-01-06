@@ -8,54 +8,57 @@ import "./sign-in-form.scss";
 import { AuthContext } from "../../hooks/auth-context";
 import { AUTH_ACTIONS } from "../../utils/constants";
 
-
 function SignInForm({ onSwitchButton }) {
+  const { dispatch } = useContext(AuthContext);
 
-    const { dispatch } = useContext(AuthContext);
-
-    const { fields, errors, setErrors, handleInputChange, handleSubmit } = useForm(
-        {
-            email: '',
-            password: '',
+  const { fields, errors, setErrors, handleInputChange, handleSubmit } =
+    useForm(
+      {
+        email: "",
+        password: "",
+      },
+      {
+        email: {
+          required: true,
+          pattern: {
+            value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+            message: "Email is not valid",
+          },
         },
-        {
-            email: {
-                required: true,
-                pattern: {
-                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                    message: "Email is not valid"
-                }
-            },
-            password: {
-                required: true,
-            }
+        password: {
+          required: true,
         },
-        fields => {
-            signInUser(fields)
-                .then(result => {
-                    getUser(result.token)
-                        .then(userInformation => (
-                            dispatch({
-                                type: AUTH_ACTIONS.LOGIN_USER,
-                                payload: {
-                                    user:  userInformation ,
-                                    accessToken: result.token,
-                                    expireTime: result.expireTime
-                                }
-                            }))
-                        )
-                        .catch(() => dispatch({
-                            type: AUTH_ACTIONS.LOGOUT_USER
-                        }));
+      },
+      (fields) => {
+        signInUser(fields)
+          .then((result) => {
+            getUser(result.token)
+              .then((userInformation) =>
+                dispatch({
+                  type: AUTH_ACTIONS.LOGIN_USER,
+                  payload: {
+                    user: userInformation,
+                    accessToken: result.token,
+                    expireTime: result.expireTime,
+                  },
                 })
-                .catch(() => {
-                    setErrors(prevErrors => ({ ...prevErrors, form: 'The credentials provided are incorrect!' }
-                    ));
-                });
-        }
+              )
+              .catch(() =>
+                dispatch({
+                  type: AUTH_ACTIONS.LOGOUT_USER,
+                })
+              );
+          })
+          .catch(() => {
+            setErrors((prevErrors) => ({
+              ...prevErrors,
+              form: "The credentials provided are incorrect!",
+            }));
+          });
+      }
     );
 
-     return (
+  return (
     <form className="sign-in-form" onSubmit={handleSubmit}>
       <TextInput
         inputName="email"
@@ -88,5 +91,3 @@ function SignInForm({ onSwitchButton }) {
 }
 
 export default SignInForm;
-
-

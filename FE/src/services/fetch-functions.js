@@ -1,4 +1,4 @@
-import { API_HOST, API_HOST_WITHOUT_TOKEN } from "../utils/constants";
+import { API_HOST } from "../utils/constants";
 
 function validateResponse(response) {
   if (!response.ok) {
@@ -27,7 +27,6 @@ function requestOptionsToken(method, body, accessToken) {
 }
 
 export function signInUser(signInInfo) {
-  console.log(signInInfo);
   return fetch(
     `${API_HOST}/Authenticate`,
     requestOptions("POST", { ...signInInfo })
@@ -63,21 +62,21 @@ export function getAllMembers(accessToken) {
 
 export function getAllBooks(accessToken) {
   return fetch(
-    `${API_HOST_WITHOUT_TOKEN}/Books`,
+    `${API_HOST}/Books`,
     requestOptionsToken("GET", undefined, accessToken)
   ).then((r) => validateResponse(r));
 }
 
 export function deleteBook(bookId, accessToken) {
   return fetch(
-    `${API_HOST_WITHOUT_TOKEN}/Books?id=${bookId}`,
+    `${API_HOST}/Books?id=${bookId}`,
     requestOptionsToken("DELETE", undefined, accessToken)
   ).then((r) => validateResponse(r));
 }
 
 export function addBook(bookFields, accessToken) {
   return fetch(
-    `${API_HOST_WITHOUT_TOKEN}/Books`,
+    `${API_HOST}/Books`,
     requestOptionsToken(
       "POST",
       {
@@ -93,11 +92,74 @@ export function addBook(bookFields, accessToken) {
 
 export function editBook(bookFields, bookId, accessToken) {
   return fetch(
-    `${API_HOST_WITHOUT_TOKEN}/Books?id=${bookId}`,
+    `${API_HOST}/Books?id=${bookId}`,
     requestOptionsToken(
       "PUT",
       { id: bookId, title: bookFields.title },
       accessToken
     )
+  ).then((r) => validateResponse(r));
+}
+
+export function getBook(bookId, accessToken) {
+  return fetch(
+    `${API_HOST}/GetBookById?BookId=${bookId}`,
+    requestOptionsToken("GET", undefined, accessToken)
+  ).then((r) => validateResponse(r));
+}
+
+export function addToReading(bookId, accessToken) {
+  return fetch(
+    `${API_HOST}/StartReading?BookId=${bookId}`,
+    requestOptionsToken("PUT", undefined, accessToken)
+  ).then((r) => validateResponse(r));
+}
+
+export function addToFavourites(bookId, accessToken) {
+  return fetch(
+    `${API_HOST}/AddToMyFavourites?BookId=${bookId}`,
+    requestOptionsToken("POST", undefined, accessToken)
+  ).then((r) => validateResponse(r));
+}
+
+export function getReadingBooks(accessToken) {
+  return fetch(
+    `${API_HOST}/GetMyReadings`,
+    requestOptionsToken("GET", undefined, accessToken)
+  ).then((r) => validateResponse(r));
+}
+
+export function finishReading(bookId, accessToken) {
+  return fetch(
+    `${API_HOST}/FinishReading?BookId=${bookId}`,
+    requestOptionsToken("PUT", undefined, accessToken)
+  ).then((r) => validateResponse(r));
+}
+
+export function getReadBooks(accessToken) {
+  return fetch(
+    `${API_HOST}/GetMyReads`,
+    requestOptionsToken("GET", undefined, accessToken)
+  ).then((r) => validateResponse(r));
+}
+
+export function getFavourites(accessToken) {
+  return fetch(
+    `${API_HOST}/GetMyFavourites`,
+    requestOptionsToken("GET", undefined, accessToken)
+  ).then((r) => validateResponse(r));
+}
+
+export function getAllGenres(accessToken) {
+  return fetch(
+    `${API_HOST}/Genres`,
+    requestOptionsToken("GET", undefined, accessToken)
+  ).then((r) => validateResponse(r));
+}
+
+export function getBooksByGenre(genreId, accessToken) {
+  return fetch(
+    `${API_HOST}/GetBooksByGenreId?GenreId=${genreId}`,
+    requestOptionsToken("GET", undefined, accessToken)
   ).then((r) => validateResponse(r));
 }

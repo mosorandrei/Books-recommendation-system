@@ -1,5 +1,6 @@
 import Reading from "./pages/user/reading";
 import Favourites from "./pages/user/favourites";
+import Read from "./pages/user/read";
 import Categories from "./pages/user/categories";
 import Discover from "./pages/user/discover";
 import Library from "./pages/admin/library";
@@ -16,6 +17,12 @@ export const userRoutes = [
   { id: 2, name: "Reading", path: "/user/reading", element: Reading },
   {
     id: 3,
+    name: "Read",
+    path: "/user/read",
+    element: Read,
+  },
+  {
+    id: 4,
     name: "Favourites",
     path: "/user/favourites",
     element: Favourites,

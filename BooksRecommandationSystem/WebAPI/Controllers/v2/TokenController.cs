@@ -10,7 +10,7 @@ using System.Security.Claims;
 namespace WebAPI.Controllers.v2
 {
     [ApiVersion("2.0")]
-    [Route("api/v{version:apiVersion}/[controller]")]
+    [Route("api/v{version:apiVersion}")]
     [EnableCors("FEPolicy")]
     public class TokenController : BaseController
     {
@@ -35,7 +35,6 @@ namespace WebAPI.Controllers.v2
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Post))]
         public async Task<TokenResponse> AuthenticateAsync([FromBody] AuthenticateCommand command)
         {
-            Console.WriteLine(command);
             var response = await mediator.Send(command);
             return response.Resource ?? throw new ArgumentNullException(nameof(command));
         }
@@ -67,7 +66,7 @@ namespace WebAPI.Controllers.v2
         /// </summary>
         */
 
-        [AllowAnonymous]
+        [Authorize(Roles = "Administrator")]
         [HttpGet("GetAllMembers")]
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
         public async Task<IActionResult> GetMembers()
@@ -85,14 +84,33 @@ namespace WebAPI.Controllers.v2
         [Authorize]
         [HttpGet("GetUser")]
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
-        public IActionResult GetUser()
+        public async Task<IActionResult> GetUser()
         {
+            var UserIdTemp = User.Claims.FirstOrDefault(x => x.Type == "UserId")?.Value;
+            IEnumerable<BookDtoFE> userReadings = await mediator.Send(new GetMyReadingsQuery()
+            {
+                UserId = UserIdTemp
+            });
+            IEnumerable<ReadBookDtoFE> userReads = await mediator.Send(new GetMyReadsQuery()
+            {
+                UserId = UserIdTemp
+            });
             var currentUser = new ApplicationUserDtoFE
             {
-                UserId = User.Claims.FirstOrDefault(x => x.Type == "UserId")?.Value,
+                UserId = UserIdTemp,
                 FullName = User.Claims.FirstOrDefault(x => x.Type == "FullName")?.Value,
+                ImageUri = await mediator.Send(new GetUserImageUriQuery()
+                {
+                    UserId = UserIdTemp
+                }),
                 Email = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Name)?.Value,
-                IsAdmin = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Role)?.Value == "Administrator" ? 1 : 0
+                IsAdmin = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Role)?.Value == "Administrator" ? 1 : 0,
+                IsBlocked = await mediator.Send(new GetUserIsBlockedQuery()
+                {
+                    UserId = UserIdTemp
+                }),
+                NumberOfReadings = userReadings.Count(),
+                NumberOfReads = userReads.Count()
             };
             return Ok(currentUser);
         }
@@ -126,12 +144,23 @@ namespace WebAPI.Controllers.v2
         /// </summary>
         */
 
-        [AllowAnonymous]
+        [Authorize(Roles = "Administrator")]
         [HttpGet("GetAllAdmins")]
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
         public async Task<IActionResult> GetAdmins()
         {
             return Ok(await mediator.Send(new GetAdminsQuery()));
+        }
+
+        [Authorize(Roles = "Administrator")]
+        [HttpPut("BlockUser")]
+        [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Put))]
+        public async Task<IActionResult> BlockUser(string UserId)
+        {
+            return Ok(await mediator.Send(new BlockUserCommand()
+            {
+                UserId = UserId
+            }));
         }
     }
 }

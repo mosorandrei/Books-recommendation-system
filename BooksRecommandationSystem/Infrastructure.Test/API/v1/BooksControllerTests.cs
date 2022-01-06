@@ -1,8 +1,8 @@
 ﻿
-using System.Threading.Tasks;
 using Application.Features.Queries;
 using FakeItEasy;
 using MediatR;
+using System.Threading.Tasks;
 using WebAPI.Controllers.v1;
 using Xunit;
 
@@ -29,4 +29,3 @@ namespace Infrastructure.Test.API.v1
 
     }
 }
-

@@ -13,22 +13,21 @@ import Button from "../button/button";
 import Modal from "../modal/modal";
 import { AuthContext } from "../../hooks/auth-context";
 
-function Dashboard({
-  onChangeDisplayMode,
-  displayMode,
-  children
-}) {
-  const { state: { expireTime, accessToken, user }, dispatch } = useContext(AuthContext);
+function Dashboard({ onChangeDisplayMode, displayMode, children }) {
+  const {
+    state: { expireTime, accessToken, user },
+    dispatch,
+  } = useContext(AuthContext);
   const endSessionModalRef = useRef();
   const [toEndSession, setToEndSession] = useState(true);
 
   function handleContinueSession(e) {
-    getNewAccessToken(accessToken).then(response => {
+    getNewAccessToken(accessToken).then((response) => {
       dispatch({
         type: AUTH_ACTIONS.SET_ACCESS_TOKEN,
         payload: {
-          accessToken: response.token
-        }
+          accessToken: response.token,
+        },
       });
     });
     endSessionModalRef.current.closeModal();
@@ -42,12 +41,12 @@ function Dashboard({
   useInterval(() => {
     if (toEndSession) {
       dispatch({
-        type: "LOGOUT_USER"
+        type: "LOGOUT_USER",
       });
     } else {
       setToEndSession(true);
     }
-  }, (expireTime) * 1000);
+  }, expireTime * 1000);
 
   const switchButton =
     displayMode === USER_TYPES.USER ? (
@@ -68,7 +67,7 @@ function Dashboard({
 
   const handleLogoutButton = () => {
     dispatch({
-      type: AUTH_ACTIONS.LOGOUT_USER
+      type: AUTH_ACTIONS.LOGOUT_USER,
     });
   };
 
@@ -76,15 +75,9 @@ function Dashboard({
     <>
       <div className="dashboard">
         <div className="lhp">
-          <Avatar
-            name={user.fullName}
-            avatarLink={user?.avatar}
-          />
+          <Avatar name={user.fullName} avatarLink={user?.avatar} />
 
-          <Level
-            alreadyRead={user?.alreadyRead}
-            allBooks={user?.allBooks}
-          />
+          <Level alreadyRead={user?.alreadyRead} allBooks={user?.allBooks} />
 
           <Navigation displayMode={displayMode} />
 
@@ -104,7 +97,7 @@ function Dashboard({
           style="contained"
           color="purple"
           size="L"
-          onClick={e => handleContinueSession(e)}
+          onClick={(e) => handleContinueSession(e)}
         >
           Yes
         </Button>
@@ -113,11 +106,10 @@ function Dashboard({
   );
 }
 
-
 Dashboard.propTypes = {
   onChangeDisplayMode: PropType.func,
   displayMode: PropType.oneOf([USER_TYPES.USER, USER_TYPES.ADMIN]),
-  children: PropType.node
+  children: PropType.node,
 };
 
 export default Dashboard;

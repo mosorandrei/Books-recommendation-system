@@ -6,7 +6,7 @@ namespace Persistence.v1
 {
     public class GenreRepository : Repository<Genre>, IGenreRepository
     {
-        public GenreRepository(GenreContext context) : base(context)
+        public GenreRepository(DatabaseContext context) : base(context)
         {
         }
     }

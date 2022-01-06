@@ -7,14 +7,20 @@
 
 .left-info {
   height: 100vh;
-  width: 50%;
+  width: 45%;
+}
+
+.bookImage {
+  height: 100%;
+  width: 100%;
 }
 
 .right-info {
   height: 100vh;
-  width: 50%;
+  width: 55%;
   display: flex;
   flex-direction: column;
+  background-color: $color-gray-800;
 }
 
 .close {
@@ -26,22 +32,37 @@
 }
 
 .details {
-  padding-top: 10vh;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 42px;
-  padding-right: 38px;
+  padding: 0px 60px 0px 60px;
 
   .name {
     height: fit-content;
     font-style: normal;
     font-weight: 500;
     font-size: 48px;
-    line-height: 56px;
     color: $color-purple-100;
-    margin: 0px 0px 30px 0px;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .authors {
+    height: fit-content;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    color: $color-purple-100;
+    margin-bottom: 60px;
+  }
+
+  .genres {
+    height: fit-content;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: $color-purple-300;
+    margin-bottom: 200px;
   }
 
   .specification {
@@ -50,20 +71,41 @@
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 20px;
     color: $color-gray-600;
-    margin-bottom: 40px;
     overflow-y: scroll;
+    margin-bottom: 20px;
   }
 
-  .footnotes {
-    height: 100px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 24px;
-    color: $color-gray-400;
-    margin-top: 40px;
-    overflow-y: scroll;
+  .rating {
+    margin-bottom: 40px;
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    .heart {
+      margin-right: 100px;
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+    }
+  }
+}
+@media only screen and (max-height: 754px) {
+  .details {
+    padding: 0px 40px 0px 40px;
+    justify-content: flex-end;
+    .bottom {
+      margin-bottom: 70px;
+      .heart {
+        margin-right: 50px;
+      }
+    }
+    .genres {
+      margin-bottom: 100px;
+    }
   }
 }

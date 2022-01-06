@@ -11,7 +11,7 @@ import { AuthContext } from "../../hooks/auth-context";
 function BookForm({
   id,
   title,
-  author,
+  authors,
   rating,
   description,
   downloadLink,
@@ -24,7 +24,7 @@ function BookForm({
     useForm(
       {
         title: title || "",
-        author: author || "",
+        authors: authors || "",
         rating: rating ? rating.toString() : "",
         description: description || "",
         image: image || "",
@@ -32,7 +32,7 @@ function BookForm({
       },
       {
         title: { required: true },
-        // author: { required: true },
+        authors: { required: true },
         description: { required: true },
         downloadLink: { required: true },
         rating: {
@@ -75,11 +75,11 @@ function BookForm({
       />
       <div className="form-input-split">
         <TextInput
-          inputName="author"
+          inputName="authors"
           inputLabel="Author"
           onChange={handleInputChange}
-          value={fields.author}
-          error={errors.author}
+          value={fields.authors}
+          error={errors.authors}
         />
         <TextInput
           inputName="rating"
@@ -125,7 +125,7 @@ function BookForm({
           Cancel
         </Button>
         <Button type="submit" style="contained" color="purple" size="M">
-          {isNewBook ? "Add" : "Edit"}
+          {isNewBook ? "Add" : "Save"}
         </Button>
       </div>
     </form>

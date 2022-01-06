@@ -103,7 +103,7 @@ namespace WebAPI
                     .AddDefaultTokenProviders()
                     .AddUserManager<UserManager<ApplicationUser>>()
                     .AddSignInManager<SignInManager<ApplicationUser>>()
-                    .AddEntityFrameworkStores<ApplicationUserContext>();
+                    .AddEntityFrameworkStores<DatabaseContext>();
             services.Configure<IdentityOptions>(
                 options =>
                 {

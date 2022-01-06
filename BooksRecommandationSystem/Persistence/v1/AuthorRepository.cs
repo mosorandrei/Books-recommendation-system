@@ -6,7 +6,7 @@ namespace Persistence.v1
 {
     public class AuthorRepository : Repository<Author>, IAuthorRepository
     {
-        public AuthorRepository(AuthorContext context) : base(context)
+        public AuthorRepository(DatabaseContext context) : base(context)
         {
         }
     }

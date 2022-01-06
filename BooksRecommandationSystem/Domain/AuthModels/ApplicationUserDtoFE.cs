@@ -13,6 +13,10 @@ namespace Domain.AuthModels
         [JsonProperty("fullname")]
         public string? FullName { get; set; }
 
+        [Required(ErrorMessage = "ImageUri is required!")]
+        [JsonProperty("ImageUri")]
+        public Uri? ImageUri { get; set; }
+
         [Required(ErrorMessage = "Email is required!")]
         [JsonProperty("email")]
         public string? Email { get; set; }
@@ -20,5 +24,15 @@ namespace Domain.AuthModels
         [Required(ErrorMessage = "isAdmin is required!")]
         [JsonProperty("isAdmin")]
         public int IsAdmin { get; set; }
+
+        [Required(ErrorMessage = "isBlocked is required!")]
+        [JsonProperty("isBlocked")]
+        public int IsBlocked { get; set; }
+        [Required(ErrorMessage = "NumberOfReadings is required!")]
+        [JsonProperty("NumberOfReadings")]
+        public int NumberOfReadings { get; set; }
+        [Required(ErrorMessage = "NumberOfReads is required!")]
+        [JsonProperty("NumberOfReads")]
+        public int NumberOfReads { get; set; }
     }
 }

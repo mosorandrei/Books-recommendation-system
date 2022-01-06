@@ -21,7 +21,6 @@ function Library() {
   useEffect(() => {
     getAllBooks(accessToken)
       .then((result) => {
-        console.log(result);
         setBooks(result);
       })
       .catch((error) => {
@@ -39,14 +38,30 @@ function Library() {
       });
   };
 
+  function displayAuthors(authors) {
+    let authorsLabel = "";
+    authors.map((author) => {
+      authorsLabel = authorsLabel.concat(
+        author.firstName + " " + author.lastName + ", "
+      );
+    });
+    authorsLabel = authorsLabel.slice(0, -2);
+
+    return authorsLabel;
+  }
+
   function openAddBookModal() {
     addBookModalRef.current.openModal();
   }
 
   function openEditBookModal(bookId) {
-    setEditBook(books.find((book) => book.id === bookId));
+    var tempBook = books.find((book) => book.bookId === bookId);
+    var authors = displayAuthors(tempBook.authors);
+    var bookWithAuthors = { ...tempBook, authors: authors };
+    setEditBook(bookWithAuthors);
     editBookModalRef.current.openModal();
   }
+
   return (
     <>
       <div className="books">
@@ -63,14 +78,14 @@ function Library() {
         </div>
         <div className="row">
           {books.map((book) => (
-            <div key={book.id}>
+            <div key={book.bookId}>
               <BookCard {...book}>
                 <div className="options">
                   <Button
                     style="outlined"
                     color="purple"
                     size="M"
-                    onClick={() => openEditBookModal(book.id)}
+                    onClick={() => openEditBookModal(book.bookId)}
                   >
                     Edit
                   </Button>
@@ -78,7 +93,7 @@ function Library() {
                     style="contained"
                     color="purple"
                     size="M"
-                    onClick={() => handleDeleteBook(book.id)}
+                    onClick={() => handleDeleteBook(book.bookId)}
                   >
                     Delete
                   </Button>

@@ -41,7 +41,7 @@ namespace Persistence.v2
             {
                 ApplicationUser user = await GetUserByEmail(request.Email);
 
-                if (user != null && user.IsEnabled)
+                if (user != null && user.IsEnabled && user.IsBlocked == 0)
                 {
                     string role = (await _userManager.GetRolesAsync(user))[0];
                     string jwtToken = await GenerateJwtToken(user);
@@ -53,6 +53,10 @@ namespace Persistence.v2
                                              jwtToken
                                              //""//refreshToken.Token
                                              );
+                }
+                else
+                {
+                    throw new SecurityTokenException("User is null, disabled or blocked!");
                 }
             }
 
@@ -73,16 +77,17 @@ namespace Persistence.v2
                     FirstName = request.FirstName,
                     LastName = request.LastName,
                     IsEnabled = true,
+                    IsBlocked = 0,
                     EmailConfirmed = true
                 };
                 var result = await _userManager.CreateAsync(user, request.Password);
                 if (!result.Succeeded)
-                    return new RegisterResponse { Status = "Error", Message = "User creation failed!" };
+                    return new RegisterResponse { Id = "INVALID_USER_ID", Status = "Error", Message = "User creation failed!" };
                 await _userManager.AddToRoleAsync(user, ApplicationIdentityConstants.Roles.Member);
-                return new RegisterResponse { Status = "Succes", Message = "User created successfully!" };
+                return new RegisterResponse { Id = user.Id, Status = "Succes", Message = "User created successfully!" };
             }
 
-            return new RegisterResponse { Status = "Error", Message = "User already exists!" };
+            return new RegisterResponse { Id = "INVALID_USER_ID", Status = "Error", Message = "User already exists!" };
         }
 
         public async Task<IEnumerable<ApplicationUserDto>> GetAllMembersAsync()
@@ -90,10 +95,13 @@ namespace Persistence.v2
             List<ApplicationUser> members = new(await _userManager.GetUsersInRoleAsync(ApplicationIdentityConstants.Roles.Member));
             return members.Select(member => new ApplicationUserDto()
             {
+                Id = member.Id,
                 Username = member.UserName,
                 Email = member.Email,
+                ImageUri = member.ImageUri,
                 FirstName = member.FirstName,
-                LastName = member.LastName
+                LastName = member.LastName,
+                IsBlocked = member.IsBlocked
             });
         }
 
@@ -102,10 +110,13 @@ namespace Persistence.v2
             List<ApplicationUser> admins = new(await _userManager.GetUsersInRoleAsync(ApplicationIdentityConstants.Roles.Administrator));
             return admins.Select(member => new ApplicationUserDto()
             {
+                Id = member.Id,
                 Username = member.UserName,
                 Email = member.Email,
+                ImageUri = member.ImageUri,
                 FirstName = member.FirstName,
-                LastName = member.LastName
+                LastName = member.LastName,
+                IsBlocked = member.IsBlocked
             });
         }
 
@@ -142,6 +153,21 @@ namespace Persistence.v2
             SignInResult signInResult = await _signInManager.PasswordSignInAsync(user, password, true, false);
 
             return signInResult.Succeeded;
+        }
+
+        public async Task<ApplicationUser> GetUserById(string UserId)
+        {
+            return await _userManager.FindByIdAsync(UserId);
+        }
+
+        public async Task<string> BlockUser(string UserId)
+        {
+            ApplicationUser user = await _userManager.FindByIdAsync(UserId);
+            if (user.IsBlocked == 1)
+                return "User already blocked!";
+            user.IsBlocked = 1;
+            await _userManager.UpdateAsync(user);
+            return "User blocked successfully!";
         }
 
         private async Task<ApplicationUser> GetUserByEmail(string email)

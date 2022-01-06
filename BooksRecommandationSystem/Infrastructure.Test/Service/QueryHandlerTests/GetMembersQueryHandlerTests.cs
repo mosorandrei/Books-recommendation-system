@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
-using Application.Features.Queries;
+﻿using Application.Features.Queries;
 using Application.Interfaces;
 using FakeItEasy;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Infrastructure.Test.Service.QueryHandlerTests

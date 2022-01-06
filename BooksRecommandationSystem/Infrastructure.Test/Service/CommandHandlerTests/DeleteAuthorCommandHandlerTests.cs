@@ -20,8 +20,8 @@ namespace Infrastructure.Test.Service
             this.handler = new DeleteAuthorCommandHandler(this.repository);
         }
 
-       [Fact]   
-       public async Task GivenDeleteAuthorCommandWhenHandleIsCalledThenDeleteAsyncAuthorIsCalled()
+        [Fact]
+        public async Task GivenDeleteAuthorCommandWhenHandleIsCalledThenDeleteAsyncAuthorIsCalled()
         {
             Author author = new()
             {

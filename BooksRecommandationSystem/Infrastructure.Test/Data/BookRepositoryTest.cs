@@ -7,7 +7,7 @@ using Xunit;
 
 namespace Infrastructure.Test.Data
 {
-    public class BookRepositoryTest : BookDatabaseBaseTest
+    public class BookRepositoryTest : DatabaseBaseTest
     {
         private readonly Repository<Book> repository;
         private readonly Book newBook;
@@ -16,11 +16,12 @@ namespace Infrastructure.Test.Data
         public BookRepositoryTest()
         {
             repository = new Repository<Book>(context);
-            newBook = new Book() 
+            newBook = new Book()
             {
                 Id = Guid.Parse("cda75f32-15d8-418b-b174-6ee981a537f0"),
                 Title = "Divergent",
-                Rating = 10,
+                Rating = 5,
+                NumberOfReviews = 1,
                 Description = "",
                 PublicationDate = DateTime.Now, //for testing purposes
                 ImageUri = new Uri("https://bit.ly/3xlV5i2"),
@@ -30,7 +31,8 @@ namespace Infrastructure.Test.Data
             {
                 Id = Guid.Parse("cda75f32-15d8-418b-b174-6ee981a537f0"),
                 Title = "John Wick",
-                Rating = 9,
+                Rating = 5,
+                NumberOfReviews = 1,
                 Description = "",
                 PublicationDate = DateTime.Now, //for testing purposes
                 ImageUri = new Uri("https://bit.ly/3xlV5i2"),
@@ -40,19 +42,13 @@ namespace Infrastructure.Test.Data
             {
                 Id = Guid.Empty,
                 Title = "Film",
-                Rating = 8,
+                Rating = 5,
+                NumberOfReviews = 1,
                 Description = "",
                 PublicationDate = DateTime.Now, //for testing purposes
                 ImageUri = new Uri("https://bit.ly/3xlV5i2"),
                 DownloadUri = new Uri("http://bit.ly/Reads_Divergent")
             };
-        }
-
-        [Fact]
-        public async Task GivenNewBookWhenBookIsNotNullThenAddAsyncShouldReturnANewBook()
-        {
-            var result = await repository.AddAsync(newBook);
-            result.Should().BeOfType<Book>();
         }
 
         [Fact]
@@ -62,25 +58,9 @@ namespace Infrastructure.Test.Data
         }
 
         [Fact]
-        public async Task GivenNewBookWhenBookIsNotNullThenUpdateAsyncShouldReturnANewBook()
-        {
-            await repository.AddAsync(newBook);
-            var result = await repository.DeleteAsync(newBook);
-            result.Should().BeOfType<Book>();
-        }
-
-        [Fact]
         public void GivenNewBookWhenBookIsNullThenUpdateAsyncShouldReturnThrowArgumentNullException()
         {
             _ = repository.Invoking(r => r.UpdateAsync(null)).Should().ThrowAsync<ArgumentNullException>();
-        }
-
-        [Fact]
-        public async Task GivenNewBookWhenBookIsNotNullThenDeleteAsyncShouldReturnANewBook()
-        {
-            await repository.AddAsync(newBook);
-            var result = await repository.DeleteAsync(newBook);
-            result.Should().BeOfType<Book>();
         }
 
         [Fact]

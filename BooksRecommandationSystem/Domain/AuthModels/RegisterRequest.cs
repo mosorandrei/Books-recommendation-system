@@ -13,7 +13,6 @@ namespace Domain.AuthModels
         [JsonProperty("email")]
         public string? Email { get; set; }
 
-
         [Required(ErrorMessage = "User Password is required!")]
         [JsonProperty("password")]
         public string? Password { get; set; }

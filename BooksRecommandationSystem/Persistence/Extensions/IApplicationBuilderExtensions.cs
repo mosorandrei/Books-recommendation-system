@@ -23,7 +23,7 @@ namespace Persistence.Extensions
             {
                 var services = serviceScope.ServiceProvider;
 
-                var dbContext = services.GetRequiredService<ApplicationUserContext>();
+                var dbContext = services.GetRequiredService<DatabaseContext>();
 
                 // Ensure the database is created.
                 // Note this does not use migrations. If database may be updated using migrations, use DbContext.Database.Migrate() instead.

@@ -1,10 +1,10 @@
 ﻿
 
-using System.Threading.Tasks;
 using Application.Features.Commands;
 using Application.Interfaces;
 using FakeItEasy;
 using Microsoft.AspNetCore.Http;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Infrastructure.Test.Service
@@ -13,13 +13,17 @@ namespace Infrastructure.Test.Service
     {
         private readonly RegisterMemberCommandHandler handler;
         private readonly ITokenRepository repository;
+        private readonly IBookRepository bookRepository;
+        private readonly IReadingStatusRepository statusRepository;
         private readonly IHttpContextAccessor httpContextAccessor;
 
         public RegisterMemberCommandHandlerTests()
         {
             this.repository = A.Fake<ITokenRepository>();
+            bookRepository = A.Fake<IBookRepository>();
+            statusRepository = A.Fake<IReadingStatusRepository>();
             this.httpContextAccessor = A.Fake<IHttpContextAccessor>();
-            this.handler = new RegisterMemberCommandHandler(this.repository, this.httpContextAccessor);
+            this.handler = new RegisterMemberCommandHandler(this.repository, this.httpContextAccessor, bookRepository, statusRepository);
         }
         [Fact]
         public async Task GivenRegisterMemberCommandWhenHandleIsCalledThenShouldRegisterTheUser()

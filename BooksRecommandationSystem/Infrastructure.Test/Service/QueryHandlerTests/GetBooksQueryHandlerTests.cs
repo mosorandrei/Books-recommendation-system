@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
-using Application.Features.Queries;
+﻿using Application.Features.Queries;
 using Application.Interfaces;
 using FakeItEasy;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Infrastructure.Test.Service.QueryHandlerTests
@@ -10,11 +10,19 @@ namespace Infrastructure.Test.Service.QueryHandlerTests
     {
         private readonly GetBooksQueryHandler handler;
         private readonly IBookRepository repository;
+        private readonly IBookAuthorAssociationRepository authorAssociationRepository;
+        private readonly IAuthorRepository authorRepository;
+        private readonly IBookGenreAssociationRepository genreAssociationRepository;
+        private readonly IGenreRepository genreRepository;
 
         public GetBooksQueryHandlerTests()
         {
-            this.repository = A.Fake<IBookRepository>();
-            this.handler = new GetBooksQueryHandler(this.repository);
+            repository = A.Fake<IBookRepository>();
+            authorAssociationRepository = A.Fake<IBookAuthorAssociationRepository>();
+            authorRepository = A.Fake<IAuthorRepository>();
+            genreAssociationRepository = A.Fake<IBookGenreAssociationRepository>();
+            genreRepository = A.Fake<IGenreRepository>();
+            handler = new GetBooksQueryHandler(repository, authorAssociationRepository, genreAssociationRepository, authorRepository, genreRepository);
         }
 
         [Fact]

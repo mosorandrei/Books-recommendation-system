@@ -1,8 +1,6 @@
 ﻿using Application.Features.Queries;
 using Application.Interfaces;
-using Domain.AuthModels;
 using FakeItEasy;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
 
