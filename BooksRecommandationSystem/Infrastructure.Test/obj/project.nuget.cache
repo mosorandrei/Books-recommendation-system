@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tI1AcYFSVFj7y0m0iB0FGugwr+GSGleuVNMB0NSId7wn4otgU7SfJSeup+1b9EoX5VnJu6bTGD9WQ7gwz/C3tQ==",
+  "dgSpecHash": "3bI5IHEOWEzL7qbCy/SxX9oMs0kvEBqJovFtPlYhP9j8El9DDMHP9ubHjRWBNE6PlCV9UotQQmPN/lgRV2Forw==",
   "success": true,
   "projectFilePath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Infrastructure.Test/Infrastructure.Test.csproj",
   "expectedPackageFiles": [

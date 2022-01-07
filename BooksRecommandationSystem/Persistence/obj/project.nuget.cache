@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Twt/9z2RWDNrkXApd0yP3KLsXohYeQGHn0v+RR7XEtd5SXnGgxnK1yI4hwfV/2yzQHTB4pkOQjZgasxNErMoiA==",
+  "dgSpecHash": "k4OADXElQn7ZBmbq6BxDGwxweQBHoqZTxzUIRJXtDkR6mrAhxhPjDcfQ8VgnttXHATVnUpTcYjVtBteDrMZPGA==",
   "success": true,
   "projectFilePath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Persistence.csproj",
   "expectedPackageFiles": [

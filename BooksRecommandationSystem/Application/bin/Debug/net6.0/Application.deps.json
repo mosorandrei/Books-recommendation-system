@@ -14,7 +14,8 @@
           "MediatR": "9.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.0",
-          "System.IdentityModel.Tokens.Jwt": "6.14.1"
+          "System.IdentityModel.Tokens.Jwt": "6.14.1",
+          "coverlet.collector": "3.1.0"
         },
         "runtime": {
           "Application.dll": {}
@@ -32,6 +33,7 @@
           }
         }
       },
+      "coverlet.collector/3.1.0": {},
       "FluentValidation/10.3.4": {
         "runtime": {
           "lib/net5.0/FluentValidation.dll": {
@@ -1297,6 +1299,13 @@
       "sha512": "sha512-uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
       "path": "automapper/10.1.1",
       "hashPath": "automapper.10.1.1.nupkg.sha512"
+    },
+    "coverlet.collector/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YzYqSRrjoP5lULBhTDcTOjuM4IDPPi6PhFsl4w8EI4WdZhE6llt7E38Tg4CHyrS+QKwyu1+9OwkdDgluOdoBTw==",
+      "path": "coverlet.collector/3.1.0",
+      "hashPath": "coverlet.collector.3.1.0.nupkg.sha512"
     },
     "FluentValidation/10.3.4": {
       "type": "package",

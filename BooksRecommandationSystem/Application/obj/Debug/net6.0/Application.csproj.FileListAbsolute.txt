@@ -88,3 +88,4 @@ C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSys
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/obj/Debug/net6.0/Application.dll
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/obj/Debug/net6.0/ref/Application.dll
 C:/Users/ROG/Documents/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/obj/Debug/net6.0/Application.pdb
+/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/bin/Debug/net6.0/CoverletSourceRootsMapping

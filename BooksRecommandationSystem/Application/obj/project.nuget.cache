@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "2Uj6ICCHcDzGGW0635fQS1WtAH/TM818hr9Vof5a/75DLxlP3Hl1n3IC+G/Tzxkwvvn2DAZFKLjUpwlJ/lRF0Q==",
+  "dgSpecHash": "XUe2vBIGjQzjgL0xkMiJKlPlkHQrk3jfQ290rzGKv/J1v25qrktc0M7DMtKSJOMW7hyB6QpT5L2utUL5ddP62g==",
   "success": true,
   "projectFilePath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Application.csproj",
   "expectedPackageFiles": [
     "/Users/alex-ama/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
+    "/Users/alex-ama/.nuget/packages/coverlet.collector/3.1.0/coverlet.collector.3.1.0.nupkg.sha512",
     "/Users/alex-ama/.nuget/packages/fluentvalidation/10.3.4/fluentvalidation.10.3.4.nupkg.sha512",
     "/Users/alex-ama/.nuget/packages/mediatr/9.0.0/mediatr.9.0.0.nupkg.sha512",
     "/Users/alex-ama/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/9.0.0/mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",

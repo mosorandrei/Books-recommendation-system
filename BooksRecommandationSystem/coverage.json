@@ -298,22 +298,32 @@
           "Branches": []
         }
       },
-      "WebAPI.Controllers.v2.AuthorsController/<Get>d__1": {
-        "System.Void WebAPI.Controllers.v2.AuthorsController/<Get>d__1::MoveNext()": {
-          "Lines": {
-            "22": 1,
-            "23": 1,
-            "24": 1
-          },
-          "Branches": []
-        }
-      },
       "WebAPI.Controllers.v2.AuthorsController/<Create>d__2": {
         "System.Void WebAPI.Controllers.v2.AuthorsController/<Create>d__2::MoveNext()": {
           "Lines": {
             "29": 1,
             "30": 1,
             "31": 1
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.AuthorsController/<Delete>d__4": {
+        "System.Void WebAPI.Controllers.v2.AuthorsController/<Delete>d__4::MoveNext()": {
+          "Lines": {
+            "48": 1,
+            "49": 1,
+            "50": 1
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.AuthorsController/<Get>d__1": {
+        "System.Void WebAPI.Controllers.v2.AuthorsController/<Get>d__1::MoveNext()": {
+          "Lines": {
+            "22": 1,
+            "23": 1,
+            "24": 1
           },
           "Branches": []
         }
@@ -347,16 +357,6 @@
             }
           ]
         }
-      },
-      "WebAPI.Controllers.v2.AuthorsController/<Delete>d__4": {
-        "System.Void WebAPI.Controllers.v2.AuthorsController/<Delete>d__4::MoveNext()": {
-          "Lines": {
-            "48": 1,
-            "49": 1,
-            "50": 1
-          },
-          "Branches": []
-        }
       }
     },
     "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/Controllers/v2/BookAuthorAssociationController.cs": {
@@ -366,19 +366,6 @@
             "15": 0,
             "16": 0,
             "17": 0
-          },
-          "Branches": []
-        }
-      },
-      "WebAPI.Controllers.v2.BookAuthorAssociationController/<GetBooksByAuthorId>d__1": {
-        "System.Void WebAPI.Controllers.v2.BookAuthorAssociationController/<GetBooksByAuthorId>d__1::MoveNext()": {
-          "Lines": {
-            "23": 0,
-            "24": 0,
-            "25": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0
           },
           "Branches": []
         }
@@ -412,6 +399,19 @@
           },
           "Branches": []
         }
+      },
+      "WebAPI.Controllers.v2.BookAuthorAssociationController/<GetBooksByAuthorId>d__1": {
+        "System.Void WebAPI.Controllers.v2.BookAuthorAssociationController/<GetBooksByAuthorId>d__1::MoveNext()": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": []
+        }
       }
     },
     "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/Controllers/v2/BookGenreAssociationController.cs": {
@@ -421,19 +421,6 @@
             "15": 0,
             "16": 0,
             "17": 0
-          },
-          "Branches": []
-        }
-      },
-      "WebAPI.Controllers.v2.BookGenreAssociationController/<GetBooksByGenreId>d__1": {
-        "System.Void WebAPI.Controllers.v2.BookGenreAssociationController/<GetBooksByGenreId>d__1::MoveNext()": {
-          "Lines": {
-            "23": 0,
-            "24": 0,
-            "25": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0
           },
           "Branches": []
         }
@@ -467,6 +454,19 @@
           },
           "Branches": []
         }
+      },
+      "WebAPI.Controllers.v2.BookGenreAssociationController/<GetBooksByGenreId>d__1": {
+        "System.Void WebAPI.Controllers.v2.BookGenreAssociationController/<GetBooksByGenreId>d__1::MoveNext()": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": []
+        }
       }
     },
     "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/Controllers/v2/BooksController.cs": {
@@ -480,22 +480,32 @@
           "Branches": []
         }
       },
-      "WebAPI.Controllers.v2.BooksController/<Get>d__1": {
-        "System.Void WebAPI.Controllers.v2.BooksController/<Get>d__1::MoveNext()": {
-          "Lines": {
-            "22": 1,
-            "23": 1,
-            "24": 1
-          },
-          "Branches": []
-        }
-      },
       "WebAPI.Controllers.v2.BooksController/<Create>d__2": {
         "System.Void WebAPI.Controllers.v2.BooksController/<Create>d__2::MoveNext()": {
           "Lines": {
             "29": 1,
             "30": 1,
             "31": 1
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.BooksController/<Delete>d__4": {
+        "System.Void WebAPI.Controllers.v2.BooksController/<Delete>d__4::MoveNext()": {
+          "Lines": {
+            "48": 1,
+            "49": 1,
+            "50": 1
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.BooksController/<Get>d__1": {
+        "System.Void WebAPI.Controllers.v2.BooksController/<Get>d__1::MoveNext()": {
+          "Lines": {
+            "22": 1,
+            "23": 1,
+            "24": 1
           },
           "Branches": []
         }
@@ -529,16 +539,6 @@
             }
           ]
         }
-      },
-      "WebAPI.Controllers.v2.BooksController/<Delete>d__4": {
-        "System.Void WebAPI.Controllers.v2.BooksController/<Delete>d__4::MoveNext()": {
-          "Lines": {
-            "48": 1,
-            "49": 1,
-            "50": 1
-          },
-          "Branches": []
-        }
       }
     },
     "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/Controllers/v2/GenresController.cs": {
@@ -552,22 +552,32 @@
           "Branches": []
         }
       },
-      "WebAPI.Controllers.v2.GenresController/<Get>d__1": {
-        "System.Void WebAPI.Controllers.v2.GenresController/<Get>d__1::MoveNext()": {
-          "Lines": {
-            "22": 1,
-            "23": 1,
-            "24": 1
-          },
-          "Branches": []
-        }
-      },
       "WebAPI.Controllers.v2.GenresController/<Create>d__2": {
         "System.Void WebAPI.Controllers.v2.GenresController/<Create>d__2::MoveNext()": {
           "Lines": {
             "29": 1,
             "30": 1,
             "31": 1
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.GenresController/<Delete>d__4": {
+        "System.Void WebAPI.Controllers.v2.GenresController/<Delete>d__4::MoveNext()": {
+          "Lines": {
+            "48": 1,
+            "49": 1,
+            "50": 1
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.GenresController/<Get>d__1": {
+        "System.Void WebAPI.Controllers.v2.GenresController/<Get>d__1::MoveNext()": {
+          "Lines": {
+            "22": 1,
+            "23": 1,
+            "24": 1
           },
           "Branches": []
         }
@@ -601,16 +611,6 @@
             }
           ]
         }
-      },
-      "WebAPI.Controllers.v2.GenresController/<Delete>d__4": {
-        "System.Void WebAPI.Controllers.v2.GenresController/<Delete>d__4::MoveNext()": {
-          "Lines": {
-            "48": 1,
-            "49": 1,
-            "50": 1
-          },
-          "Branches": []
-        }
       }
     },
     "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/Controllers/v2/ReadingStatusController.cs": {
@@ -620,29 +620,6 @@
             "17": 0,
             "18": 0,
             "19": 0
-          },
-          "Branches": []
-        }
-      },
-      "WebAPI.Controllers.v2.ReadingStatusController/<GetBookById>d__1": {
-        "System.Void WebAPI.Controllers.v2.ReadingStatusController/<GetBookById>d__1::MoveNext()": {
-          "Lines": {
-            "25": 0,
-            "26": 0,
-            "27": 0,
-            "28": 0,
-            "29": 0,
-            "30": 0
-          },
-          "Branches": []
-        }
-      },
-      "WebAPI.Controllers.v2.ReadingStatusController/<GetAllStatuses>d__2": {
-        "System.Void WebAPI.Controllers.v2.ReadingStatusController/<GetAllStatuses>d__2::MoveNext()": {
-          "Lines": {
-            "36": 0,
-            "37": 0,
-            "38": 0
           },
           "Branches": []
         }
@@ -707,35 +684,6 @@
             "181": 0
           },
           "Branches": []
-        }
-      },
-      "WebAPI.Controllers.v2.ReadingStatusController/<GetMyStatuses>d__3": {
-        "System.Void WebAPI.Controllers.v2.ReadingStatusController/<GetMyStatuses>d__3::MoveNext()": {
-          "Lines": {
-            "44": 0,
-            "45": 0,
-            "46": 0,
-            "48": 0,
-            "49": 0
-          },
-          "Branches": [
-            {
-              "Line": 45,
-              "Offset": 88,
-              "EndOffset": 90,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 45,
-              "Offset": 88,
-              "EndOffset": 94,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
         }
       },
       "WebAPI.Controllers.v2.ReadingStatusController/<AddToMyFavourites>d__4": {
@@ -834,154 +782,6 @@
           ]
         }
       },
-      "WebAPI.Controllers.v2.ReadingStatusController/<GetMyFavourites>d__6": {
-        "System.Void WebAPI.Controllers.v2.ReadingStatusController/<GetMyFavourites>d__6::MoveNext()": {
-          "Lines": {
-            "87": 0,
-            "88": 0,
-            "89": 0,
-            "91": 0,
-            "92": 0
-          },
-          "Branches": [
-            {
-              "Line": 88,
-              "Offset": 88,
-              "EndOffset": 90,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 88,
-              "Offset": 88,
-              "EndOffset": 94,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "WebAPI.Controllers.v2.ReadingStatusController/<GetUserFavourites>d__7": {
-        "System.Void WebAPI.Controllers.v2.ReadingStatusController/<GetUserFavourites>d__7::MoveNext()": {
-          "Lines": {
-            "98": 0,
-            "99": 0,
-            "100": 0,
-            "101": 0,
-            "102": 0,
-            "103": 0
-          },
-          "Branches": []
-        }
-      },
-      "WebAPI.Controllers.v2.ReadingStatusController/<GetMyToReads>d__8": {
-        "System.Void WebAPI.Controllers.v2.ReadingStatusController/<GetMyToReads>d__8::MoveNext()": {
-          "Lines": {
-            "109": 0,
-            "110": 0,
-            "111": 0,
-            "113": 0,
-            "114": 0
-          },
-          "Branches": [
-            {
-              "Line": 110,
-              "Offset": 88,
-              "EndOffset": 90,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 110,
-              "Offset": 88,
-              "EndOffset": 94,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "WebAPI.Controllers.v2.ReadingStatusController/<StartReading>d__9": {
-        "System.Void WebAPI.Controllers.v2.ReadingStatusController/<StartReading>d__9::MoveNext()": {
-          "Lines": {
-            "122": 0,
-            "123": 0,
-            "124": 0,
-            "125": 0,
-            "127": 0,
-            "128": 0,
-            "129": 0,
-            "130": 0
-          },
-          "Branches": [
-            {
-              "Line": 123,
-              "Offset": 91,
-              "EndOffset": 93,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 123,
-              "Offset": 91,
-              "EndOffset": 97,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            },
-            {
-              "Line": 129,
-              "Offset": 270,
-              "EndOffset": 272,
-              "Path": 0,
-              "Ordinal": 2,
-              "Hits": 0
-            },
-            {
-              "Line": 129,
-              "Offset": 270,
-              "EndOffset": 283,
-              "Path": 1,
-              "Ordinal": 3,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "WebAPI.Controllers.v2.ReadingStatusController/<GetMyReadings>d__10": {
-        "System.Void WebAPI.Controllers.v2.ReadingStatusController/<GetMyReadings>d__10::MoveNext()": {
-          "Lines": {
-            "136": 0,
-            "137": 0,
-            "138": 0,
-            "140": 0,
-            "141": 0
-          },
-          "Branches": [
-            {
-              "Line": 137,
-              "Offset": 88,
-              "EndOffset": 90,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 137,
-              "Offset": 88,
-              "EndOffset": 94,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        }
-      },
       "WebAPI.Controllers.v2.ReadingStatusController/<FinishReading>d__11": {
         "System.Void WebAPI.Controllers.v2.ReadingStatusController/<FinishReading>d__11::MoveNext()": {
           "Lines": {
@@ -1030,6 +830,87 @@
           ]
         }
       },
+      "WebAPI.Controllers.v2.ReadingStatusController/<GetAllStatuses>d__2": {
+        "System.Void WebAPI.Controllers.v2.ReadingStatusController/<GetAllStatuses>d__2::MoveNext()": {
+          "Lines": {
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.ReadingStatusController/<GetBookById>d__1": {
+        "System.Void WebAPI.Controllers.v2.ReadingStatusController/<GetBookById>d__1::MoveNext()": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.ReadingStatusController/<GetMyFavourites>d__6": {
+        "System.Void WebAPI.Controllers.v2.ReadingStatusController/<GetMyFavourites>d__6::MoveNext()": {
+          "Lines": {
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "91": 0,
+            "92": 0
+          },
+          "Branches": [
+            {
+              "Line": 88,
+              "Offset": 88,
+              "EndOffset": 90,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 88,
+              "Offset": 88,
+              "EndOffset": 94,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "WebAPI.Controllers.v2.ReadingStatusController/<GetMyReadings>d__10": {
+        "System.Void WebAPI.Controllers.v2.ReadingStatusController/<GetMyReadings>d__10::MoveNext()": {
+          "Lines": {
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "140": 0,
+            "141": 0
+          },
+          "Branches": [
+            {
+              "Line": 137,
+              "Offset": 88,
+              "EndOffset": 90,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 137,
+              "Offset": 88,
+              "EndOffset": 94,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
       "WebAPI.Controllers.v2.ReadingStatusController/<GetMyReads>d__12": {
         "System.Void WebAPI.Controllers.v2.ReadingStatusController/<GetMyReads>d__12::MoveNext()": {
           "Lines": {
@@ -1057,6 +938,77 @@
               "Hits": 0
             }
           ]
+        }
+      },
+      "WebAPI.Controllers.v2.ReadingStatusController/<GetMyStatuses>d__3": {
+        "System.Void WebAPI.Controllers.v2.ReadingStatusController/<GetMyStatuses>d__3::MoveNext()": {
+          "Lines": {
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": [
+            {
+              "Line": 45,
+              "Offset": 88,
+              "EndOffset": 90,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 45,
+              "Offset": 88,
+              "EndOffset": 94,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "WebAPI.Controllers.v2.ReadingStatusController/<GetMyToReads>d__8": {
+        "System.Void WebAPI.Controllers.v2.ReadingStatusController/<GetMyToReads>d__8::MoveNext()": {
+          "Lines": {
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "113": 0,
+            "114": 0
+          },
+          "Branches": [
+            {
+              "Line": 110,
+              "Offset": 88,
+              "EndOffset": 90,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 110,
+              "Offset": 88,
+              "EndOffset": 94,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "WebAPI.Controllers.v2.ReadingStatusController/<GetUserFavourites>d__7": {
+        "System.Void WebAPI.Controllers.v2.ReadingStatusController/<GetUserFavourites>d__7::MoveNext()": {
+          "Lines": {
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0
+          },
+          "Branches": []
         }
       },
       "WebAPI.Controllers.v2.ReadingStatusController/<RateBook>d__13": {
@@ -1141,6 +1093,54 @@
             }
           ]
         }
+      },
+      "WebAPI.Controllers.v2.ReadingStatusController/<StartReading>d__9": {
+        "System.Void WebAPI.Controllers.v2.ReadingStatusController/<StartReading>d__9::MoveNext()": {
+          "Lines": {
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0
+          },
+          "Branches": [
+            {
+              "Line": 123,
+              "Offset": 91,
+              "EndOffset": 93,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 123,
+              "Offset": 91,
+              "EndOffset": 97,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 129,
+              "Offset": 270,
+              "EndOffset": 272,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 129,
+              "Offset": 270,
+              "EndOffset": 283,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
       }
     },
     "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/Controllers/v2/TokenController.cs": {
@@ -1150,72 +1150,6 @@
             "17": 2,
             "18": 2,
             "19": 2
-          },
-          "Branches": []
-        }
-      },
-      "WebAPI.Controllers.v2.TokenController/<AuthenticateAsync>d__1": {
-        "System.Void WebAPI.Controllers.v2.TokenController/<AuthenticateAsync>d__1::MoveNext()": {
-          "Lines": {
-            "37": 0,
-            "38": 0,
-            "39": 0,
-            "40": 0
-          },
-          "Branches": [
-            {
-              "Line": 39,
-              "Offset": 173,
-              "EndOffset": 175,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 39,
-              "Offset": 173,
-              "EndOffset": 187,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "WebAPI.Controllers.v2.TokenController/<RegisterAsync>d__2": {
-        "System.Void WebAPI.Controllers.v2.TokenController/<RegisterAsync>d__2::MoveNext()": {
-          "Lines": {
-            "57": 0,
-            "58": 0,
-            "59": 0,
-            "60": 0
-          },
-          "Branches": [
-            {
-              "Line": 59,
-              "Offset": 172,
-              "EndOffset": 174,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 59,
-              "Offset": 172,
-              "EndOffset": 185,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "WebAPI.Controllers.v2.TokenController/<GetMembers>d__3": {
-        "System.Void WebAPI.Controllers.v2.TokenController/<GetMembers>d__3::MoveNext()": {
-          "Lines": {
-            "73": 1,
-            "74": 1,
-            "75": 1
           },
           "Branches": []
         }
@@ -1248,6 +1182,67 @@
         "System.Boolean WebAPI.Controllers.v2.TokenController/<>c::<RefreshTokenAsync>b__5_0(System.Security.Claims.Claim)": {
           "Lines": {
             "130": 0
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.TokenController/<AuthenticateAsync>d__1": {
+        "System.Void WebAPI.Controllers.v2.TokenController/<AuthenticateAsync>d__1::MoveNext()": {
+          "Lines": {
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0
+          },
+          "Branches": [
+            {
+              "Line": 39,
+              "Offset": 173,
+              "EndOffset": 175,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 173,
+              "EndOffset": 187,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "WebAPI.Controllers.v2.TokenController/<BlockUser>d__7": {
+        "System.Void WebAPI.Controllers.v2.TokenController/<BlockUser>d__7::MoveNext()": {
+          "Lines": {
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "163": 0,
+            "164": 0
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.TokenController/<GetAdmins>d__6": {
+        "System.Void WebAPI.Controllers.v2.TokenController/<GetAdmins>d__6::MoveNext()": {
+          "Lines": {
+            "151": 1,
+            "152": 1,
+            "153": 1
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v2.TokenController/<GetMembers>d__3": {
+        "System.Void WebAPI.Controllers.v2.TokenController/<GetMembers>d__3::MoveNext()": {
+          "Lines": {
+            "73": 1,
+            "74": 1,
+            "75": 1
           },
           "Branches": []
         }
@@ -1411,27 +1406,32 @@
           ]
         }
       },
-      "WebAPI.Controllers.v2.TokenController/<GetAdmins>d__6": {
-        "System.Void WebAPI.Controllers.v2.TokenController/<GetAdmins>d__6::MoveNext()": {
+      "WebAPI.Controllers.v2.TokenController/<RegisterAsync>d__2": {
+        "System.Void WebAPI.Controllers.v2.TokenController/<RegisterAsync>d__2::MoveNext()": {
           "Lines": {
-            "151": 1,
-            "152": 1,
-            "153": 1
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0
           },
-          "Branches": []
-        }
-      },
-      "WebAPI.Controllers.v2.TokenController/<BlockUser>d__7": {
-        "System.Void WebAPI.Controllers.v2.TokenController/<BlockUser>d__7::MoveNext()": {
-          "Lines": {
-            "159": 0,
-            "160": 0,
-            "161": 0,
-            "162": 0,
-            "163": 0,
-            "164": 0
-          },
-          "Branches": []
+          "Branches": [
+            {
+              "Line": 59,
+              "Offset": 172,
+              "EndOffset": 174,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 59,
+              "Offset": 172,
+              "EndOffset": 185,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
         }
       }
     },
@@ -1446,22 +1446,32 @@
           "Branches": []
         }
       },
-      "WebAPI.Controllers.v1.AuthorsController/<Get>d__1": {
-        "System.Void WebAPI.Controllers.v1.AuthorsController/<Get>d__1::MoveNext()": {
-          "Lines": {
-            "19": 1,
-            "20": 1,
-            "21": 1
-          },
-          "Branches": []
-        }
-      },
       "WebAPI.Controllers.v1.AuthorsController/<Create>d__2": {
         "System.Void WebAPI.Controllers.v1.AuthorsController/<Create>d__2::MoveNext()": {
           "Lines": {
             "25": 0,
             "26": 0,
             "27": 0
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v1.AuthorsController/<Delete>d__4": {
+        "System.Void WebAPI.Controllers.v1.AuthorsController/<Delete>d__4::MoveNext()": {
+          "Lines": {
+            "42": 0,
+            "43": 0,
+            "44": 0
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v1.AuthorsController/<Get>d__1": {
+        "System.Void WebAPI.Controllers.v1.AuthorsController/<Get>d__1::MoveNext()": {
+          "Lines": {
+            "19": 1,
+            "20": 1,
+            "21": 1
           },
           "Branches": []
         }
@@ -1495,16 +1505,6 @@
             }
           ]
         }
-      },
-      "WebAPI.Controllers.v1.AuthorsController/<Delete>d__4": {
-        "System.Void WebAPI.Controllers.v1.AuthorsController/<Delete>d__4::MoveNext()": {
-          "Lines": {
-            "42": 0,
-            "43": 0,
-            "44": 0
-          },
-          "Branches": []
-        }
       }
     },
     "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/Controllers/v1/BooksController.cs": {
@@ -1518,22 +1518,32 @@
           "Branches": []
         }
       },
-      "WebAPI.Controllers.v1.BooksController/<Get>d__1": {
-        "System.Void WebAPI.Controllers.v1.BooksController/<Get>d__1::MoveNext()": {
-          "Lines": {
-            "18": 1,
-            "19": 1,
-            "20": 1
-          },
-          "Branches": []
-        }
-      },
       "WebAPI.Controllers.v1.BooksController/<Create>d__2": {
         "System.Void WebAPI.Controllers.v1.BooksController/<Create>d__2::MoveNext()": {
           "Lines": {
             "23": 0,
             "24": 0,
             "25": 0
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v1.BooksController/<Delete>d__4": {
+        "System.Void WebAPI.Controllers.v1.BooksController/<Delete>d__4::MoveNext()": {
+          "Lines": {
+            "39": 0,
+            "40": 0,
+            "41": 0
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v1.BooksController/<Get>d__1": {
+        "System.Void WebAPI.Controllers.v1.BooksController/<Get>d__1::MoveNext()": {
+          "Lines": {
+            "18": 1,
+            "19": 1,
+            "20": 1
           },
           "Branches": []
         }
@@ -1567,16 +1577,6 @@
             }
           ]
         }
-      },
-      "WebAPI.Controllers.v1.BooksController/<Delete>d__4": {
-        "System.Void WebAPI.Controllers.v1.BooksController/<Delete>d__4::MoveNext()": {
-          "Lines": {
-            "39": 0,
-            "40": 0,
-            "41": 0
-          },
-          "Branches": []
-        }
       }
     },
     "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/Controllers/v1/GenresController.cs": {
@@ -1590,22 +1590,32 @@
           "Branches": []
         }
       },
-      "WebAPI.Controllers.v1.GenresController/<Get>d__1": {
-        "System.Void WebAPI.Controllers.v1.GenresController/<Get>d__1::MoveNext()": {
-          "Lines": {
-            "18": 1,
-            "19": 1,
-            "20": 1
-          },
-          "Branches": []
-        }
-      },
       "WebAPI.Controllers.v1.GenresController/<Create>d__2": {
         "System.Void WebAPI.Controllers.v1.GenresController/<Create>d__2::MoveNext()": {
           "Lines": {
             "23": 0,
             "24": 0,
             "25": 0
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v1.GenresController/<Delete>d__4": {
+        "System.Void WebAPI.Controllers.v1.GenresController/<Delete>d__4::MoveNext()": {
+          "Lines": {
+            "39": 0,
+            "40": 0,
+            "41": 0
+          },
+          "Branches": []
+        }
+      },
+      "WebAPI.Controllers.v1.GenresController/<Get>d__1": {
+        "System.Void WebAPI.Controllers.v1.GenresController/<Get>d__1::MoveNext()": {
+          "Lines": {
+            "18": 1,
+            "19": 1,
+            "20": 1
           },
           "Branches": []
         }
@@ -1638,16 +1648,6 @@
               "Hits": 0
             }
           ]
-        }
-      },
-      "WebAPI.Controllers.v1.GenresController/<Delete>d__4": {
-        "System.Void WebAPI.Controllers.v1.GenresController/<Delete>d__4::MoveNext()": {
-          "Lines": {
-            "39": 0,
-            "40": 0,
-            "41": 0
-          },
-          "Branches": []
         }
       }
     }
@@ -2159,306 +2159,6 @@
           ]
         }
       },
-      "Persistence.v2.ReadingStatusRepository/<GetMyFavourites>d__3": {
-        "System.Void Persistence.v2.ReadingStatusRepository/<GetMyFavourites>d__3::MoveNext()": {
-          "Lines": {
-            "52": 0,
-            "53": 0,
-            "54": 0,
-            "55": 0,
-            "56": 0,
-            "57": 0,
-            "58": 0,
-            "59": 0,
-            "60": 0,
-            "61": 0,
-            "62": 0,
-            "63": 0,
-            "64": 0,
-            "65": 0,
-            "66": 0
-          },
-          "Branches": [
-            {
-              "Line": 55,
-              "Offset": 280,
-              "EndOffset": 171,
-              "Path": 1,
-              "Ordinal": 5,
-              "Hits": 0
-            },
-            {
-              "Line": 57,
-              "Offset": 215,
-              "EndOffset": 217,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 59,
-              "Offset": 233,
-              "EndOffset": 235,
-              "Path": 0,
-              "Ordinal": 2,
-              "Hits": 0
-            },
-            {
-              "Line": 59,
-              "Offset": 233,
-              "EndOffset": 260,
-              "Path": 1,
-              "Ordinal": 3,
-              "Hits": 0
-            },
-            {
-              "Line": 57,
-              "Offset": 215,
-              "EndOffset": 261,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            },
-            {
-              "Line": 55,
-              "Offset": 280,
-              "EndOffset": 282,
-              "Path": 0,
-              "Ordinal": 4,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "Persistence.v2.ReadingStatusRepository/<GetMyToReads>d__4": {
-        "System.Void Persistence.v2.ReadingStatusRepository/<GetMyToReads>d__4::MoveNext()": {
-          "Lines": {
-            "69": 0,
-            "70": 0,
-            "71": 0,
-            "72": 0,
-            "73": 0,
-            "74": 0,
-            "75": 0,
-            "76": 0,
-            "77": 0,
-            "78": 0,
-            "79": 0,
-            "80": 0,
-            "81": 0,
-            "82": 0,
-            "83": 0
-          },
-          "Branches": [
-            {
-              "Line": 72,
-              "Offset": 283,
-              "EndOffset": 171,
-              "Path": 1,
-              "Ordinal": 5,
-              "Hits": 0
-            },
-            {
-              "Line": 74,
-              "Offset": 215,
-              "EndOffset": 217,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 76,
-              "Offset": 236,
-              "EndOffset": 238,
-              "Path": 0,
-              "Ordinal": 2,
-              "Hits": 0
-            },
-            {
-              "Line": 76,
-              "Offset": 236,
-              "EndOffset": 263,
-              "Path": 1,
-              "Ordinal": 3,
-              "Hits": 0
-            },
-            {
-              "Line": 74,
-              "Offset": 215,
-              "EndOffset": 264,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            },
-            {
-              "Line": 72,
-              "Offset": 283,
-              "EndOffset": 285,
-              "Path": 0,
-              "Ordinal": 4,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "Persistence.v2.ReadingStatusRepository/<StartReading>d__5": {
-        "System.Void Persistence.v2.ReadingStatusRepository/<StartReading>d__5::MoveNext()": {
-          "Lines": {
-            "86": 0,
-            "87": 0,
-            "88": 0,
-            "89": 0,
-            "90": 0,
-            "91": 0,
-            "92": 0,
-            "93": 0,
-            "94": 0,
-            "96": 0,
-            "97": 0,
-            "98": 0,
-            "100": 0,
-            "101": 0,
-            "102": 0
-          },
-          "Branches": [
-            {
-              "Line": 88,
-              "Offset": 448,
-              "EndOffset": 186,
-              "Path": 1,
-              "Ordinal": 7,
-              "Hits": 0
-            },
-            {
-              "Line": 90,
-              "Offset": 226,
-              "EndOffset": 228,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 90,
-              "Offset": 226,
-              "EndOffset": 252,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            },
-            {
-              "Line": 90,
-              "Offset": 257,
-              "EndOffset": 262,
-              "Path": 0,
-              "Ordinal": 2,
-              "Hits": 0
-            },
-            {
-              "Line": 92,
-              "Offset": 284,
-              "EndOffset": 286,
-              "Path": 0,
-              "Ordinal": 4,
-              "Hits": 0
-            },
-            {
-              "Line": 92,
-              "Offset": 284,
-              "EndOffset": 298,
-              "Path": 1,
-              "Ordinal": 5,
-              "Hits": 0
-            },
-            {
-              "Line": 90,
-              "Offset": 257,
-              "EndOffset": 429,
-              "Path": 1,
-              "Ordinal": 3,
-              "Hits": 0
-            },
-            {
-              "Line": 88,
-              "Offset": 448,
-              "EndOffset": 453,
-              "Path": 0,
-              "Ordinal": 6,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "Persistence.v2.ReadingStatusRepository/<GetMyReadings>d__6": {
-        "System.Void Persistence.v2.ReadingStatusRepository/<GetMyReadings>d__6::MoveNext()": {
-          "Lines": {
-            "105": 0,
-            "106": 0,
-            "107": 0,
-            "108": 0,
-            "109": 0,
-            "110": 0,
-            "111": 0,
-            "112": 0,
-            "113": 0,
-            "114": 0,
-            "115": 0,
-            "116": 0,
-            "117": 0,
-            "118": 0,
-            "119": 0
-          },
-          "Branches": [
-            {
-              "Line": 108,
-              "Offset": 283,
-              "EndOffset": 171,
-              "Path": 1,
-              "Ordinal": 5,
-              "Hits": 0
-            },
-            {
-              "Line": 110,
-              "Offset": 215,
-              "EndOffset": 217,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 112,
-              "Offset": 236,
-              "EndOffset": 238,
-              "Path": 0,
-              "Ordinal": 2,
-              "Hits": 0
-            },
-            {
-              "Line": 112,
-              "Offset": 236,
-              "EndOffset": 263,
-              "Path": 1,
-              "Ordinal": 3,
-              "Hits": 0
-            },
-            {
-              "Line": 110,
-              "Offset": 215,
-              "EndOffset": 264,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            },
-            {
-              "Line": 108,
-              "Offset": 283,
-              "EndOffset": 285,
-              "Path": 0,
-              "Ordinal": 4,
-              "Hits": 0
-            }
-          ]
-        }
-      },
       "Persistence.v2.ReadingStatusRepository/<FinishReading>d__7": {
         "System.Void Persistence.v2.ReadingStatusRepository/<FinishReading>d__7::MoveNext()": {
           "Lines": {
@@ -2546,6 +2246,148 @@
           ]
         }
       },
+      "Persistence.v2.ReadingStatusRepository/<GetMyFavourites>d__3": {
+        "System.Void Persistence.v2.ReadingStatusRepository/<GetMyFavourites>d__3::MoveNext()": {
+          "Lines": {
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0
+          },
+          "Branches": [
+            {
+              "Line": 55,
+              "Offset": 280,
+              "EndOffset": 171,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 57,
+              "Offset": 215,
+              "EndOffset": 217,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 59,
+              "Offset": 233,
+              "EndOffset": 235,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 59,
+              "Offset": 233,
+              "EndOffset": 260,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 57,
+              "Offset": 215,
+              "EndOffset": 261,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 55,
+              "Offset": 280,
+              "EndOffset": 282,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Persistence.v2.ReadingStatusRepository/<GetMyReadings>d__6": {
+        "System.Void Persistence.v2.ReadingStatusRepository/<GetMyReadings>d__6::MoveNext()": {
+          "Lines": {
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0
+          },
+          "Branches": [
+            {
+              "Line": 108,
+              "Offset": 283,
+              "EndOffset": 171,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 110,
+              "Offset": 215,
+              "EndOffset": 217,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 112,
+              "Offset": 236,
+              "EndOffset": 238,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 112,
+              "Offset": 236,
+              "EndOffset": 263,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 110,
+              "Offset": 215,
+              "EndOffset": 264,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 108,
+              "Offset": 283,
+              "EndOffset": 285,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            }
+          ]
+        }
+      },
       "Persistence.v2.ReadingStatusRepository/<GetMyReads>d__8": {
         "System.Void Persistence.v2.ReadingStatusRepository/<GetMyReads>d__8::MoveNext()": {
           "Lines": {
@@ -2610,6 +2452,143 @@
               "Line": 144,
               "Offset": 283,
               "EndOffset": 285,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Persistence.v2.ReadingStatusRepository/<GetMyToReads>d__4": {
+        "System.Void Persistence.v2.ReadingStatusRepository/<GetMyToReads>d__4::MoveNext()": {
+          "Lines": {
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0
+          },
+          "Branches": [
+            {
+              "Line": 72,
+              "Offset": 283,
+              "EndOffset": 171,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 74,
+              "Offset": 215,
+              "EndOffset": 217,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 76,
+              "Offset": 236,
+              "EndOffset": 238,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 76,
+              "Offset": 236,
+              "EndOffset": 263,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 74,
+              "Offset": 215,
+              "EndOffset": 264,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 72,
+              "Offset": 283,
+              "EndOffset": 285,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Persistence.v2.ReadingStatusRepository/<GetUserAssignedScore>d__10": {
+        "System.Void Persistence.v2.ReadingStatusRepository/<GetUserAssignedScore>d__10::MoveNext()": {
+          "Lines": {
+            "179": 0,
+            "180": 0,
+            "181": 0,
+            "182": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "187": 0,
+            "188": 0,
+            "189": 0
+          },
+          "Branches": [
+            {
+              "Line": 181,
+              "Offset": 267,
+              "EndOffset": 160,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 183,
+              "Offset": 200,
+              "EndOffset": 202,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 183,
+              "Offset": 200,
+              "EndOffset": 226,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 183,
+              "Offset": 231,
+              "EndOffset": 233,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 183,
+              "Offset": 231,
+              "EndOffset": 248,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 181,
+              "Offset": 267,
+              "EndOffset": 269,
               "Path": 0,
               "Ordinal": 4,
               "Hits": 0
@@ -2722,67 +2701,88 @@
           ]
         }
       },
-      "Persistence.v2.ReadingStatusRepository/<GetUserAssignedScore>d__10": {
-        "System.Void Persistence.v2.ReadingStatusRepository/<GetUserAssignedScore>d__10::MoveNext()": {
+      "Persistence.v2.ReadingStatusRepository/<StartReading>d__5": {
+        "System.Void Persistence.v2.ReadingStatusRepository/<StartReading>d__5::MoveNext()": {
           "Lines": {
-            "179": 0,
-            "180": 0,
-            "181": 0,
-            "182": 0,
-            "183": 0,
-            "184": 0,
-            "185": 0,
-            "187": 0,
-            "188": 0,
-            "189": 0
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0
           },
           "Branches": [
             {
-              "Line": 181,
-              "Offset": 267,
-              "EndOffset": 160,
+              "Line": 88,
+              "Offset": 448,
+              "EndOffset": 186,
               "Path": 1,
-              "Ordinal": 5,
+              "Ordinal": 7,
               "Hits": 0
             },
             {
-              "Line": 183,
-              "Offset": 200,
-              "EndOffset": 202,
+              "Line": 90,
+              "Offset": 226,
+              "EndOffset": 228,
               "Path": 0,
               "Ordinal": 0,
               "Hits": 0
             },
             {
-              "Line": 183,
-              "Offset": 200,
-              "EndOffset": 226,
+              "Line": 90,
+              "Offset": 226,
+              "EndOffset": 252,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
             },
             {
-              "Line": 183,
-              "Offset": 231,
-              "EndOffset": 233,
+              "Line": 90,
+              "Offset": 257,
+              "EndOffset": 262,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 0
             },
             {
-              "Line": 183,
-              "Offset": 231,
-              "EndOffset": 248,
+              "Line": 92,
+              "Offset": 284,
+              "EndOffset": 286,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 92,
+              "Offset": 284,
+              "EndOffset": 298,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 90,
+              "Offset": 257,
+              "EndOffset": 429,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 0
             },
             {
-              "Line": 181,
-              "Offset": 267,
-              "EndOffset": 269,
+              "Line": 88,
+              "Offset": 448,
+              "EndOffset": 453,
               "Path": 0,
-              "Ordinal": 4,
+              "Ordinal": 6,
               "Hits": 0
             }
           ]
@@ -2793,10 +2793,10 @@
       "Persistence.v2.Repository`1": {
         "System.Void Persistence.v2.Repository`1::.ctor(Microsoft.EntityFrameworkCore.DbContext)": {
           "Lines": {
-            "11": 24,
-            "12": 24,
-            "13": 24,
-            "14": 24
+            "11": 17,
+            "12": 17,
+            "13": 17,
+            "14": 17
           },
           "Branches": []
         }
@@ -2804,14 +2804,14 @@
       "Persistence.v2.Repository`1/<AddAsync>d__2": {
         "System.Void Persistence.v2.Repository`1/<AddAsync>d__2::MoveNext()": {
           "Lines": {
-            "16": 21,
-            "17": 21,
+            "16": 14,
+            "17": 14,
             "18": 4,
             "19": 4,
-            "21": 17,
-            "22": 15,
-            "23": 15,
-            "24": 15
+            "21": 10,
+            "22": 8,
+            "23": 8,
+            "24": 8
           },
           "Branches": [
             {
@@ -2828,7 +2828,7 @@
               "EndOffset": 56,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 17
+              "Hits": 10
             }
           ]
         }
@@ -2836,14 +2836,14 @@
       "Persistence.v2.Repository`1/<DeleteAsync>d__3": {
         "System.Void Persistence.v2.Repository`1/<DeleteAsync>d__3::MoveNext()": {
           "Lines": {
-            "27": 9,
-            "28": 9,
+            "27": 3,
+            "28": 3,
             "29": 3,
             "30": 3,
-            "33": 6,
-            "34": 6,
-            "35": 5,
-            "36": 5
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0
           },
           "Branches": [
             {
@@ -2860,7 +2860,7 @@
               "EndOffset": 48,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 6
+              "Hits": 0
             }
           ]
         }
@@ -2953,6 +2953,38 @@
             "30": 0,
             "31": 0,
             "32": 0
+          },
+          "Branches": []
+        }
+      },
+      "Persistence.v2.TokenRepository/<>c": {
+        "Domain.AuthModels.ApplicationUserDto Persistence.v2.TokenRepository/<>c::<GetAllMembersAsync>b__7_0(Domain.Entities.ApplicationUser)": {
+          "Lines": {
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0
+          },
+          "Branches": []
+        },
+        "Domain.AuthModels.ApplicationUserDto Persistence.v2.TokenRepository/<>c::<GetAllAdminsAsync>b__8_0(Domain.Entities.ApplicationUser)": {
+          "Lines": {
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0
           },
           "Branches": []
         }
@@ -3081,6 +3113,209 @@
           ]
         }
       },
+      "Persistence.v2.TokenRepository/<BlockUser>d__12": {
+        "System.Void Persistence.v2.TokenRepository/<BlockUser>d__12::MoveNext()": {
+          "Lines": {
+            "164": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "170": 0,
+            "171": 0
+          },
+          "Branches": [
+            {
+              "Line": 166,
+              "Offset": 180,
+              "EndOffset": 182,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 166,
+              "Offset": 180,
+              "EndOffset": 193,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Persistence.v2.TokenRepository/<GenerateJwtToken>d__14": {
+        "System.Void Persistence.v2.TokenRepository/<GenerateJwtToken>d__14::MoveNext()": {
+          "Lines": {
+            "179": 0,
+            "180": 0,
+            "181": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "187": 0,
+            "188": 0,
+            "189": 0,
+            "190": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0,
+            "196": 0,
+            "197": 0,
+            "198": 0,
+            "200": 0,
+            "201": 0,
+            "202": 0
+          },
+          "Branches": [
+            {
+              "Line": 181,
+              "Offset": 179,
+              "EndOffset": 181,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 181,
+              "Offset": 179,
+              "EndOffset": 192,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Persistence.v2.TokenRepository/<GetAllAdminsAsync>d__8": {
+        "System.Void Persistence.v2.TokenRepository/<GetAllAdminsAsync>d__8::MoveNext()": {
+          "Lines": {
+            "109": 0,
+            "110": 0,
+            "121": 0
+          },
+          "Branches": []
+        }
+      },
+      "Persistence.v2.TokenRepository/<GetAllMembersAsync>d__7": {
+        "System.Void Persistence.v2.TokenRepository/<GetAllMembersAsync>d__7::MoveNext()": {
+          "Lines": {
+            "94": 0,
+            "95": 0,
+            "106": 0
+          },
+          "Branches": []
+        }
+      },
+      "Persistence.v2.TokenRepository/<GetUserByEmail>d__13": {
+        "System.Void Persistence.v2.TokenRepository/<GetUserByEmail>d__13::MoveNext()": {
+          "Lines": {
+            "174": 0,
+            "175": 0,
+            "176": 0
+          },
+          "Branches": []
+        }
+      },
+      "Persistence.v2.TokenRepository/<GetUserById>d__11": {
+        "System.Void Persistence.v2.TokenRepository/<GetUserById>d__11::MoveNext()": {
+          "Lines": {
+            "159": 0,
+            "160": 0,
+            "161": 0
+          },
+          "Branches": []
+        }
+      },
+      "Persistence.v2.TokenRepository/<IsValidUser>d__10": {
+        "System.Void Persistence.v2.TokenRepository/<IsValidUser>d__10::MoveNext()": {
+          "Lines": {
+            "144": 0,
+            "145": 0,
+            "147": 0,
+            "148": 0,
+            "150": 0,
+            "153": 0,
+            "155": 0,
+            "156": 0
+          },
+          "Branches": [
+            {
+              "Line": 147,
+              "Offset": 170,
+              "EndOffset": 172,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 147,
+              "Offset": 170,
+              "EndOffset": 180,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Persistence.v2.TokenRepository/<RefreshToken>d__9": {
+        "System.Void Persistence.v2.TokenRepository/<RefreshToken>d__9::MoveNext()": {
+          "Lines": {
+            "124": 0,
+            "125": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "131": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "140": 0,
+            "141": 0
+          },
+          "Branches": [
+            {
+              "Line": 127,
+              "Offset": 182,
+              "EndOffset": 184,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 127,
+              "Offset": 182,
+              "EndOffset": 197,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 127,
+              "Offset": 202,
+              "EndOffset": 207,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 127,
+              "Offset": 202,
+              "EndOffset": 526,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      },
       "Persistence.v2.TokenRepository/<RegisterMember>d__6": {
         "System.Void Persistence.v2.TokenRepository/<RegisterMember>d__6::MoveNext()": {
           "Lines": {
@@ -3170,241 +3405,6 @@
               "EndOffset": 733,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "Persistence.v2.TokenRepository/<>c": {
-        "Domain.AuthModels.ApplicationUserDto Persistence.v2.TokenRepository/<>c::<GetAllMembersAsync>b__7_0(Domain.Entities.ApplicationUser)": {
-          "Lines": {
-            "96": 0,
-            "97": 0,
-            "98": 0,
-            "99": 0,
-            "100": 0,
-            "101": 0,
-            "102": 0,
-            "103": 0,
-            "104": 0,
-            "105": 0
-          },
-          "Branches": []
-        },
-        "Domain.AuthModels.ApplicationUserDto Persistence.v2.TokenRepository/<>c::<GetAllAdminsAsync>b__8_0(Domain.Entities.ApplicationUser)": {
-          "Lines": {
-            "111": 0,
-            "112": 0,
-            "113": 0,
-            "114": 0,
-            "115": 0,
-            "116": 0,
-            "117": 0,
-            "118": 0,
-            "119": 0,
-            "120": 0
-          },
-          "Branches": []
-        }
-      },
-      "Persistence.v2.TokenRepository/<GetAllMembersAsync>d__7": {
-        "System.Void Persistence.v2.TokenRepository/<GetAllMembersAsync>d__7::MoveNext()": {
-          "Lines": {
-            "94": 0,
-            "95": 0,
-            "106": 0
-          },
-          "Branches": []
-        }
-      },
-      "Persistence.v2.TokenRepository/<GetAllAdminsAsync>d__8": {
-        "System.Void Persistence.v2.TokenRepository/<GetAllAdminsAsync>d__8::MoveNext()": {
-          "Lines": {
-            "109": 0,
-            "110": 0,
-            "121": 0
-          },
-          "Branches": []
-        }
-      },
-      "Persistence.v2.TokenRepository/<RefreshToken>d__9": {
-        "System.Void Persistence.v2.TokenRepository/<RefreshToken>d__9::MoveNext()": {
-          "Lines": {
-            "124": 0,
-            "125": 0,
-            "127": 0,
-            "128": 0,
-            "129": 0,
-            "131": 0,
-            "133": 0,
-            "134": 0,
-            "135": 0,
-            "136": 0,
-            "137": 0,
-            "140": 0,
-            "141": 0
-          },
-          "Branches": [
-            {
-              "Line": 127,
-              "Offset": 182,
-              "EndOffset": 184,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 127,
-              "Offset": 182,
-              "EndOffset": 197,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            },
-            {
-              "Line": 127,
-              "Offset": 202,
-              "EndOffset": 207,
-              "Path": 0,
-              "Ordinal": 2,
-              "Hits": 0
-            },
-            {
-              "Line": 127,
-              "Offset": 202,
-              "EndOffset": 526,
-              "Path": 1,
-              "Ordinal": 3,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "Persistence.v2.TokenRepository/<IsValidUser>d__10": {
-        "System.Void Persistence.v2.TokenRepository/<IsValidUser>d__10::MoveNext()": {
-          "Lines": {
-            "144": 0,
-            "145": 0,
-            "147": 0,
-            "148": 0,
-            "150": 0,
-            "153": 0,
-            "155": 0,
-            "156": 0
-          },
-          "Branches": [
-            {
-              "Line": 147,
-              "Offset": 170,
-              "EndOffset": 172,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 147,
-              "Offset": 170,
-              "EndOffset": 180,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "Persistence.v2.TokenRepository/<GetUserById>d__11": {
-        "System.Void Persistence.v2.TokenRepository/<GetUserById>d__11::MoveNext()": {
-          "Lines": {
-            "159": 0,
-            "160": 0,
-            "161": 0
-          },
-          "Branches": []
-        }
-      },
-      "Persistence.v2.TokenRepository/<BlockUser>d__12": {
-        "System.Void Persistence.v2.TokenRepository/<BlockUser>d__12::MoveNext()": {
-          "Lines": {
-            "164": 0,
-            "165": 0,
-            "166": 0,
-            "167": 0,
-            "168": 0,
-            "169": 0,
-            "170": 0,
-            "171": 0
-          },
-          "Branches": [
-            {
-              "Line": 166,
-              "Offset": 180,
-              "EndOffset": 182,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 166,
-              "Offset": 180,
-              "EndOffset": 193,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            }
-          ]
-        }
-      },
-      "Persistence.v2.TokenRepository/<GetUserByEmail>d__13": {
-        "System.Void Persistence.v2.TokenRepository/<GetUserByEmail>d__13::MoveNext()": {
-          "Lines": {
-            "174": 0,
-            "175": 0,
-            "176": 0
-          },
-          "Branches": []
-        }
-      },
-      "Persistence.v2.TokenRepository/<GenerateJwtToken>d__14": {
-        "System.Void Persistence.v2.TokenRepository/<GenerateJwtToken>d__14::MoveNext()": {
-          "Lines": {
-            "179": 0,
-            "180": 0,
-            "181": 0,
-            "183": 0,
-            "184": 0,
-            "185": 0,
-            "186": 0,
-            "187": 0,
-            "188": 0,
-            "189": 0,
-            "190": 0,
-            "191": 0,
-            "192": 0,
-            "193": 0,
-            "194": 0,
-            "195": 0,
-            "196": 0,
-            "197": 0,
-            "198": 0,
-            "200": 0,
-            "201": 0,
-            "202": 0
-          },
-          "Branches": [
-            {
-              "Line": 181,
-              "Offset": 179,
-              "EndOffset": 181,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 181,
-              "Offset": 179,
-              "EndOffset": 192,
-              "Path": 1,
-              "Ordinal": 1,
               "Hits": 0
             }
           ]
@@ -4952,13 +4952,13 @@
       "Domain.Entities.Author": {
         "System.String Domain.Entities.Author::get_FirstName()": {
           "Lines": {
-            "7": 27
+            "7": 21
           },
           "Branches": []
         },
         "System.String Domain.Entities.Author::get_LastName()": {
           "Lines": {
-            "8": 27
+            "8": 21
           },
           "Branches": []
         }
@@ -4968,31 +4968,31 @@
       "Domain.Entities.Book": {
         "System.String Domain.Entities.Book::get_Title()": {
           "Lines": {
-            "7": 28
+            "7": 19
           },
           "Branches": []
         },
         "System.Decimal Domain.Entities.Book::get_Rating()": {
           "Lines": {
-            "8": 28
+            "8": 19
           },
           "Branches": []
         },
         "System.Int32 Domain.Entities.Book::get_NumberOfReviews()": {
           "Lines": {
-            "9": 79
+            "9": 61
           },
           "Branches": []
         },
         "System.String Domain.Entities.Book::get_Description()": {
           "Lines": {
-            "10": 28
+            "10": 19
           },
           "Branches": []
         },
         "System.DateTime Domain.Entities.Book::get_PublicationDate()": {
           "Lines": {
-            "11": 28
+            "11": 19
           },
           "Branches": []
         },
@@ -5004,13 +5004,13 @@
         },
         "System.Uri Domain.Entities.Book::get_ImageUri()": {
           "Lines": {
-            "13": 28
+            "13": 19
           },
           "Branches": []
         },
         "System.Uri Domain.Entities.Book::get_DownloadUri()": {
           "Lines": {
-            "14": 28
+            "14": 19
           },
           "Branches": []
         }
@@ -5076,7 +5076,7 @@
       "Domain.Entities.Genre": {
         "System.String Domain.Entities.Genre::get_Name()": {
           "Lines": {
-            "7": 27
+            "7": 21
           },
           "Branches": []
         }
@@ -5152,7 +5152,7 @@
       "Domain.Common.BaseEntity": {
         "System.Guid Domain.Common.BaseEntity::get_Id()": {
           "Lines": {
-            "5": 104
+            "5": 83
           },
           "Branches": []
         }
@@ -8800,29 +8800,6 @@
           "Branches": []
         }
       },
-      "Application.Features.Commands.CreateBookCommandHandler/<Handle>d__4": {
-        "System.Void Application.Features.Commands.CreateBookCommandHandler/<Handle>d__4::MoveNext()": {
-          "Lines": {
-            "23": 2,
-            "24": 2,
-            "25": 2,
-            "26": 2,
-            "27": 2,
-            "28": 2,
-            "29": 2,
-            "30": 2,
-            "31": 2,
-            "32": 2,
-            "33": 2,
-            "34": 2,
-            "36": 2,
-            "37": 2,
-            "38": 2,
-            "39": 2
-          },
-          "Branches": []
-        }
-      },
       "Application.Features.Commands.CreateBookCommandHandler/<AddBookToStatuses>d__5": {
         "System.Void Application.Features.Commands.CreateBookCommandHandler/<AddBookToStatuses>d__5::MoveNext()": {
           "Lines": {
@@ -8860,6 +8837,29 @@
               "Hits": 2
             }
           ]
+        }
+      },
+      "Application.Features.Commands.CreateBookCommandHandler/<Handle>d__4": {
+        "System.Void Application.Features.Commands.CreateBookCommandHandler/<Handle>d__4::MoveNext()": {
+          "Lines": {
+            "23": 2,
+            "24": 2,
+            "25": 2,
+            "26": 2,
+            "27": 2,
+            "28": 2,
+            "29": 2,
+            "30": 2,
+            "31": 2,
+            "32": 2,
+            "33": 2,
+            "34": 2,
+            "36": 2,
+            "37": 2,
+            "38": 2,
+            "39": 2
+          },
+          "Branches": []
         }
       }
     },
@@ -9679,37 +9679,6 @@
           ]
         }
       },
-      "Application.Features.Commands.RegisterMemberCommandHandler/<Handle>d__5": {
-        "System.Void Application.Features.Commands.RegisterMemberCommandHandler/<Handle>d__5::MoveNext()": {
-          "Lines": {
-            "26": 1,
-            "27": 1,
-            "29": 1,
-            "32": 1,
-            "34": 1,
-            "35": 1,
-            "36": 1
-          },
-          "Branches": [
-            {
-              "Line": 34,
-              "Offset": 198,
-              "EndOffset": 200,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 34,
-              "Offset": 198,
-              "EndOffset": 207,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 1
-            }
-          ]
-        }
-      },
       "Application.Features.Commands.RegisterMemberCommandHandler/<AddUserToStatuses>d__6": {
         "System.Void Application.Features.Commands.RegisterMemberCommandHandler/<AddUserToStatuses>d__6::MoveNext()": {
           "Lines": {
@@ -9742,6 +9711,37 @@
               "EndOffset": 391,
               "Path": 0,
               "Ordinal": 0,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "Application.Features.Commands.RegisterMemberCommandHandler/<Handle>d__5": {
+        "System.Void Application.Features.Commands.RegisterMemberCommandHandler/<Handle>d__5::MoveNext()": {
+          "Lines": {
+            "26": 1,
+            "27": 1,
+            "29": 1,
+            "32": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1
+          },
+          "Branches": [
+            {
+              "Line": 34,
+              "Offset": 198,
+              "EndOffset": 200,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 198,
+              "EndOffset": 207,
+              "Path": 1,
+              "Ordinal": 1,
               "Hits": 1
             }
           ]
