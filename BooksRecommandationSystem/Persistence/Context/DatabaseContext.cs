@@ -24,9 +24,9 @@ namespace Persistence.Context
         {
             return await base.SaveChangesAsync();
         }
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseSqlite("Data Source=MyDatabase.db");
-        //}
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite("Data Source=MyDatabase.db");
+        }
     }
 }

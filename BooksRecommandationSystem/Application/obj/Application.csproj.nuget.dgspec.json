@@ -14,7 +14,7 @@
         "outputPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alex-ama/.nuget/NuGet/NuGet.Config"
+          "/Users/alex-ama/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -102,7 +102,7 @@
         "outputPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alex-ama/.nuget/NuGet/NuGet.Config"
+          "/Users/alex-ama/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"

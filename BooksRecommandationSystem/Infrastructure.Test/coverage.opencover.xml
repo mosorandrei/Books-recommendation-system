@@ -2,9 +2,9 @@
 <CoverageSession>
   <Summary numSequencePoints="3384" visitedSequencePoints="767" numBranchPoints="484" visitedBranchPoints="109" sequenceCoverage="22.66" branchCoverage="22.52" maxCyclomaticComplexity="384" minCyclomaticComplexity="111" visitedClasses="148" numClasses="263" visitedMethods="208" numMethods="405" />
   <Modules>
-    <Module hash="6E087F6C-0CFF-4E4F-AFC2-D9A68367F2AE">
+    <Module hash="2B1F9326-375D-44D9-B8F3-AA9431A7A0BF">
       <ModulePath>WebAPI.dll</ModulePath>
-      <ModuleTime>2022-01-07T12:54:03</ModuleTime>
+      <ModuleTime>2022-01-07T06:46:36</ModuleTime>
       <ModuleName>WebAPI</ModuleName>
       <Files>
         <File uid="1" fullPath="/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/NamespaceConvention.cs" />
@@ -1823,9 +1823,9 @@
         </Class>
       </Classes>
     </Module>
-    <Module hash="390CFBE3-2D65-4806-AB7C-8E8F3D506E99">
+    <Module hash="EB10915B-5DAB-4A5A-9901-D3AB47D9BAC8">
       <ModulePath>Persistence.dll</ModulePath>
-      <ModuleTime>2022-01-07T12:54:03</ModuleTime>
+      <ModuleTime>2022-01-07T06:46:36</ModuleTime>
       <ModuleName>Persistence</ModuleName>
       <Files>
         <File uid="15" fullPath="/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/PersistenceDI.cs" />
@@ -4752,9 +4752,9 @@
         </Class>
       </Classes>
     </Module>
-    <Module hash="FCD9E489-9863-4D61-8E48-C65451A45373">
+    <Module hash="3E68923A-0372-4F23-856D-C9818342A1FB">
       <ModulePath>Domain.dll</ModulePath>
-      <ModuleTime>2022-01-07T12:54:03</ModuleTime>
+      <ModuleTime>2022-01-07T06:46:36</ModuleTime>
       <ModuleName>Domain</ModuleName>
       <Files>
         <File uid="34" fullPath="/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Entities/ApplicationUser.cs" />
@@ -6171,9 +6171,9 @@
         </Class>
       </Classes>
     </Module>
-    <Module hash="2DA7EE43-2851-482E-8DEC-02D76E29F244">
+    <Module hash="630E4A26-340B-4BAA-B710-6DBCD8EF553D">
       <ModulePath>Application.dll</ModulePath>
-      <ModuleTime>2022-01-07T12:54:03</ModuleTime>
+      <ModuleTime>2022-01-07T06:46:36</ModuleTime>
       <ModuleName>Application</ModuleName>
       <Files>
         <File uid="58" fullPath="/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/ApplicationDI.cs" />
