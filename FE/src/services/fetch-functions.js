@@ -55,14 +55,22 @@ export function getNewAccessToken(accessToken) {
 }
 
 export function getAllMembers(accessToken) {
-  return fetch(`${API_HOST}/GetAllMembers`, requestOptions("GET")).then((r) =>
-    validateResponse(r)
-  );
+  return fetch(
+    `${API_HOST}/GetAllMembers`,
+    requestOptionsToken("GET", undefined, accessToken)
+  ).then((r) => validateResponse(r));
 }
 
 export function getAllBooks(accessToken) {
   return fetch(
     `${API_HOST}/Books`,
+    requestOptionsToken("GET", undefined, accessToken)
+  ).then((r) => validateResponse(r));
+}
+
+export function getAllBooksForUser(accessToken) {
+  return fetch(
+    `${API_HOST}/GetMyStatuses`,
     requestOptionsToken("GET", undefined, accessToken)
   ).then((r) => validateResponse(r));
 }
@@ -161,5 +169,26 @@ export function getBooksByGenre(genreId, accessToken) {
   return fetch(
     `${API_HOST}/GetBooksByGenreId?GenreId=${genreId}`,
     requestOptionsToken("GET", undefined, accessToken)
+  ).then((r) => validateResponse(r));
+}
+
+export function rateBook(rating, bookId, accessToken) {
+  return fetch(
+    `${API_HOST}/RateBook?BookId=${bookId}&Score=${rating}`,
+    requestOptionsToken("PUT", undefined, accessToken)
+  ).then((r) => validateResponse(r));
+}
+
+export function removeFromFavourites(bookId, accessToken) {
+  return fetch(
+    `${API_HOST}/DeleteFromMyFavourites?bookId=${bookId}`,
+    requestOptionsToken("DELETE", undefined, accessToken)
+  ).then((r) => validateResponse(r));
+}
+
+export function blockUser(userId, accessToken) {
+  return fetch(
+    `${API_HOST}/BlockUser?UserId=${userId}`,
+    requestOptionsToken("PUT", undefined, accessToken)
   ).then((r) => validateResponse(r));
 }

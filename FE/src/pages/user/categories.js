@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 
 import BookCard from "../../components/book-card/BookCard";
 import "../pages.scss";
-import { getAllGenres, getBooksByGenre } from "../../services/fetch-functions";
+import {
+  getAllGenres,
+  getBooksByGenre,
+  addToFavourites,
+  addToReading,
+} from "../../services/fetch-functions";
 import { AuthContext } from "../../hooks/auth-context";
 
 function Categories() {
@@ -82,7 +87,7 @@ function Categories() {
             <div key={book.bookId} className="bookLink">
               <Link to={`/user/book/${book.bookId}`}>
                 <BookCard {...book}>
-                  <div className="options"></div>
+                  <div className="options link">{"See more.."}</div>
                 </BookCard>
               </Link>
             </div>

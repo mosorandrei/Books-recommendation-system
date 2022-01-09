@@ -9,18 +9,38 @@ function Button({
   color,
   size,
   onClick,
-  children
+  children,
+  disabled,
 }) {
-  return <button type={type} className={`${style} ${color} ${size} `} onClick={onClick}>{children}</button>;
+  return (
+    <button
+      type={type}
+      className={`${style} ${disabled ? "disabled" : color} ${size}`}
+      onClick={onClick}
+      disabled={disabled}
+    >
+      {children}
+    </button>
+  );
 }
 
 Button.propTypes = {
-  type: PropTypes.oneOf(['button', 'submit', 'reset']),
-  style: PropTypes.oneOf(['outlined', 'contained']),
-  color: PropTypes.oneOf(['purple', 'green']),
-  size: PropTypes.oneOf(['XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL']),
+  type: PropTypes.oneOf(["button", "submit", "reset"]),
+  style: PropTypes.oneOf(["outlined", "contained"]),
+  color: PropTypes.oneOf(["purple", "green"]),
+  size: PropTypes.oneOf([
+    "XXS",
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "XXXL",
+    "special",
+  ]),
   onClick: PropTypes.func,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 export default Button;

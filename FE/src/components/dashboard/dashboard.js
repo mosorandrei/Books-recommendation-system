@@ -77,7 +77,10 @@ function Dashboard({ onChangeDisplayMode, displayMode, children }) {
         <div className="lhp">
           <Avatar name={user.fullName} avatarLink={user?.avatar} />
 
-          <Level alreadyRead={user?.alreadyRead} allBooks={user?.allBooks} />
+          <Level
+            alreadyRead={user?.numberOfReads}
+            allBooks={user?.numberOfReads + user?.numberOfReadings}
+          />
 
           <Navigation displayMode={displayMode} />
 

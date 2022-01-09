@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 import BookCard from "../../components/book-card/BookCard";
 import "../pages.scss";
-import { getFavourites, addToReading } from "../../services/fetch-functions";
+import {
+  getFavourites,
+  removeFromFavourites,
+} from "../../services/fetch-functions";
 import { AuthContext } from "../../hooks/auth-context";
 import Button from "../../components/button/button";
 
@@ -24,8 +27,18 @@ function Favourites() {
       });
   }, [accessToken, user]);
 
-  function handleAddToReading(bookId) {
-    addToReading(bookId, accessToken)
+  function handleRemoveFromFavourites(bookId) {
+    removeFromFavourites(bookId, accessToken)
+      .then(() => {
+        updateUserInformation(accessToken);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
+  function handleRemoveFromFavourites(bookId) {
+    removeFromFavourites(bookId, accessToken)
       .then(() => {
         updateUserInformation(accessToken);
       })
@@ -39,21 +52,21 @@ function Favourites() {
       <h2>Favourites</h2>
       <div className="row">
         {books.map((book) => (
-          <div key={book.id} className="bookLink">
-            <Link to={`/user/book/${book.id}`}>
+          <div key={book.bookId} className="bookLink">
+            <Link to={`/user/book/${book.bookId}`}>
               <BookCard {...book}>
                 <div className="single-button">
                   <Button
                     style="contained"
                     color="purple"
-                    size="XXL"
+                    size="special"
                     onClick={(event) => {
                       event.stopPropagation();
                       event.preventDefault();
-                      handleAddToReading(book.id);
+                      handleRemoveFromFavourites(book.bookId);
                     }}
                   >
-                    Add to reading
+                    Remove from Favourites
                   </Button>
                 </div>
               </BookCard>

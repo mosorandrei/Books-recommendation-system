@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
 
 import BookCard from "../../components/book-card/BookCard";
 import "../pages.scss";
@@ -14,7 +15,7 @@ function Reading() {
     updateUserInformation,
   } = useContext(AuthContext);
   const [books, setBooks] = useState([]);
-  const [download, setDownload] = useState(false);
+  const [download, setDownload] = useState([]);
 
   function handleFinishReading(bookId) {
     finishReading(bookId, accessToken)
@@ -34,43 +35,88 @@ function Reading() {
       .catch((error) => {
         console.log(error);
       });
+    let tempDownloadStatus = [];
+    books.map((book) => {
+      tempDownloadStatus.push({ id: book.bookId, download: false });
+    });
+    setDownload(tempDownloadStatus);
   }, [accessToken, user]);
+
+  const getDownloadStatusForBook = (id) => {
+    let downloadStatus = false;
+    download &&
+      download.map((statusForBook) => {
+        if (statusForBook.id === id) {
+          downloadStatus = statusForBook.download;
+        }
+      });
+    return downloadStatus;
+  };
+
+  const setDownloadStatusForBook = (id) => {
+    let tempDownloadStatus = download;
+
+    tempDownloadStatus = tempDownloadStatus.map((statusForBook) => {
+      if (statusForBook.id === id) {
+        return {
+          ...statusForBook,
+          download: true,
+        };
+      }
+      return statusForBook;
+    });
+
+    setDownload(tempDownloadStatus);
+  };
 
   return (
     <div className="books">
       <h2>Reading books</h2>
       <div className="row">
         {books.map((book) => (
-          <div key={book.id} className="bookLink">
-            <BookCard {...book}>
-              <div className="options">
-                <Button
-                  style="contained"
-                  color="purple"
-                  size="XL"
+          <div key={book.bookId} className="bookLink">
+            <Link to={`/user/book/${book.bookId}`}>
+              <BookCard {...book}>
+                <div
+                  className="options"
                   onClick={(event) => {
                     event.stopPropagation();
-                    event.preventDefault();
-                    handleFinishReading(book.id);
                   }}
                 >
-                  Finish reading
-                </Button>
-                <a
-                  href={book.downloadUri}
-                  className={download ? "download-link" : ""}
-                  target="_blank"
-                  onClick={() => {
-                    setDownload(true);
-                  }}
-                >
-                  <img
-                    className="download-button"
-                    src={!download ? downloadIcon : checkIcon}
-                  />
-                </a>
-              </div>
-            </BookCard>
+                  <Button
+                    style="contained"
+                    color="purple"
+                    size="XL"
+                    onClick={() => {
+                      handleFinishReading(book.bookId);
+                    }}
+                  >
+                    Finish reading
+                  </Button>
+                  <a
+                    href={book.downloadUri}
+                    className={
+                      getDownloadStatusForBook(book.bookId)
+                        ? "download-link"
+                        : ""
+                    }
+                    target="_blank"
+                    onClick={() => {
+                      setDownloadStatusForBook(book.bookId);
+                    }}
+                  >
+                    <img
+                      className="download-button"
+                      src={
+                        !getDownloadStatusForBook(book.bookId)
+                          ? downloadIcon
+                          : checkIcon
+                      }
+                    />
+                  </a>
+                </div>
+              </BookCard>
+            </Link>
           </div>
         ))}
       </div>

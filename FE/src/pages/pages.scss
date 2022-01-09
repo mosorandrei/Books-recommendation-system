@@ -34,6 +34,13 @@
       display: none;
     }
 
+    .double-button {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 0px;
+    }
+
     .single-button {
       width: 100%;
       display: flex;
@@ -46,6 +53,9 @@
       padding: 0px 20px 0px 20px;
       justify-content: space-between;
       height: 40px;
+      .link {
+        text-decoration: none;
+      }
       .heart {
         padding-top: 5px;
         width: 30px;
@@ -58,6 +68,11 @@
       }
       .download-link {
         pointer-events: none;
+      }
+      .remove {
+        width: 25px;
+        height: 30px;
+        cursor: pointer;
       }
     }
   }
@@ -72,6 +87,7 @@
   height: 100%;
 }
 .genre {
+  cursor: pointer;
   font-size: 22px;
   font-weight: 500;
   padding: 10px;
