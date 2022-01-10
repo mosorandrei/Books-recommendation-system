@@ -170,6 +170,16 @@ namespace Persistence.v2
             return "User blocked successfully!";
         }
 
+        public async Task<string> UnblockUser(string UserId)
+        {
+            ApplicationUser user = await _userManager.FindByIdAsync(UserId);
+            if (user.IsBlocked == 0)
+                return "User is not blocked!";
+            user.IsBlocked = 0;
+            await _userManager.UpdateAsync(user);
+            return "User unblocked successfully!";
+        }
+
         private async Task<ApplicationUser> GetUserByEmail(string email)
         {
             return await _userManager.FindByEmailAsync(email);

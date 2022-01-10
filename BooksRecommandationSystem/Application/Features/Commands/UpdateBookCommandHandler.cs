@@ -18,8 +18,6 @@ namespace Application.Features.Commands
             {
                 throw new InvalidDataException("Book does not exist!");
             }
-            book.Rating = request.Rating;
-            book.NumberOfReviews = request.NumberOfReviews;
             book.Description = request.Description;
             book.Title = request.Title;
             book.PublicationDate = request.PublicationDate;

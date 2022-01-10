@@ -41,5 +41,6 @@ namespace Application.Interfaces
         /// <returns></returns>
         Task<ApplicationUser> GetUserById(string UserId);
         Task<string> BlockUser(string UserId);
+        Task<string> UnblockUser(string UserId);
     }
 }

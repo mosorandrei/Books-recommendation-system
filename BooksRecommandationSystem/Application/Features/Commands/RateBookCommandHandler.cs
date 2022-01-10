@@ -43,7 +43,7 @@ namespace Application.Features.Commands
                     }
                     await bookRepository.UpdateBookReviews(request.BookId, status.UserScore, request.Score);
                     await repository.RateBook(request.UserId, request.BookId, request.Score);
-                    response.Resource.Status = "The Rating has been added successfully!";
+                    response.Resource.Status = "The Rating has been added/updated successfully!";
                     return response;
                 }
             }
