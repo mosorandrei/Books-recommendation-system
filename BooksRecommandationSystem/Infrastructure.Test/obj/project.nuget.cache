@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7XdIdFdYW9BBdBd1O9ntBvUmTYMawimvbCB27SiI1MRcU2N2P+petVP9Z+RwAvgqOazdWI1q7aBsxH11Nomh/g==",
+  "dgSpecHash": "4RvUV0NemwL5Sua7xsBv2vYdT+8G7CJlRiMBIoOD1j/FHvJXG8WGKn6ZMSlAcLV4Vc8Kkqb+RQIYAMeRUscHbg==",
   "success": true,
   "projectFilePath": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Infrastructure.Test\\Infrastructure.Test.csproj",
   "expectedPackageFiles": [
@@ -71,6 +71,10 @@
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.10.0\\microsoft.identitymodel.protocols.6.10.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.10.0\\microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.14.1\\microsoft.identitymodel.tokens.6.14.1.nupkg.sha512",
+    "C:\\Users\\adria\\.nuget\\packages\\microsoft.ml\\1.7.0\\microsoft.ml.1.7.0.nupkg.sha512",
+    "C:\\Users\\adria\\.nuget\\packages\\microsoft.ml.cpumath\\1.7.0\\microsoft.ml.cpumath.1.7.0.nupkg.sha512",
+    "C:\\Users\\adria\\.nuget\\packages\\microsoft.ml.dataview\\1.7.0\\microsoft.ml.dataview.1.7.0.nupkg.sha512",
+    "C:\\Users\\adria\\.nuget\\packages\\microsoft.ml.recommender\\0.19.0\\microsoft.ml.recommender.0.19.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.net.test.sdk\\17.0.0\\microsoft.net.test.sdk.17.0.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
@@ -188,6 +192,7 @@
     "C:\\Users\\adria\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\system.text.regularexpressions\\4.3.0\\system.text.regularexpressions.4.3.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
+    "C:\\Users\\adria\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\system.threading.tasks.extensions\\4.3.0\\system.threading.tasks.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
