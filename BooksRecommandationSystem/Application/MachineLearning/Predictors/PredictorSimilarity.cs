@@ -3,17 +3,14 @@ using Microsoft.ML;
 
 namespace Application.MachineLearning.Predictors
 {
-    /// <summary>
-    /// Loads Model from the file and makes predictions.
-    /// </summary>
-    public class Predictor
+    public class PredictorSimilarity
     {
-        protected static string ModelPath => Path.Combine(AppContext.BaseDirectory, "recommender.mdl");
+        protected static string ModelPath => Path.Combine(AppContext.BaseDirectory, "recommenderSimilarity.mdl");
         private readonly MLContext _mlContext;
 
-        private ITransformer? _model;
+        private ITransformer? _modelSimilarity;
 
-        public Predictor()
+        public PredictorSimilarity()
         {
             _mlContext = new MLContext(111);
         }
@@ -23,11 +20,11 @@ namespace Application.MachineLearning.Predictors
         /// </summary>
         /// <param name="newSample">New data sample.</param>
         /// <returns>Prediction object</returns>
-        public BookRatingPrediction Predict(BookRating newSample)
+        public BookSimilarityPrediction Predict(BookSimilarity newSample)
         {
             LoadModel();
 
-            var predictionEngine = _mlContext.Model.CreatePredictionEngine<BookRating, BookRatingPrediction>(_model);
+            var predictionEngine = _mlContext.Model.CreatePredictionEngine<BookSimilarity, BookSimilarityPrediction>(_modelSimilarity);
 
             return predictionEngine.Predict(newSample);
         }
@@ -41,10 +38,10 @@ namespace Application.MachineLearning.Predictors
 
             using (var stream = new FileStream(ModelPath, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
-                _model = _mlContext.Model.Load(stream, out _);
+                _modelSimilarity = _mlContext.Model.Load(stream, out _);
             }
 
-            if (_model == null)
+            if (_modelSimilarity == null)
             {
                 throw new Exception($"Failed to load Model");
             }

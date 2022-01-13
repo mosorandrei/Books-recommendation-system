@@ -4,6 +4,7 @@ using Application.MachineLearning.DataModels;
 using Application.MachineLearning.Predictors;
 using Application.MachineLearning.Trainers;
 using Domain.AuthModels;
+using Domain.Constants;
 using Domain.Entities;
 using MediatR;
 
@@ -29,42 +30,88 @@ namespace Application.Features.Queries
         }
         public async Task<IEnumerable<BookDtoFE>> Handle(GetRecommendationsQuery request, CancellationToken cancellationToken)
         {
+            var RecommendationScores = new Dictionary<Guid, float>();
+
             if (request.UserId == null)
                 throw new ArgumentNullException("Request UserId is null!");
+
             IEnumerable<ReadingStatus> readingStatuses = await readingStatusRepository.GetAllAsync();
+
             List<ReadingStatus> readingStatusesToBeRecommended = new();
+            List<ReadingStatus> favourites = new();
             foreach (ReadingStatus readingStatus in readingStatuses)
             {
+                if (readingStatus.ApplicationUserId == request.UserId && readingStatus.IsFavourited == true)
+                    favourites.Add(readingStatus);
                 if (readingStatus.ApplicationUserId == request.UserId && readingStatus.IsFavourited == false && readingStatus.Status == Domain.Constants.ReadingStatusEnum.ToBeReaded)
+                {
                     readingStatusesToBeRecommended.Add(readingStatus);
+                    RecommendationScores[readingStatus.BookId] = 0;
+                }
             }
-
-            if (readingStatuses.ToList().Count == 0)
-                throw new ArgumentException("Insufficient data in order to get Recommendations!");
             if (readingStatusesToBeRecommended.Count == 0)
                 throw new ArgumentException("No recommendations available! You read all the Books!");
 
-            List<BookRatingPrediction> Predictions = GetPredictions(readingStatuses.ToList(), readingStatusesToBeRecommended);
-            Predictions.Sort((p, q) => p.Score.CompareTo(q.Score));
-            Predictions.Reverse();
+            // SCORE PREDICTION COMPONENT
+
+            if (readingStatuses.ToList().Count == 0)
+                throw new ArgumentException("Insufficient data in order to get Recommendations!");
+
+            List<BookRatingPrediction> PredictionsScores = GetPredictionsScore(readingStatuses.ToList(), readingStatusesToBeRecommended);
+
+            foreach (BookRatingPrediction prediction in PredictionsScores)
+            {
+                if (float.IsNaN(prediction.Score))
+                    prediction.Score = 0;
+#pragma warning disable CS8604 // Possible null reference argument.
+                RecommendationScores[Guid.Parse(prediction.BookId)] += prediction.Score;
+#pragma warning restore CS8604 // Possible null reference argument.
+            }
+
+            // END OF SCORE PREDICTION COMPONENT
+
+            // GENRE AND AUTHOR PREDICTION COMPONENT
+            if (favourites.Count > 0)
+            {
+                IEnumerable<BookDtoFE> allBooks = await GetAllBooksDtoFes();
+                List<BookSimilarityPrediction> PredictionsSimilarity = GetPredictionsSimilarity(allBooks.ToList(), favourites, readingStatusesToBeRecommended);
+                foreach (BookSimilarityPrediction prediction in PredictionsSimilarity)
+                {
+                    if (float.IsNaN(prediction.Score))
+                        prediction.Score = 0;
+#pragma warning disable CS8604 // Possible null reference argument.
+                    RecommendationScores[Guid.Parse(prediction.BookId)] += prediction.Score;
+#pragma warning restore CS8604 // Possible null reference argument.
+                }
+            }
+            else
+            {
+                Console.WriteLine("NO PREDICTIONS MADE WITH GENRES - NO FAVOURITES!");
+            }
+
+            // END OF GENRE PREDICTION COMPONENT
+
+            // DISPLAYING RESULTS
+
+
+            IEnumerable<KeyValuePair<Guid, float>> FinalRecommendations = RecommendationScores.OrderByDescending(key => key.Value).Take(MachineLearningConstants.RECOMMENDATION_FETCHED);
 
             List<Book> books = new();
 
             var count = 0;
 
             Console.WriteLine("*******************************");
-            Console.WriteLine("Printing our Recommended Books' predicted scores! - at most 5 Recommendations");
+            Console.WriteLine($"Printing our Recommended Books' predicted scores! - at most {MachineLearningConstants.RECOMMENDATION_FETCHED} Recommendations");
+            Console.WriteLine("!!! If a score is NaN, it means that not enough information is available in order to evaluate it correctly !!!");
             Console.WriteLine("*******************************");
 
-            foreach (BookRatingPrediction prediction in Predictions)
+            foreach (KeyValuePair<Guid, float> prediction in FinalRecommendations)
             {
-                Console.WriteLine(prediction.BookId + " - with predicted Score = " + prediction.Score);
-                if (count == 5)
+                Console.WriteLine(prediction.Key + " - with predicted Score = " + prediction.Value);
+                if (count == MachineLearningConstants.RECOMMENDATION_FETCHED)
                     break;
-                if (prediction.BookId == null)
-                    throw new ArgumentNullException("Error when predicting : BookId is null!");
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
-                Book toBeAdded = await repository.GetByIdAsync(Guid.Parse(prediction.BookId));
+                Book toBeAdded = await repository.GetByIdAsync(prediction.Key);
 #pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
                 if (toBeAdded == null)
                     throw new ArgumentNullException("Error when fetching requested Book, not found!!");
@@ -72,6 +119,8 @@ namespace Application.Features.Queries
                 count++;
             }
             Console.WriteLine("*******************************");
+
+            // END OF DISPLAYING RESULTS
 
             List<BookDtoFE> bookDtos = new();
             foreach (Book book in books)
@@ -120,37 +169,62 @@ namespace Application.Features.Queries
             return bookDtos;
         }
 
-        private static List<BookRatingPrediction> GetPredictions(List<ReadingStatus> trainData, List<ReadingStatus> toBeRecommended)
+        private static List<BookRatingPrediction> GetPredictionsScore(List<ReadingStatus> trainData, List<ReadingStatus> toBeRecommended)
         {
-            List<BookRating> movieRatings = new();
+            List<BookRating> bookRatings = new();
             foreach (ReadingStatus status in toBeRecommended)
             {
-                movieRatings.Add(new BookRating()
+                bookRatings.Add(new BookRating()
                 {
                     UserId = status.ApplicationUserId,
                     BookId = status.BookId.ToString()
                 });
             }
 
-            var trainer = new MatrixFactorizationTrainer(10, 50, 0.1);
+            var trainer = new MatrixFactorizationTrainerRating(100, 50, 0.055);
 
             List<BookRatingPrediction> bookRatingPredictions = new();
 
-            foreach (BookRating sample in movieRatings)
-                bookRatingPredictions.Add(TrainEvaluatePredict(trainData, trainer, sample));
+            foreach (BookRating sample in bookRatings)
+                bookRatingPredictions.Add(TrainEvaluatePredictScore(trainData, trainer, sample));
 
             return bookRatingPredictions;
         }
 
-        private static BookRatingPrediction TrainEvaluatePredict(List<ReadingStatus> trainData, ITrainerBase trainer, BookRating newSample)
+        private static List<BookSimilarityPrediction> GetPredictionsSimilarity(List<BookDtoFE> trainData, List<ReadingStatus> Favourites, List<ReadingStatus> toBeRecommended)
+        {
+            List<BookSimilarity> bookSimilarities = new();
+            foreach (ReadingStatus status in toBeRecommended)
+            {
+                foreach (ReadingStatus favStatus in Favourites)
+                {
+                    bookSimilarities.Add(new BookSimilarity()
+                    {
+                        BookId = status.BookId.ToString(),
+                        SimilarBookId = favStatus.BookId.ToString()
+                    });
+                }
+            }
+
+            var trainer = new MatrixFactorizationTrainerSimilarity(100, 50, 0.055);
+
+            List<BookSimilarityPrediction> bookRatingPredictions = new();
+
+            foreach (BookSimilarity sample in bookSimilarities)
+                bookRatingPredictions.Add(TrainEvaluatePredictSimilarity(trainData, trainer, sample));
+
+            return bookRatingPredictions;
+        }
+
+        private static BookRatingPrediction TrainEvaluatePredictScore(List<ReadingStatus> trainData, ITrainerBase trainer, BookRating newSample)
         {
             Console.WriteLine("*******************************");
             Console.WriteLine($"{ trainer.Name }");
             Console.WriteLine("*******************************");
 
-            trainer.Fit(trainData);
+            trainer.FitScore(trainData);
 
-            var modelMetrics = trainer.Evaluate();
+            var modelMetrics = trainer.EvaluateRating();
 
             Console.WriteLine($"Loss Function: {modelMetrics.LossFunction:0.##}{Environment.NewLine}" +
                               $"Mean Absolute Error: {modelMetrics.MeanAbsoluteError:#.##}{Environment.NewLine}" +
@@ -160,13 +234,90 @@ namespace Application.Features.Queries
 
             trainer.Save();
 
-            var predictor = new Predictor();
+            var predictor = new PredictorRating();
             var prediction = predictor.Predict(newSample);
             Console.WriteLine("------------------------------");
             Console.WriteLine($"Prediction: {prediction.BookId}");
             Console.WriteLine($"Prediction: {prediction.Score:#.##}");
             Console.WriteLine("------------------------------");
             return prediction;
+        }
+
+        private static BookSimilarityPrediction TrainEvaluatePredictSimilarity(List<BookDtoFE> trainData, ITrainerBase trainer, BookSimilarity newSample)
+        {
+            Console.WriteLine("*******************************");
+            Console.WriteLine($"{ trainer.Name }");
+            Console.WriteLine("*******************************");
+
+            trainer.FitSimilarity(trainData);
+
+            var modelMetrics = trainer.EvaluateSimilarity();
+
+            Console.WriteLine($"Loss Function: {modelMetrics.LossFunction:0.##}{Environment.NewLine}" +
+                              $"Mean Absolute Error: {modelMetrics.MeanAbsoluteError:#.##}{Environment.NewLine}" +
+                              $"Mean Squared Error: {modelMetrics.MeanSquaredError:#.##}{Environment.NewLine}" +
+                              $"RSquared: {modelMetrics.RSquared:0.##}{Environment.NewLine}" +
+                              $"Root Mean Squared Error: {modelMetrics.RootMeanSquaredError:#.##}");
+
+            trainer.Save();
+
+            var predictor = new PredictorSimilarity();
+            var prediction = predictor.Predict(newSample);
+            Console.WriteLine("------------------------------");
+            Console.WriteLine($"Prediction: {newSample.BookId} and {newSample.SimilarBookId}");
+            Console.WriteLine($"Prediction: {prediction.Score:#.##}");
+            Console.WriteLine("------------------------------");
+            return prediction;
+        }
+
+        private async Task<IEnumerable<BookDtoFE>> GetAllBooksDtoFes()
+        {
+            IEnumerable<Book> books = await repository.GetAllAsync();
+            List<BookDtoFE> bookDtos = new();
+            foreach (Book book in books)
+            {
+                var bookDto = new BookDtoFE
+                {
+                    BookId = book.Id,
+                    Title = book.Title,
+                    Rating = book.Rating,
+                    NumberOfReviews = book.NumberOfReviews,
+                    Description = book.Description,
+                    DownloadUri = book.DownloadUri,
+                    PublicationDate = book.PublicationDate,
+                    UploadDate = book.UploadDate,
+                    ImageUri = book.ImageUri
+                };
+
+                ICollection<Guid> genreIds = await genreAssociationRepository.GetGenresByBookId(book.Id);
+                ICollection<Genre> genres = new List<Genre>();
+                foreach (Guid genreId in genreIds)
+                {
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
+                    Genre genre = await genreRepository.GetByIdAsync(genreId);
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
+                    if (genre == null)
+                        throw new InvalidDataException(nameof(genre));
+                    genres.Add(genre);
+                }
+                bookDto.Genres = genres;
+
+                ICollection<Guid> authorIds = await authorAssociationRepository.GetAuthorsByBookId(book.Id);
+                ICollection<Author> authors = new List<Author>();
+                foreach (Guid authorId in authorIds)
+                {
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
+                    Author author = await authorRepository.GetByIdAsync(authorId);
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
+                    if (author == null)
+                        throw new InvalidDataException(nameof(author));
+                    authors.Add(author);
+                }
+                bookDto.Authors = authors;
+
+                bookDtos.Add(bookDto);
+            }
+            return bookDtos;
         }
     }
 }
