@@ -2,7 +2,11 @@ import React, { useState, useEffect, useContext } from "react";
 
 import UserCard from "../../components/user-card/UserCard";
 import "../pages.scss";
-import { getAllMembers, blockUser } from "../../services/fetch-functions";
+import {
+  getAllMembers,
+  blockUser,
+  unblockUser,
+} from "../../services/fetch-functions";
 import Button from "../../components/button/button";
 import { AuthContext } from "../../hooks/auth-context";
 
@@ -63,9 +67,9 @@ function Users() {
   };
 
   const handleUnblockUser = (id) => {
-    // unblockUser(id, accessToken).catch((error) => {
-    //   console.log(error);
-    // });
+    unblockUser(id, accessToken).catch((error) => {
+      console.log(error);
+    });
     let tempStatus = usersStatus;
     tempStatus = tempStatus.map((user) => {
       if (user.id == id) {

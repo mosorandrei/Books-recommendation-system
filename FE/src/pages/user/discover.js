@@ -6,6 +6,7 @@ import { Rating } from "react-simple-star-rating";
 import "../pages.scss";
 import {
   getAllBooksForUser,
+  getAllBooksRecommendationForUser,
   addToFavourites,
   addToReading,
   rateBook,
@@ -25,8 +26,10 @@ function Discover() {
     updateUserInformation,
   } = useContext(AuthContext);
   const [books, setBooks] = useState([]);
+  const [booksRecommendation, setBooksRecommendation] = useState([]);
   const [rating, setRating] = useState([]);
   const [download, setDownload] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     accessToken &&
@@ -42,6 +45,18 @@ function Discover() {
       tempDownloadStatus.push({ id: object.book.bookId, download: false });
     });
     setDownload(tempDownloadStatus);
+  }, [accessToken, user]);
+
+  useEffect(() => {
+    accessToken &&
+      getAllBooksRecommendationForUser(accessToken)
+        .then((result) => {
+          setBooksRecommendation(result);
+          setIsLoading(false);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
   }, [accessToken, user]);
 
   useEffect(() => {
@@ -69,9 +84,14 @@ function Discover() {
     rateBook(rate / 20, id, accessToken);
   };
 
-  function handleAddToReading(bookId) {
+  function handleAddToReading(bookId, recommend = false) {
     addToReading(bookId, accessToken)
       .then(() => {
+        if (recommend) {
+          let tempBooks = booksRecommendation;
+          tempBooks = tempBooks.filter((book) => book.bookId != bookId);
+          setBooksRecommendation(tempBooks);
+        }
         updateUserInformation(accessToken);
       })
       .catch((error) => {
@@ -89,9 +109,14 @@ function Discover() {
       });
   }
 
-  function handleAddToFavourites(bookId) {
+  function handleAddToFavourites(bookId, recommend = false) {
     addToFavourites(bookId, accessToken)
       .then(() => {
+        if (recommend) {
+          let tempBooks = booksRecommendation;
+          tempBooks = tempBooks.filter((book) => book.bookId != bookId);
+          setBooksRecommendation(tempBooks);
+        }
         updateUserInformation(accessToken);
       })
       .catch((error) => {
@@ -179,7 +204,8 @@ function Discover() {
           style="contained"
           color="purple"
           size="XL"
-          onClick={() => {
+          onClick={(e) => {
+            e.preventDefault();
             handleFinishReading(id);
           }}
         >
@@ -234,10 +260,40 @@ function Discover() {
     );
   };
 
+  const optionsForRecommendedBook = (id) => {
+    return (
+      <div
+        className="options"
+        onClick={(event) => {
+          event.stopPropagation();
+          event.preventDefault();
+        }}
+      >
+        <Button
+          style="contained"
+          color="purple"
+          size="XL"
+          onClick={() => {
+            handleAddToReading(id, true);
+          }}
+        >
+          Add to reading
+        </Button>
+        <img
+          src={heart}
+          className="heart"
+          onClick={() => {
+            handleAddToFavourites(id, true);
+          }}
+        />
+      </div>
+    );
+  };
+
   return (
     <div className="books">
       <h2>All books</h2>
-      <div className="row">
+      <div className="row slider">
         {books.map((object) => (
           <div key={object.book.bookId} className="bookLink">
             <Link to={`/user/book/${object.book.bookId}`}>
@@ -259,6 +315,21 @@ function Discover() {
             </Link>
           </div>
         ))}
+      </div>
+      <h2>Your recommendations</h2>
+      <div className={isLoading && books.length && "loader-discover"}>
+        <div className="row slider">
+          {!isLoading &&
+            booksRecommendation.map((book) => (
+              <div key={book.bookId} className="bookLink">
+                <Link to={`/user/book/${book.bookId}`}>
+                  <BookCard {...book}>
+                    <div>{optionsForRecommendedBook(book.bookId)}</div>
+                  </BookCard>
+                </Link>
+              </div>
+            ))}
+        </div>
       </div>
     </div>
   );

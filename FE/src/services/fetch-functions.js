@@ -1,6 +1,9 @@
 import { API_HOST } from "../utils/constants";
 
 function validateResponse(response) {
+  if (response.status === 403) {
+    throw `User is blocked`;
+  }
   if (!response.ok) {
     throw new Error(`[${response.status}] There was an error fetching data.`);
   }
@@ -75,6 +78,13 @@ export function getAllBooksForUser(accessToken) {
   ).then((r) => validateResponse(r));
 }
 
+export function getAllBooksRecommendationForUser(accessToken) {
+  return fetch(
+    `${API_HOST}/GetRecommendations`,
+    requestOptionsToken("GET", undefined, accessToken)
+  ).then((r) => validateResponse(r));
+}
+
 export function deleteBook(bookId, accessToken) {
   return fetch(
     `${API_HOST}/Books?id=${bookId}`,
@@ -92,6 +102,7 @@ export function addBook(bookFields, accessToken) {
         rating: bookFields.rating,
         downloadUri: bookFields.downloadLink,
         description: bookFields.description,
+        imageUri: bookFields.image,
       },
       accessToken
     )
@@ -99,11 +110,19 @@ export function addBook(bookFields, accessToken) {
 }
 
 export function editBook(bookFields, bookId, accessToken) {
+  console.log(bookFields);
   return fetch(
     `${API_HOST}/Books?id=${bookId}`,
     requestOptionsToken(
       "PUT",
-      { id: bookId, title: bookFields.title },
+      {
+        id: bookId,
+        title: bookFields.title,
+        imageUri: bookFields.image,
+        downloadUri: bookFields.downloadLink,
+        description: bookFields.description,
+        rating: bookFields.rating,
+      },
       accessToken
     )
   ).then((r) => validateResponse(r));
@@ -190,5 +209,37 @@ export function blockUser(userId, accessToken) {
   return fetch(
     `${API_HOST}/BlockUser?UserId=${userId}`,
     requestOptionsToken("PUT", undefined, accessToken)
+  ).then((r) => validateResponse(r));
+}
+
+export function unblockUser(userId, accessToken) {
+  return fetch(
+    `${API_HOST}/UnblockUser?UserId=${userId}`,
+    requestOptionsToken("PUT", undefined, accessToken)
+  ).then((r) => validateResponse(r));
+}
+
+export function resetPassword(email) {
+  return fetch(
+    `${API_HOST}/Authenticate`,
+    requestOptions("POST", { ...email })
+  ).then((r) => validateResponse(r));
+}
+
+export function addAuthor(firstName, lastName, accessToken) {
+  return fetch(
+    `${API_HOST}/Authors`,
+    requestOptionsToken(
+      "POST",
+      { firstName: firstName, lastName: lastName },
+      accessToken
+    )
+  ).then((r) => validateResponse(r));
+}
+
+export function addAuthorToBook(bookId, authorId, accessToken) {
+  return fetch(
+    `${API_HOST}/AddAuthorToBook?BookId=${bookId}&AuthorId=${authorId}`,
+    requestOptionsToken("POST", undefined, accessToken)
   ).then((r) => validateResponse(r));
 }

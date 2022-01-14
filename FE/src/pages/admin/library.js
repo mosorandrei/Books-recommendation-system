@@ -19,13 +19,14 @@ function Library() {
   const [editBook, setEditBook] = useState({});
 
   useEffect(() => {
-    getAllBooks(accessToken)
-      .then((result) => {
-        setBooks(result);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    accessToken &&
+      getAllBooks(accessToken)
+        .then((result) => {
+          setBooks(result);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
   }, [accessToken, user]);
 
   const handleDeleteBook = (bookId) => {
@@ -61,7 +62,6 @@ function Library() {
     setEditBook(bookWithAuthors);
     editBookModalRef.current.openModal();
   }
-
   return (
     <>
       <div className="books">

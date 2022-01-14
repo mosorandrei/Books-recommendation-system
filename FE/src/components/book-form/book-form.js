@@ -5,17 +5,22 @@ import TextInput from "../text-input/text-input";
 import Button from "../button/button";
 import useForm from "../../hooks/use-form";
 import "./book-form.scss";
-import { addBook, editBook } from "../../services/fetch-functions";
+import {
+  addBook,
+  editBook,
+  addAuthor,
+  addAuthorToBook,
+} from "../../services/fetch-functions";
 import { AuthContext } from "../../hooks/auth-context";
 
 function BookForm({
-  id,
+  bookId,
   title,
   authors,
   rating,
   description,
-  downloadLink,
-  image,
+  downloadUri,
+  imageUri,
   isNewBook = false,
   onFormClose,
 }) {
@@ -27,8 +32,8 @@ function BookForm({
         authors: authors || "",
         rating: rating ? rating.toString() : "",
         description: description || "",
-        image: image || "",
-        downloadLink: downloadLink || "",
+        image: imageUri || "",
+        downloadLink: downloadUri || "",
       },
       {
         title: { required: true },
@@ -38,16 +43,29 @@ function BookForm({
         rating: {
           pattern: {
             value: /^\d+$/,
-            message: "Experience can only contain digits",
+            message: "Rating can only contain digits",
           },
         },
       },
       (fields) => {
+        var newBookId = "";
+        var newAuthorId = "";
         let newPromise = Promise;
+        let addBookPromise = Promise;
         if (isNewBook) {
-          newPromise = addBook(fields, state.accessToken);
+          addBookPromise = addBook(fields, state.accessToken);
+          addBookPromise.then((result) => {
+            newBookId = result;
+          });
+          let author = fields.authors.split(" ");
+          newPromise = addAuthor(author[0], author[1], state.accessToken).then(
+            (result) => {
+              newAuthorId = result;
+              addAuthorToBook(newBookId, newAuthorId, state.accessToken);
+            }
+          );
         } else {
-          newPromise = editBook(fields, id, state.accessToken);
+          newPromise = editBook(fields, bookId, state.accessToken);
         }
 
         newPromise

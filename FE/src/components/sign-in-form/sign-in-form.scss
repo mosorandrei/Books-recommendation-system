@@ -2,7 +2,6 @@
 
 .sign-in-form {
   width: 100%;
-
   .form-input-split,
   .form-button-split {
     display: flex;
@@ -57,5 +56,148 @@
     > :not(:first-child) {
       margin-top: 20px;
     }
+  }
+
+  .form-bottom-reset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      color: $color-gray-300;
+
+      a {
+        color: $color-purple-100;
+
+        transition: all 0.5s;
+
+        &:hover {
+          cursor: pointer;
+          color: $color-red;
+        }
+      }
+    }
+
+    > :not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.send-email-form {
+  height: 150px;
+  p {
+    font-size: 15px;
+    font-weight: 400;
+    color: $color-gray-900;
+    margin-bottom: 10px;
+  }
+}
+
+.forgot-password {
+  height: 0px;
+}
+.close-button-reset {
+  margin-top: 20px;
+  width: 30px;
+  height: 30px;
+}
+.send-email {
+  display: flex;
+  height: 30px;
+  width: 100%;
+
+  .download-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .input-reset {
+    flex: 1 1 auto;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    .field {
+      width: 80%;
+      z-index: 1;
+      border: 0;
+      padding: 0 0 2px 0;
+      background-color: transparent;
+      border-bottom: 1px solid $color-gray-200;
+      height: 27px;
+      font: inherit;
+      font-size: 14px;
+      line-height: 24px;
+
+      &:focus {
+        outline: 0;
+        border-bottom-color: $color-purple-100;
+      }
+
+      &:focus,
+      &:not(:placeholder-shown) {
+        & + .input-label {
+          transform: translateY(-15px);
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.reset-password-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+
+  .input-reset-password {
+    flex: 1 1 auto;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    .field {
+      width: 100%;
+      z-index: 1;
+      border: 0;
+      padding: 0 0 6px 0;
+      margin-bottom: 30px;
+      background-color: transparent;
+      border-bottom: 1px solid $color-gray-200;
+      height: 80px;
+      font: inherit;
+      font-size: 14px;
+      line-height: 24px;
+
+      &:focus {
+        outline: 0;
+        border-bottom-color: $color-purple-100;
+      }
+
+      &:focus,
+      &:not(:placeholder-shown) {
+        & + .input-label {
+          transform: translateY(-15px);
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .reset-button {
+    margin-top: 10px;
+    display: flex;
+    justify-content: end;
+  }
+  .double-button-reset {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 }

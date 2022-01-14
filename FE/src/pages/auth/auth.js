@@ -24,7 +24,7 @@ function Auth() {
           </>
         ) : (
           <>
-            <h2>Sign In</h2>
+            <h2 id="title-form">Sign In</h2>
             <SignInForm onSwitchButton={() => setShowSignUp(true)} />
           </>
         )}
