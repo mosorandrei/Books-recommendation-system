@@ -219,13 +219,6 @@ export function unblockUser(userId, accessToken) {
   ).then((r) => validateResponse(r));
 }
 
-export function resetPassword(email) {
-  return fetch(
-    `${API_HOST}/Authenticate`,
-    requestOptions("POST", { ...email })
-  ).then((r) => validateResponse(r));
-}
-
 export function addAuthor(firstName, lastName, accessToken) {
   return fetch(
     `${API_HOST}/Authors`,
@@ -241,5 +234,19 @@ export function addAuthorToBook(bookId, authorId, accessToken) {
   return fetch(
     `${API_HOST}/AddAuthorToBook?BookId=${bookId}&AuthorId=${authorId}`,
     requestOptionsToken("POST", undefined, accessToken)
+  ).then((r) => validateResponse(r));
+}
+
+export function sendEmail(email) {
+  return fetch(
+    `${API_HOST}/SendResetEmail?Email=${email}`,
+    requestOptions("POST", undefined)
+  ).then((r) => validateResponse(r));
+}
+
+export function resetPassword(email, code, password, confirm) {
+  return fetch(
+    `${API_HOST}/ResetPassword?Email=${email}&Token=${code}&Password=${password}&ConfirmPassword=${confirm}`,
+    requestOptions("POST", undefined)
   ).then((r) => validateResponse(r));
 }

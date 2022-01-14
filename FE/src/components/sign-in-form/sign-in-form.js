@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import {
   getUser,
   resetPassword,
+  sendEmail,
   signInUser,
 } from "../../services/fetch-functions";
 import TextInput from "../text-input/text-input";
@@ -25,7 +26,6 @@ function SignInForm({ onSwitchButton }) {
   const [confirmNewPasswordValue, setConfirmNewPasswordValue] = useState("");
   const [displayResetInputs, setDisplayResetInputs] = useState(false);
   const [email, setEmail] = useState("");
-  const history = useHistory();
 
   useEffect(() => {
     if (!forgotPassword && !displayResetInputs)
@@ -36,10 +36,11 @@ function SignInForm({ onSwitchButton }) {
     setForgotPassword(true);
   }
   function sendEmailWithCode(email) {
-    //call api
-    console.log(email);
-    setEmail(email);
     setDisplayResetInputs(true);
+    setEmail(email);
+    sendEmail(email).catch((error) => {
+      console.log(error);
+    });
   }
   const onChangeHandlerInput = (event) => {
     setInputValue(event.target.value);
@@ -54,8 +55,16 @@ function SignInForm({ onSwitchButton }) {
     setConfirmNewPasswordValue(event.target.value);
   };
   const onHandleResetPassword = () => {
-    //call api to reset
-    console.log(codeValue, newPasswordValue, confirmNewPasswordValue, email);
+    resetPassword(
+      email,
+      codeValue,
+      newPasswordValue,
+      confirmNewPasswordValue
+    ).catch((error) => {
+      setDisplayResetInputs(false);
+      setForgotPassword(false);
+      console.log(error);
+    });
   };
   const { fields, errors, setErrors, handleInputChange, handleSubmit } =
     useForm(
@@ -188,7 +197,7 @@ function SignInForm({ onSwitchButton }) {
           <img
             className="close-button-reset"
             src={closeIcon}
-            onClick={() => history.goBack()}
+            onClick={() => setForgotPassword(false)}
           />
         </div>
       ) : (
@@ -208,7 +217,7 @@ function SignInForm({ onSwitchButton }) {
             <div className="input-reset-password">
               <input
                 className="field"
-                type="text"
+                type="password"
                 name="name"
                 placeholder="New Password"
                 onChange={onChangeHandlerNewPassword}
@@ -218,7 +227,7 @@ function SignInForm({ onSwitchButton }) {
             <div className="input-reset-password">
               <input
                 className="field"
-                type="text"
+                type="password"
                 name="name"
                 placeholder="Confirm New Password"
                 onChange={onChangeHandlerConfirmNewPassword}
@@ -230,7 +239,10 @@ function SignInForm({ onSwitchButton }) {
                 style="contained"
                 color="purple"
                 size="XL"
-                onClick={() => history.goBack()}
+                onClick={() => {
+                  setForgotPassword(false);
+                  setDisplayResetInputs(false);
+                }}
               >
                 Cancel
               </Button>
