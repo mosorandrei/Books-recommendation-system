@@ -85,10 +85,14 @@ namespace Application.MachineLearning.Common
         /// <summary>
         /// Save Model in the file.
         /// </summary>
-        public void Save()
+        public void SaveRating()
+        {
+            MlContext.Model.Save(_trainedModelRating, _dataSplit.TrainSet.Schema, ModelPathRating);
+        }
+
+        public void SaveSimilarity()
         {
             MlContext.Model.Save(_trainedModelSimilarity, _dataSplit.TrainSet.Schema, ModelPathSimilarity);
-            MlContext.Model.Save(_trainedModelRating, _dataSplit.TrainSet.Schema, ModelPathRating);
         }
 
         /// <summary>

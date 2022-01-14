@@ -11,6 +11,7 @@ namespace Application.MachineLearning.Common
         void FitSimilarity(List<BookDtoFE> BookGuids);
         RegressionMetrics EvaluateRating();
         RegressionMetrics EvaluateSimilarity();
-        void Save();
+        void SaveRating();
+        void SaveSimilarity();
     }
 }

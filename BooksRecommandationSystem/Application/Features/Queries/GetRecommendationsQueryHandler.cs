@@ -183,12 +183,44 @@ namespace Application.Features.Queries
 
             var trainer = new MatrixFactorizationTrainerRating(100, 50, 0.055);
 
+            TrainEvaluateScoreModel(trainData, trainer);
+
             List<BookRatingPrediction> bookRatingPredictions = new();
 
             foreach (BookRating sample in bookRatings)
-                bookRatingPredictions.Add(TrainEvaluatePredictScore(trainData, trainer, sample));
+                bookRatingPredictions.Add(PredictScore(sample));
 
             return bookRatingPredictions;
+        }
+
+        private static void TrainEvaluateScoreModel(List<ReadingStatus> trainData, ITrainerBase trainer)
+        {
+            Console.WriteLine("*******************************");
+            Console.WriteLine($"{ trainer.Name }");
+            Console.WriteLine("*******************************");
+
+            trainer.FitScore(trainData);
+
+            var modelMetrics = trainer.EvaluateRating();
+
+            Console.WriteLine($"Loss Function: {modelMetrics.LossFunction:0.##}{Environment.NewLine}" +
+                              $"Mean Absolute Error: {modelMetrics.MeanAbsoluteError:#.##}{Environment.NewLine}" +
+                              $"Mean Squared Error: {modelMetrics.MeanSquaredError:#.##}{Environment.NewLine}" +
+                              $"RSquared: {modelMetrics.RSquared:0.##}{Environment.NewLine}" +
+                              $"Root Mean Squared Error: {modelMetrics.RootMeanSquaredError:#.##}");
+            trainer.SaveRating();
+
+        }
+
+        private static BookRatingPrediction PredictScore(BookRating newSample)
+        {
+            var predictor = new PredictorRating();
+            var prediction = predictor.Predict(newSample);
+            Console.WriteLine("------------------------------");
+            Console.WriteLine($"Prediction: {prediction.BookId}");
+            Console.WriteLine($"Prediction: {prediction.Score:#.##}");
+            Console.WriteLine("------------------------------");
+            return prediction;
         }
 
         private static List<BookSimilarityPrediction> GetPredictionsSimilarity(List<BookDtoFE> trainData, List<ReadingStatus> Favourites, List<ReadingStatus> toBeRecommended)
@@ -208,42 +240,17 @@ namespace Application.Features.Queries
 
             var trainer = new MatrixFactorizationTrainerSimilarity(100, 50, 0.055);
 
+            TrainEvaluateSimilarityModel(trainData, trainer);
+
             List<BookSimilarityPrediction> bookRatingPredictions = new();
 
             foreach (BookSimilarity sample in bookSimilarities)
-                bookRatingPredictions.Add(TrainEvaluatePredictSimilarity(trainData, trainer, sample));
+                bookRatingPredictions.Add(PredictSimilarity(sample));
 
             return bookRatingPredictions;
         }
 
-        private static BookRatingPrediction TrainEvaluatePredictScore(List<ReadingStatus> trainData, ITrainerBase trainer, BookRating newSample)
-        {
-            Console.WriteLine("*******************************");
-            Console.WriteLine($"{ trainer.Name }");
-            Console.WriteLine("*******************************");
-
-            trainer.FitScore(trainData);
-
-            var modelMetrics = trainer.EvaluateRating();
-
-            Console.WriteLine($"Loss Function: {modelMetrics.LossFunction:0.##}{Environment.NewLine}" +
-                              $"Mean Absolute Error: {modelMetrics.MeanAbsoluteError:#.##}{Environment.NewLine}" +
-                              $"Mean Squared Error: {modelMetrics.MeanSquaredError:#.##}{Environment.NewLine}" +
-                              $"RSquared: {modelMetrics.RSquared:0.##}{Environment.NewLine}" +
-                              $"Root Mean Squared Error: {modelMetrics.RootMeanSquaredError:#.##}");
-
-            trainer.Save();
-
-            var predictor = new PredictorRating();
-            var prediction = predictor.Predict(newSample);
-            Console.WriteLine("------------------------------");
-            Console.WriteLine($"Prediction: {prediction.BookId}");
-            Console.WriteLine($"Prediction: {prediction.Score:#.##}");
-            Console.WriteLine("------------------------------");
-            return prediction;
-        }
-
-        private static BookSimilarityPrediction TrainEvaluatePredictSimilarity(List<BookDtoFE> trainData, ITrainerBase trainer, BookSimilarity newSample)
+        private static void TrainEvaluateSimilarityModel(List<BookDtoFE> trainData, ITrainerBase trainer)
         {
             Console.WriteLine("*******************************");
             Console.WriteLine($"{ trainer.Name }");
@@ -259,8 +266,11 @@ namespace Application.Features.Queries
                               $"RSquared: {modelMetrics.RSquared:0.##}{Environment.NewLine}" +
                               $"Root Mean Squared Error: {modelMetrics.RootMeanSquaredError:#.##}");
 
-            trainer.Save();
+            trainer.SaveSimilarity();
+        }
 
+        private static BookSimilarityPrediction PredictSimilarity(BookSimilarity newSample)
+        {
             var predictor = new PredictorSimilarity();
             var prediction = predictor.Predict(newSample);
             Console.WriteLine("------------------------------");
