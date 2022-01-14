@@ -180,6 +180,13 @@ namespace Persistence.v2
             return "User unblocked successfully!";
         }
 
+        public async Task<IdentityResult> ResetUserPassword(string Email, string NewPassword)
+        {
+            ApplicationUser currentUser = await GetUserByEmail(Email);
+            string ResetToken = await _userManager.GeneratePasswordResetTokenAsync(currentUser);
+            return await _userManager.ResetPasswordAsync(currentUser, ResetToken, NewPassword);
+        }
+
         private async Task<ApplicationUser> GetUserByEmail(string email)
         {
             return await _userManager.FindByEmailAsync(email);

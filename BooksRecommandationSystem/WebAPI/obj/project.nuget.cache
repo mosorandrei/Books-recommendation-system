@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rEN+F7vTr71Y12ow0XvtIaDGEQcdiD3p6Ks89iDA2/dLcsXeCpCzMDmcDWvfW1O9OA5K4vd2Xt7RcbUB6JE+Ow==",
+  "dgSpecHash": "j49FQwXbhieBkzlPTOKV/LBMc/Btz2GDlwTcbu8IWoZCApe3txfio4nJJltcyufCSbcSCiwRYm7c4Nl6FDXBqw==",
   "success": true,
   "projectFilePath": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
@@ -103,10 +103,12 @@
     "C:\\Users\\adria\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\adria\\.nuget\\packages\\sendgrid\\9.25.2\\sendgrid.9.25.2.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.6\\sqlitepclraw.bundle_e_sqlite3.2.0.6.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\sqlitepclraw.core\\2.0.6\\sqlitepclraw.core.2.0.6.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.6\\sqlitepclraw.lib.e_sqlite3.2.0.6.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.6\\sqlitepclraw.provider.e_sqlite3.2.0.6.nupkg.sha512",
+    "C:\\Users\\adria\\.nuget\\packages\\starkbank-ecdsa\\1.3.3\\starkbank-ecdsa.1.3.3.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.1\\swashbuckle.aspnetcore.6.2.1.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.1\\swashbuckle.aspnetcore.swagger.6.2.1.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.1\\swashbuckle.aspnetcore.swaggergen.6.2.1.nupkg.sha512",

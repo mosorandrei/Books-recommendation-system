@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NJOYuI8YKaGBfgMARPT9ZC4T/SgNxK2fjFXOL2KoWWYXh2eXJAuMPVVqo6s0KPweKVM9/wpqASYVpNyTuy2Dhw==",
+  "dgSpecHash": "/3wfDsfK6yoDfxUVi7X3mX7VmBJbCjtmzOYkAUTqjXEhzqb+jQ/ccJCoE05BIXAxa7DbI5yYnvrldAUDw8BS0w==",
   "success": true,
   "projectFilePath": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
@@ -97,10 +97,12 @@
     "C:\\Users\\adria\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\adria\\.nuget\\packages\\sendgrid\\9.25.2\\sendgrid.9.25.2.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.6\\sqlitepclraw.bundle_e_sqlite3.2.0.6.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\sqlitepclraw.core\\2.0.6\\sqlitepclraw.core.2.0.6.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.6\\sqlitepclraw.lib.e_sqlite3.2.0.6.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.6\\sqlitepclraw.provider.e_sqlite3.2.0.6.nupkg.sha512",
+    "C:\\Users\\adria\\.nuget\\packages\\starkbank-ecdsa\\1.3.3\\starkbank-ecdsa.1.3.3.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\system.codedom\\4.7.0\\system.codedom.4.7.0.nupkg.sha512",

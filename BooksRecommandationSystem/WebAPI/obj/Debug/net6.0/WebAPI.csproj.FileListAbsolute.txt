@@ -694,3 +694,5 @@ C:\Users\ROG\Documents\GitHub\Books-recommendation-system\BooksRecommandationSys
 C:\Users\ROG\Documents\GitHub\Books-recommendation-system\BooksRecommandationSystem\WebAPI\obj\Debug\net6.0\WebAPI.genruntimeconfig.cache
 C:\Users\ROG\Documents\GitHub\Books-recommendation-system\BooksRecommandationSystem\WebAPI\obj\Debug\net6.0\WebAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ROG\Documents\GitHub\Books-recommendation-system\BooksRecommandationSystem\WebAPI\obj\Debug\net6.0\WebAPI.csproj.AssemblyReference.cache
+C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\WebAPI\bin\Debug\net6.0\SendGrid.dll
+C:\Users\adria\Desktop\Books-recommendation-system\BooksRecommandationSystem\WebAPI\bin\Debug\net6.0\StarkbankEcdsa.dll
