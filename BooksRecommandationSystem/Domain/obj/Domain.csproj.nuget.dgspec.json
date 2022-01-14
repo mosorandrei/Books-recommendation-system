@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj": {}
+    "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj": {
+    "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\ROG\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ROG\\Documents\\GitHub\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\ROG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -76,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -2,6 +2,6 @@
 {
     public static class MachineLearningConstants
     {
-        public static readonly int RECOMMENDATION_FETCHED = 3;
+        public static readonly int RECOMMENDATION_FETCHED = 5;
     }
 }
