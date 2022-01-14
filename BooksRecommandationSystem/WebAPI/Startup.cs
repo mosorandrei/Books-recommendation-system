@@ -1,13 +1,17 @@
 ﻿using Application;
 using Domain.AuthModels;
+using Domain.CustomExceptionMiddleware;
 using Domain.Entities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Persistence;
 using Persistence.Context;
 using Persistence.Extensions;
+using System.Net;
 using System.Text;
 
 namespace WebAPI
@@ -150,7 +154,6 @@ namespace WebAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -158,6 +161,7 @@ namespace WebAPI
                 app.EnsureIdentityDbIsCreated();
                 app.SeedIdentityDataAsync().Wait();
             }
+            app.UseMiddleware(typeof(ExceptionMiddleware));
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {

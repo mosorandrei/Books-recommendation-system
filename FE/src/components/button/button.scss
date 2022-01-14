@@ -23,6 +23,9 @@ button {
     &.green {
       background-color: $color-green;
     }
+    &.disabled {
+      background-color: $color-gray-300;
+    }
   }
 
   &.outlined {
@@ -40,6 +43,10 @@ button {
     &.green {
       color: $color-green;
       border: 1px solid $color-green;
+    }
+    &.disabled {
+      color: $color-gray-300;
+      border: 2px solid $color-gray-300;
     }
   }
 }
@@ -81,4 +88,8 @@ button {
 
 .XXXL {
   min-width: 240px;
+}
+
+.special {
+  min-width: 200px;
 }

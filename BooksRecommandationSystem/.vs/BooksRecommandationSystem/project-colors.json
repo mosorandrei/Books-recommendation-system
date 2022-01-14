@@ -30,7 +30,12 @@
       "ProjectGuid": "14a03164-94e0-4fd0-9137-ecc1c22637d7",
       "DisplayName": "Infrastructure.Test",
       "ColorIndex": 4
+    },
+    "576b7fc2-4813-47a2-b025-f6390f9eef43": {
+      "ProjectGuid": "576b7fc2-4813-47a2-b025-f6390f9eef43",
+      "DisplayName": "MachineLearning",
+      "ColorIndex": 5
     }
   },
-  "NextColorIndex": 5
+  "NextColorIndex": 6
 }

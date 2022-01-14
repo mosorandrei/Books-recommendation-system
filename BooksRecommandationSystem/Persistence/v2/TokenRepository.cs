@@ -170,6 +170,23 @@ namespace Persistence.v2
             return "User blocked successfully!";
         }
 
+        public async Task<string> UnblockUser(string UserId)
+        {
+            ApplicationUser user = await _userManager.FindByIdAsync(UserId);
+            if (user.IsBlocked == 0)
+                return "User is not blocked!";
+            user.IsBlocked = 0;
+            await _userManager.UpdateAsync(user);
+            return "User unblocked successfully!";
+        }
+
+        public async Task<IdentityResult> ResetUserPassword(string Email, string NewPassword)
+        {
+            ApplicationUser currentUser = await GetUserByEmail(Email);
+            string ResetToken = await _userManager.GeneratePasswordResetTokenAsync(currentUser);
+            return await _userManager.ResetPasswordAsync(currentUser, ResetToken, NewPassword);
+        }
+
         private async Task<ApplicationUser> GetUserByEmail(string email)
         {
             return await _userManager.FindByEmailAsync(email);

@@ -1,5 +1,6 @@
 ﻿using Domain.AuthModels;
 using Domain.Entities;
+using Microsoft.AspNetCore.Identity;
 
 namespace Application.Interfaces
 {
@@ -40,6 +41,8 @@ namespace Application.Interfaces
         /// <param name="UserId"></param>
         /// <returns></returns>
         Task<ApplicationUser> GetUserById(string UserId);
+        Task<IdentityResult> ResetUserPassword(string Email, string NewPassword);
         Task<string> BlockUser(string UserId);
+        Task<string> UnblockUser(string UserId);
     }
 }

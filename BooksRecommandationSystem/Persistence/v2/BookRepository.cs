@@ -15,8 +15,10 @@ namespace Persistence.v2
             Book? book = await GetByIdAsync(BookId);
             if (book == null)
                 throw new NullReferenceException("No Book found with the specified ID!");
-            book.NumberOfReviews++;
-            book.Rating = ((book.NumberOfReviews - 1) * book.Rating - PreviousScore + Score) / book.NumberOfReviews;
+            decimal currentScore = book.NumberOfReviews * book.Rating;
+            if (PreviousScore == 0)
+                book.NumberOfReviews++;
+            book.Rating = (currentScore + Score - PreviousScore) / book.NumberOfReviews;
             await UpdateAsync(book);
             return "Book Rating updated successfully!";
         }

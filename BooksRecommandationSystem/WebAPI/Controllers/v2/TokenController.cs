@@ -162,5 +162,16 @@ namespace WebAPI.Controllers.v2
                 UserId = UserId
             }));
         }
+
+        [Authorize(Roles = "Administrator")]
+        [HttpPut("UnblockUser")]
+        [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Put))]
+        public async Task<IActionResult> UnblockUser(string UserId)
+        {
+            return Ok(await mediator.Send(new UnblockUserCommand()
+            {
+                UserId = UserId
+            }));
+        }
     }
 }

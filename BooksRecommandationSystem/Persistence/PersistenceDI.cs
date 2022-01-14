@@ -20,6 +20,7 @@ namespace Persistence
             services.AddTransient<IReadingStatusRepository, ReadingStatusRepository>();
             services.AddTransient<IBookGenreAssociationRepository, BookGenreAssociationRepository>();
             services.AddTransient<IBookAuthorAssociationRepository, BookAuthorAssociationRepository>();
+            services.AddTransient<IResetPasswordRepository, ResetPasswordRepository>();
         }
     }
 }

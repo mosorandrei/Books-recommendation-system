@@ -3,6 +3,7 @@
 .books {
   padding: 30px;
   margin-bottom: 40px;
+  position: relative;
 
   .top {
     display: flex;
@@ -22,16 +23,16 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    overflow-x: auto;
-    overflow-y: hidden;
-
     > * {
       margin-right: 40px;
       margin-bottom: 40px;
     }
 
-    &::-webkit-scrollbar {
-      display: none;
+    .double-button {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 0px;
     }
 
     .single-button {
@@ -46,6 +47,9 @@
       padding: 0px 20px 0px 20px;
       justify-content: space-between;
       height: 40px;
+      .link {
+        text-decoration: none;
+      }
       .heart {
         padding-top: 5px;
         width: 30px;
@@ -59,7 +63,16 @@
       .download-link {
         pointer-events: none;
       }
+      .remove {
+        width: 25px;
+        height: 30px;
+        cursor: pointer;
+      }
     }
+  }
+  .slider {
+    max-height: 370px;
+    overflow-y: auto;
   }
 }
 
@@ -72,6 +85,7 @@
   height: 100%;
 }
 .genre {
+  cursor: pointer;
   font-size: 22px;
   font-weight: 500;
   padding: 10px;
@@ -86,5 +100,76 @@
 
   &:hover {
     pointer-events: none;
+  }
+}
+
+.loader-discover {
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 35%;
+  width: 10vmax;
+  height: 10vmax;
+  border-right: 4px solid $color-purple-100;
+  border-radius: 100%;
+  animation: spinRight 800ms linear infinite;
+
+  &:before,
+  &:after {
+    content: "";
+    width: 6vmax;
+    height: 6vmax;
+    display: block;
+    position: absolute;
+    top: calc(50% - 3vmax);
+    left: calc(50% - 3vmax);
+    border-left: 3px solid $color-purple-100;
+    border-radius: 100%;
+    animation: spinLeft 800ms linear infinite;
+  }
+
+  &:after {
+    width: 4vmax;
+    height: 4vmax;
+    top: calc(50% - 2vmax);
+    left: calc(50% - 2vmax);
+    border: 0;
+    border-right: 2px solid $color-purple-100;
+    animation: none;
+  }
+
+  @keyframes spinLeft {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(720deg);
+    }
+  }
+
+  @keyframes spinRight {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+}
+@media only screen and (max-height: 754px) {
+  .details {
+    padding: 0px 40px 0px 40px;
+    justify-content: flex-end;
+    .bottom {
+      margin-bottom: 70px;
+      .heart {
+        margin-right: 50px;
+      }
+    }
+    .genres {
+      margin-bottom: 100px;
+    }
+  }
+  .loader-discover {
+    margin-top: 2%;
   }
 }

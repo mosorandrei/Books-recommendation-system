@@ -1,33 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/WebAPI.csproj": {}
+    "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Application.csproj": {
+    "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Application.csproj",
+        "projectUniqueName": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Application.csproj",
-        "packagesPath": "/Users/alex-ama/.nuget/packages/",
-        "outputPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/obj/",
+        "projectPath": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alex-ama/.config/NuGet/NuGet.Config"
+          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Domain.csproj": {
-                "projectPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Domain.csproj"
+              "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj"
               }
             }
           }
@@ -62,6 +64,18 @@
               "target": "Package",
               "version": "[6.0.0, )"
             },
+            "Microsoft.ML": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "Microsoft.ML.Recommender": {
+              "target": "Package",
+              "version": "[0.19.0, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.25.2, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.14.1, )"
@@ -88,26 +102,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Domain.csproj": {
+    "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Domain.csproj",
+        "projectUniqueName": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/Domain.csproj",
-        "packagesPath": "/Users/alex-ama/.nuget/packages/",
-        "outputPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Domain/obj/",
+        "projectPath": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alex-ama/.config/NuGet/NuGet.Config"
+          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -162,34 +178,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Persistence.csproj": {
+    "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Persistence.csproj",
-        "packagesPath": "/Users/alex-ama/.nuget/packages/",
-        "outputPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/obj/",
+        "projectPath": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alex-ama/.config/NuGet/NuGet.Config"
+          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Application.csproj": {
-                "projectPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Application.csproj"
+              "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Application\\Application.csproj"
               }
             }
           }
@@ -270,37 +288,39 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/WebAPI.csproj": {
+    "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/WebAPI.csproj",
-        "packagesPath": "/Users/alex-ama/.nuget/packages/",
-        "outputPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/WebAPI/obj/",
+        "projectPath": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\WebAPI\\WebAPI.csproj",
+        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alex-ama/.config/NuGet/NuGet.Config"
+          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Application.csproj": {
-                "projectPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Application/Application.csproj"
+              "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Application\\Application.csproj"
               },
-              "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Persistence.csproj": {
-                "projectPath": "/Users/alex-ama/Files/GitHub/Books-recommendation-system/BooksRecommandationSystem/Persistence/Persistence.csproj"
+              "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Persistence\\Persistence.csproj": {
+                "projectPath": "C:\\Users\\adria\\Desktop\\Books-recommendation-system\\BooksRecommandationSystem\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -402,7 +422,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

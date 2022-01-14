@@ -19,16 +19,14 @@ namespace Persistence.Extensions
         /// <param name="builder"></param>
         public static void EnsureIdentityDbIsCreated(this IApplicationBuilder builder)
         {
-            using (var serviceScope = builder.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
-            {
-                var services = serviceScope.ServiceProvider;
+            using var serviceScope = builder.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope();
+            var services = serviceScope.ServiceProvider;
 
-                var dbContext = services.GetRequiredService<DatabaseContext>();
+            var dbContext = services.GetRequiredService<DatabaseContext>();
 
-                // Ensure the database is created.
-                // Note this does not use migrations. If database may be updated using migrations, use DbContext.Database.Migrate() instead.
-                dbContext.Database.Migrate();
-            }
+            // Ensure the database is created.
+            // Note this does not use migrations. If database may be updated using migrations, use DbContext.Database.Migrate() instead.
+            dbContext.Database.Migrate();
         }
 
         /// <summary>
@@ -37,15 +35,13 @@ namespace Persistence.Extensions
         /// <param name="builder"></param>
         public static async Task SeedIdentityDataAsync(this IApplicationBuilder builder)
         {
-            using (var serviceScope = builder.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
-            {
-                var services = serviceScope.ServiceProvider;
+            using var serviceScope = builder.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope();
+            var services = serviceScope.ServiceProvider;
 
-                var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
-                var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+            var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+            var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
 
-                await ApplicationUserContextDataSeed.SeedAsync(userManager, roleManager);
-            }
+            await ApplicationUserContextDataSeed.SeedAsync(userManager, roleManager);
         }
     }
 }

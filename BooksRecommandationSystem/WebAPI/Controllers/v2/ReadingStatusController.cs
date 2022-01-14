@@ -19,6 +19,17 @@ namespace WebAPI.Controllers.v2
         }
 
         [Authorize(Roles = "Member,Administrator")]
+        [HttpGet("GetRecommendations")]
+        [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
+        public async Task<IActionResult> GetRecommendations()
+        {
+            return Ok(await mediator.Send(new GetRecommendationsQuery()
+            {
+                UserId = User.Claims.FirstOrDefault(x => x.Type == "UserId")?.Value
+            }));
+        }
+
+        [Authorize(Roles = "Member,Administrator")]
         [HttpGet("GetBookById")]
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
         public async Task<IActionResult> GetBookById(Guid BookId)

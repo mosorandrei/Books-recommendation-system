@@ -35,7 +35,7 @@ namespace Infrastructure.Test.Service.CommandHandlerTests
         [Fact]
         public void GivenAddAuthorToBookCommandHandlerWhenHandleIsCalledAndBookIdIsNullThenShouldThrowArgumentNullException()
         {
-            AddAuthorToBookCommand command = new AddAuthorToBookCommand
+            AddAuthorToBookCommand command = new()
             {
                 BookId = Guid.Empty,
                 AuthorId = new Guid("8a55c0c8-a75c-4a4a-9714-5a31e431e052")
@@ -49,7 +49,7 @@ namespace Infrastructure.Test.Service.CommandHandlerTests
         [Fact]
         public void GivenAddAuthorToBookCommandHandlerWhenHandleIsCalledAndAuthorIdIsNullThenShouldThrowArgumentNullException()
         {
-            AddAuthorToBookCommand command = new AddAuthorToBookCommand
+            AddAuthorToBookCommand command = new()
             {
                 BookId = new Guid("8a55c0c8-a75c-4a4a-9714-5a31e431e052"),
                 AuthorId = Guid.Empty
@@ -63,12 +63,12 @@ namespace Infrastructure.Test.Service.CommandHandlerTests
         [Fact]
         public async Task GivenAddAuthorToBookCommandHandlerWhenHandleIsCalledAndAuthorIsAssociatedThenShouldReturnMessage()
         {
-            AddAuthorToBookCommand command = new AddAuthorToBookCommand
+            AddAuthorToBookCommand command = new()
             {
                 BookId = new Guid("8a55c0c8-a75c-4a4a-9714-5a31e431e052"),
                 AuthorId = new Guid("6a55c0c8-a75c-4a4a-9714-5a31e431e052")
             };
-            BookAuthorAssociation association = new BookAuthorAssociation
+            BookAuthorAssociation association = new()
             {
                 AuthorId = new Guid("6a55c0c8-a75c-4a4a-9714-5a31e431e052"),
                 BookId = new Guid("8a55c0c8-a75c-4a4a-9714-5a31e431e052")
